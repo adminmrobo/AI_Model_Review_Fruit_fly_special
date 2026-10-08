@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>教育者用の解答 — ディープラーニング A to Z · ショウジョウバエ特別編</title>
+<meta name="description" content="ショウジョウバエ特別編 1〜3の確認問題の解答、採点基準、Colab課題の解答例。">
+<meta name="author" content="Sangsun Ahn">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>@import url("https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css");
+:root{--night:#1b1533;--deep:#120e24;--panel:#261e45;--line:#3d3170;--text:#efe9ff;--muted:#b5abd6;--violet:#b07cff;--pink:#ff86b8;--red:#ef5b5b;--cyan:#57d0dc;--amber:#ffc65c;
+  --pix:"Galmuri11","Galmuri9","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;--body:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Meiryo","Noto Sans JP","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);line-height:1.7;font-size:16px}
+a{color:var(--cyan)} a:focus-visible,button:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.pix{font-family:var(--pix);letter-spacing:0}
+h2{font-size:clamp(24px,3.4vw,34px);margin:0 0 6px;text-shadow:3px 3px 0 #5a2fa8}
+.sub{color:var(--muted);margin:0 0 22px}
+section{padding:56px 0;border-top:4px solid var(--line)}
+.btn{display:inline-block;font-family:var(--pix);font-size:15px;color:var(--text);text-decoration:none;background:var(--panel);border:3px solid var(--line);padding:10px 16px;box-shadow:4px 4px 0 #0b0818;cursor:pointer}
+.btn:hover{border-color:var(--cyan)} .btn.main{border-color:var(--violet);background:#3a2370}
+.box{background:var(--panel);border:3px solid var(--line);box-shadow:4px 4px 0 #0b0818;padding:16px 18px}
+img.px{image-rendering:auto;filter:drop-shadow(3px 3px 0 #0d0a1c)}
+footer{background:var(--deep);padding:30px 0 40px;color:var(--muted);font-size:14px;border-top:4px solid var(--line)}
+.cc{margin-top:14px;padding-top:12px;border-top:1px solid rgba(181,171,214,.3);font-size:13px;line-height:1.7}
+.cc .ccb{display:inline-block;border:2px solid currentColor;border-radius:3px;padding:0 5px;margin-right:4px;font-weight:700;font-size:11.5px}
+.cc a{color:inherit}
+
+header.top{background:var(--deep);padding:44px 0 26px;border-bottom:4px solid var(--line)}
+header.top h1{font-size:clamp(26px,4vw,40px);margin:0 0 10px;text-shadow:3px 3px 0 #5a2fa8}
+header.top p{color:var(--muted);max-width:70ch;margin:0}
+nav.bar{position:sticky;top:0;z-index:5;background:var(--night);border-bottom:4px solid var(--line)}
+nav.bar .wrap{display:flex;flex-wrap:wrap;gap:8px;padding-top:10px;padding-bottom:10px}
+nav.bar a{font-family:var(--pix);font-size:13px;color:var(--text);text-decoration:none;border:3px solid var(--line);padding:5px 10px;background:var(--panel)}
+nav.bar a:hover{border-color:var(--cyan)}
+section.ans{scroll-margin-top:70px}
+.ah{display:flex;gap:14px;align-items:center;margin-bottom:8px}
+.ah .no{font-family:var(--pix);font-size:16px;border:4px solid var(--violet);padding:6px 10px;color:var(--violet)}
+.ah h2{margin:0}
+.back{font-size:14px;margin:0 0 18px}
+.q{margin:0 0 14px}
+.q h4{margin:0 0 6px;font-size:16px}
+.q p{margin:4px 0;color:var(--text)} .q .pt{color:var(--amber);font-size:14px}
+h3{font-size:18px;color:var(--amber);margin:26px 0 10px}
+</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ko" href="../answers.html">
+<link rel="alternate" hreflang="en" href="../en/answers.html">
+<link rel="alternate" hreflang="zh-CN" href="../zh/answers.html">
+<link rel="alternate" hreflang="ja" href="../ja/answers.html">
+<link rel="alternate" hreflang="uz-Latn" href="../uz/answers.html">
+<link rel="alternate" hreflang="ru" href="../ru/answers.html">
+<style id="i18n-style">
+.i18n-banner{position:relative;z-index:40;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 10px;padding:8px 44px 8px 14px;background:#0d0a1c;color:#efe9ff;border-bottom:2px solid #57d0dc;font:500 14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+.i18n-banner .i18n-lab{font-weight:700;color:#57d0dc;white-space:nowrap}
+.i18n-banner a{color:#efe9ff;text-decoration:none;border:1px solid rgba(239,233,255,.35);border-radius:999px;padding:3px 11px;white-space:nowrap;line-height:1.4}
+.i18n-banner a:hover{border-color:#57d0dc;color:#57d0dc}
+.i18n-banner a[aria-current="true"]{background:#57d0dc;border-color:#57d0dc;color:#0d0a1c;font-weight:700}
+.i18n-banner .i18n-x{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:#b5abd6;font-size:20px;line-height:1;cursor:pointer;padding:4px 8px}
+.i18n-banner .i18n-x:hover{color:#efe9ff}
+.i18n-pick{display:inline-flex;align-items:center;gap:4px;flex:none;white-space:nowrap}
+.i18n-pick select{font:600 13.5px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;color:#efe9ff;background:#261e45;border:1px solid #57d0dc;border-radius:6px;padding:5px 6px;cursor:pointer;max-width:9.5em}
+.i18n-pick select:focus-visible{outline:2px solid #57d0dc;outline-offset:2px}
+.i18n-pick .i18n-globe{font-size:15px}
+nav.top.i18n-has{display:flex;align-items:center}
+nav.top.i18n-has>.wrap{flex:1 1 auto;min-width:0}
+nav.top>.i18n-pick{flex:none;padding:0 14px 0 10px;border-left:1px solid rgba(181,171,214,.25);margin-left:4px}
+.bar .i18n-pick{margin-left:auto}
+nav.i18n-top{position:sticky;top:0;z-index:35;background:rgba(18,14,36,.94);border-bottom:4px solid #3d3170;backdrop-filter:blur(6px)}
+nav.i18n-top .i18n-wrap{max-width:1120px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:12px}
+nav.i18n-top .i18n-brand{color:#efe9ff;text-decoration:none;font-weight:700;margin-right:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+nav.i18n-top a.i18n-link{color:#b5abd6;text-decoration:none;white-space:nowrap;font-size:14px}
+nav.i18n-top a.i18n-link:hover{color:#57d0dc}
+@media (max-width:560px){nav.i18n-top a.i18n-link{display:none}.i18n-banner{font-size:13px;padding-right:38px}}
+@media print{.i18n-banner,.i18n-pick,nav.i18n-top{display:none!important}}
+</style>
+<script id="i18n-script">
+(function(){
+var CUR='ja', FILE='answers.html', KEY='fly-lang';
+var L=[['ko','한국어',''],['en','English','en/'],['zh','中文','zh/'],['ja','日本語','ja/'],['uz','Oʻzbekcha','uz/'],['ru','Русский','ru/']];
+var LAB={ko:'언어',en:'Language',zh:'语言',ja:'言語',uz:'Til',ru:'Язык'};
+var CLOSE={ko:'배너 닫기',en:'Close banner',zh:'关闭横幅',ja:'バナーを閉じる',uz:'Bannerni yopish',ru:'Закрыть баннер'};
+var ROOT=CUR==='ko'?'':'../';
+function dir(c){for(var i=0;i<L.length;i++) if(L[i][0]===c) return L[i][2]; return null;}
+function url(c){return ROOT+dir(c)+FILE+(location.hash||'');}
+function get(k,s){try{return (s||localStorage).getItem(k);}catch(e){return null;}}
+function set(k,v,s){try{(s||localStorage).setItem(k,v);}catch(e){}}
+function detect(){var ls=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];
+  for(var i=0;i<ls.length;i++){var p=String(ls[i]).toLowerCase().split('-')[0]; if(dir(p)!==null) return p;} return null;}
+// 1) automatic switching: the reader's saved choice wins; otherwise the Korean default follows the browser language
+var pref=get(KEY), target=null;
+if(pref&&dir(pref)!==null&&pref!==CUR) target=pref;
+else if(!pref&&CUR==='ko'){var d=detect(); if(d&&d!=='ko') target=d;}
+if(target&&!/[?&]lang=stay\b/.test(location.search)){location.replace(url(target)); return;}
+function go(c){set(KEY,c); if(c!==CUR) location.href=url(c);}
+function picker(){var w=document.createElement('span'); w.className='i18n-pick';
+  var g=document.createElement('span'); g.className='i18n-globe'; g.setAttribute('aria-hidden','true'); g.textContent='🌐'; w.appendChild(g);
+  var s=document.createElement('select'); s.setAttribute('aria-label',LAB[CUR]+' / Language');
+  L.forEach(function(x){var o=document.createElement('option'); o.value=x[0]; o.textContent=x[1]; o.lang=x[0]; if(x[0]===CUR) o.selected=true; s.appendChild(o);});
+  s.addEventListener('change',function(){go(s.value);}); w.appendChild(s); return w;}
+function banner(){var b=document.createElement('div'); b.className='i18n-banner'; b.setAttribute('role','navigation'); b.setAttribute('aria-label',LAB[CUR]+' / Language');
+  var t=document.createElement('span'); t.className='i18n-lab'; t.textContent='🌐 '+LAB[CUR]+(CUR==='en'?'':' · Language'); b.appendChild(t);
+  L.forEach(function(x){var a=document.createElement('a'); a.href=url(x[0]); a.textContent=x[1]; a.lang=x[0]; a.hreflang=x[0];
+    if(x[0]===CUR) a.setAttribute('aria-current','true');
+    a.addEventListener('click',function(e){e.preventDefault(); go(x[0]);}); b.appendChild(a);});
+  var c=document.createElement('button'); c.type='button'; c.className='i18n-x'; c.setAttribute('aria-label',CLOSE[CUR]); c.textContent='×';
+  c.addEventListener('click',function(){b.remove(); set('fly-lang-banner','off',sessionStorage);}); b.appendChild(c); return b;}
+function init(){var body=document.body;
+  // 2) language menu inside the topmost navigation
+  var nt=document.querySelector('nav.top'), nb=document.querySelector('nav.bar .wrap');
+  if(nt){nt.classList.add('i18n-has'); nt.appendChild(picker());}
+  else if(nb){nb.appendChild(picker());}
+  else{var n=document.createElement('nav'); n.className='i18n-top'; n.setAttribute('aria-label',LAB[CUR]);
+    var w=document.createElement('div'); w.className='i18n-wrap';
+    var br=document.createElement('a'); br.className='i18n-brand'; br.href='#'; br.textContent="ディープラーニング A to Z · ショウジョウバエ特別編"; w.appendChild(br);
+    [["1_fruitfly_brain_deep_learning.html", "特別編 1"], ["2_fruitfly_memory_retrieval_paper.html", "特別編 2"], ["3_fruitfly_minecraft_connectome.html", "特別編 3"], ["answers.html", "教育者用の解答"]].forEach(function(x){var a=document.createElement('a'); a.className='i18n-link'; a.href=x[0]; a.textContent=x[1]; w.appendChild(a);});
+    w.appendChild(picker()); n.appendChild(w); body.insertBefore(n,body.firstChild);}
+  // 3) language banner at the very top
+  if(get('fly-lang-banner',sessionStorage)!=='off') body.insertBefore(banner(),body.firstChild);}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+<!-- i18n:end -->
+</head>
+<body>
+<header class="top"><div class="wrap"><h1>教育者用の解答</h1><p>学習者の方は、各編の確認問題をまず自分で解いてから確認してください。1問20点、1編100点満点の採点ポイントと、Colab課題の解答例を載せています。解答例の数値は実行環境によって少し異なる場合があります。</p></div></header>
+<nav class="bar" aria-label="各編へのショートカット"><div class="wrap"><a href="index.html">ホーム</a><a href="#a-s1">特別編 1 ショウジョウバエ脳探検</a><a href="#a-s2">特別編 2 記憶想起の論文</a><a href="#a-s3">特別編 3 マインクラフトの中のショウジョウバエ脳</a></div></nav>
+<section class="ans" id="a-s1"><div class="wrap"><div class="ah"><span class="no">特別編 1</span><h2>ショウジョウバエ脳探検</h2></div><p class="back"><a href="1_fruitfly_brain_deep_learning.html#teach">特別編 1ページの教育者向けTIPに戻る</a></p><h3>確認問題の解答と採点基準</h3><div class="q box"><h4>Q1. 2つの入力（1, 0）、重み（0.8, −0.5）、しきい値0.5のパーセプトロンの出力は？</h4><p><b>解答</b> · 合計 = 1×0.8 + 0×(−0.5) = 0.8。0.8 ≥ 0.5なので出力は1です。</p><p class="pt">配点20点 · 採点：計算過程10点、結果10点</p></div><div class="q box"><h4>Q2. パーセプトロンが「帯状」（真ん中だけがエサ）の問題を解けないのはなぜ？</h4><p><b>解答</b> · パーセプトロンは1本の直線（平面）でしか分けられません。帯には両側に2つの境界が必要なので、直線1本では分けられません。隠れ層が境界を複数つくって組み合わせます。</p><p class="pt">配点20点 · 採点：「直線1本」10点、「境界が2つ必要」10点</p></div><div class="q box"><h4>Q3. 訓練精度96%、検証精度59%なら何が起きているか？対策を2つ挙げよ。</h4><p><b>解答</b> · 過学習です。訓練データを丸暗記しています。対策：データを増やす、隠れニューロンを減らす、学習を早めに止める、のうち2つ。</p><p class="pt">配点20点 · 採点：過学習の診断10点、対策各5点</p></div><div class="q box"><h4>Q4. ショウジョウバエ方式で学習される結合と固定された結合は、それぞれ何か？</h4><p><b>解答</b> · 固定：投射ニューロン → ケニオン細胞（ランダムでスパースな結合）。学習：ケニオン細胞 → 出力ニューロン（ドーパミンが変える）。</p><p class="pt">配点20点 · 採点：各10点</p></div><div class="q box"><h4>Q5. コード2で、ショウジョウバエ方式（学習パラメータ4,004個）がMLP（学習パラメータ16,708個）と同程度の精度を出したことから何がわかるか？</h4><p><b>解答</b> · 広くスパースな固定表現だけでも、単純な図形の問題なら出力層の学習で十分に解けます。ただし表現そのものは改善できないため、難しい問題では限界があります。</p><p class="pt">配点20点 · 採点：「固定表現でも十分」10点、限界への言及10点</p></div><h3>Colab課題の解答例</h3><div class="q box"><h4>基本</h4><p><b>課題</b> · コード1でTOP（オンになる割合）を0.08から0.5に変えると、訓練精度とオンになったケニオン細胞の数がどう変わるかを報告し、スパース性がなぜ役立つのかを2文で書く。</p><p><b>解答例</b> · TOPを0.5に上げるとケニオン細胞の半分がオンになり、異なる入力どうしのコードが大きく重なります。おもちゃのデータは簡単なので訓練精度は高いままのこともありますが、オンの細胞が約80個から約500個に増え、記憶どうしが混ざりやすくなります。スパースなコードは入力ごとに重ならない少数の細胞だけを使うので、似たにおいも区別でき、1つの記憶を書き換えるときにほかの記憶への影響が少なくなります。</p><p class="pt">採点ポイント · オンの数の変化の確認（5） · 精度の報告（5） · スパース性の利点2つ（重なりの減少、干渉の減少）（10）</p></div><div class="q box"><h4>チャレンジ</h4><p><b>課題</b> · コード2のMLPの隠れ層サイズを8、64、512に変え、検証精度を2つのシードで比較する。過学習が見られるかを学習曲線（7番目のセル）とあわせて解釈する。</p><p><b>解答例</b> · 隠れ層を大きくすると訓練損失は速く下がりますが、検証精度は上がらないか、シードによってばらつきます。例のデータ160個（訓練96個）では、512個の隠れ層は訓練データを丸暗記しやすくなります。学習曲線で訓練損失と検証精度の差が開き始める時点を指摘して、過学習を判断します。</p><p class="pt">採点ポイント · 3サイズ × 2シードの結果表（8） · 学習曲線にもとづく根拠（6） · データ量と結びつけた解釈（6）</p></div></div></section>
+<section class="ans" id="a-s2"><div class="wrap"><div class="ah"><span class="no">特別編 2</span><h2>記憶想起の論文</h2></div><p class="back"><a href="2_fruitfly_memory_retrieval_paper.html#teach">特別編 2ページの教育者向けTIPに戻る</a></p><h3>確認問題の解答と採点基準</h3><div class="q box"><h4>Q1. この論文の主張を1文で書くと？</h4><p><b>解答</b> · キノコ体から取り出された記憶の信号が側角の合流ニューロン（PD2a1/b1）に伝わってはじめて、記憶が行動になる。</p><p class="pt">配点20点 · 採点：「キノコ体 → 側角」10点、「合流ニューロンが必要」10点</p></div><div class="q box"><h4>Q2. 合流ニューロンをオフにする実験で「温度だけ上げた対照群」が必要なのはなぜ？</h4><p><b>解答</b> · 温度そのものが行動を変える可能性があるので、記憶スコアが下がった原因がニューロンの遮断なのか温度なのかを見分ける必要があるからです。</p><p class="pt">配点20点 · 採点：対照の目的20点</p></div><div class="q box"><h4>Q3. モデル実験室の合流の式が 1.0 × 本能 + 0.6 × 記憶 のとき、本能 = 0.2、記憶 = −1.0なら合流値は？記憶の入力を遮断すると？</h4><p><b>解答</b> · 0.2 + 0.6 × (−1.0) = −0.4（避ける側）。遮断すると0.2（本能だけが残り近づく側）。</p><p class="pt">配点20点 · 採点：各10点</p></div><div class="q box"><h4>Q4. 1つのニューロンをオフにすると、記憶の想起とエサへの誘引がいっしょに消えるのはなぜ？</h4><p><b>解答</b> · そのニューロンが2つの経路（キノコ体からの記憶の信号と、エサのにおいの投射ニューロンからの本能の信号）を両方受け取って出力する共有層だからです。</p><p class="pt">配点20点 · 採点：「共有」の概念20点</p></div><div class="q box"><h4>Q5. コード2で記憶の想起を遮断すると、精度が0.84から0.09に下がった。なぜ0.09なのか？</h4><p><b>解答</b> · 本能の値がすべて0なので全クラスのスコアが同じになり、モデルが常に最初のクラスを選ぶからです。0.09はテストデータに占める最初のクラスの割合です。</p><p class="pt">配点20点 · 採点：「スコアが同じになる」10点、「最初のクラスの割合」10点</p></div><h3>Colab課題の解答例</h3><div class="q box"><h4>基本</h4><p><b>課題</b> · コード1でinnateの値を[0.0, 0.5]（本能が避ける側）に変えると、訓練前・訓練後・遮断時の結果がどう変わるかを表で報告し、本能と記憶が同じ向きのときと逆向きのときを比較する。</p><p><b>解答例</b> · innate = [0.0, 0.5]だと、訓練前から本能のスコアが「避ける」を指します。罰の訓練は記憶側で「近づく」スコアを下げるので訓練後も避けるままで、記憶の入力を遮断しても本能だけで避けます。元の設定（innate = [0.5, 0.0]）では、遮断すると近づくに戻りました。本能と記憶が同じ向きなら遮断しても行動は変わらず記憶の寄与が見えません。逆向きのときにだけ、遮断実験が記憶の役割を示してくれます。</p><p class="pt">採点ポイント · 3つの状況の結果表（8） · 元の設定との比較（6） · 「逆向きのときにだけ見える」という解釈（6）</p></div><div class="q box"><h4>チャレンジ</h4><p><b>課題</b> · コード2のMemoryInnateでinnateに値を入れて（例：バツ印クラスに2.0）学習したあと、記憶の入力を遮断する。遮断前後の混同行列を比較し、本能が判断をどう引き寄せるかを書く。</p><p><b>解答例</b> · innateのバツ印クラスに2.0を入れると、学習中に記憶の経路がこの引き寄せに逆らって合わせるように変わります。遮断すると本能だけが残り、ほとんどの図をバツ印と判断するので、混同行列のバツ印の列に集中します。本能は学習しないバイアス（bias）のように働き、記憶はその上の補正である、という点を指摘します。</p><p class="pt">採点ポイント · 遮断前後の混同行列（8） · バツ印の列への偏りの説明（6） · バイアス + 補正という解釈（6）</p></div></div></section>
+<section class="ans" id="a-s3"><div class="wrap"><div class="ah"><span class="no">特別編 3</span><h2>マインクラフトの中のショウジョウバエ脳</h2></div><p class="back"><a href="3_fruitfly_minecraft_connectome.html#teach">特別編 3ページの教育者向けTIPに戻る</a></p><h3>確認問題の解答と採点基準</h3><div class="q box"><h4>Q1. シナプス30個の結合で、入力スパイク1つが加える電流gは何mVか？（0.275 mV × ゲイン0.65）</h4><p><b>解答</b> · 30 × 0.275 × 0.65 ≈ 5.36 mV。</p><p class="pt">配点20点 · 採点：式10点、値10点</p></div><div class="q box"><h4>Q2. 静止電位−52 mV、しきい値−45 mVのとき、スパイク1回が膜電位をgの約0.1575倍だけ上げるとすると、単独で発火させるにはgがいくら必要か？</h4><p><b>解答</b> · しきい値まで7 mV。7 / 0.1575 ≈ 44.4 mV。ゲイン1.0ならシナプス約162個、ゲイン0.65なら約249個が同時に必要です。</p><p class="pt">配点20点 · 採点：7 mVの計算10点、gの値10点</p></div><div class="q box"><h4>Q3. 砂糖 + 苦味の場面で、口吻の運動ニューロン（MN9）は0 Hzなのに、甘味の2次ニューロンはオンになっている。抑制はどの段階で起きているか？</h4><p><b>解答</b> · 運動の直前の段階。苦味ブレーキ（Scapula）が「食べる」命令の経路をふさぎます。</p><p class="pt">配点20点 · 採点：「運動の直前」20点</p></div><div class="q box"><h4>Q4. ゲインを0.75に上げると、毛づくろいの場面で何が起きるか？</h4><p><b>解答</b> · 200 msでティックあたりのスパイクが5倍に膨れ上がり、ケニオン細胞が39 Hzで目覚め、生じた抑制が毛づくろい命令ニューロンまでオフにしてしまいます（暴走）。</p><p class="pt">配点20点 · 採点：暴走現象10点、毛づくろい命令がオフになること10点</p></div><div class="q box"><h4>Q5. コード2で、固定配線スパイキングモデルは学習される結合644個でテスト0.75〜0.81を出した。この結果をMLP（16,708個、0.88〜0.91）と比較して解釈すると？</h4><p><b>解答</b> · 結合の約4%を学習するだけでもかなり当てられますが、表現そのものを学習できないためMLPより低くなります。データが少ない（テスト32個）ので差が±0.1ほど揺れる点もあわせて述べます。</p><p class="pt">配点20点 · 採点：割合の比較10点、限界・不確実性10点</p></div><h3>Colab課題の解答例</h3><div class="q box"><h4>基本</h4><p><b>課題</b> · コード1でゲイン0.65を0.55と0.75に変え、発火したニューロン数と平均発火頻度を表で報告し、セクション「ゲイン合わせ」の暴走と結びつけて2文で解釈する。</p><p><b>解答例</b> · ゲインを下げると（0.55）入力1つが加える電流が減り、発火したニューロン数と平均発火頻度が0.65のときより減ります。上げると（0.75）増えます。コード1の小さなネットワークでも、ゲインが大きくなるほどフィードバックで広がる発火が急速に増えます。MODのオスの神経系全体ではこの増加が暴走（ティックあたりのスパイク5倍、ケニオン細胞39 Hz）として現れるため、0.65を選びました。</p><p class="pt">採点ポイント · 3つのゲインの結果表（8） · 増加の向きの説明（6） · 暴走との結びつけ（6）</p></div><div class="q box"><h4>チャレンジ</h4><p><b>課題</b> · コード2のConnectomeLIFで抑制ニューロンの符号（−0.5）をすべて+0.18に変えて（抑制の除去）再学習する。スパイク記録（8番目のセル）と精度を2つのシードで比較し、抑制がネットワークの中で果たす役割を書く。</p><p><b>解答例</b> · 抑制をなくすと隠れニューロンの大半がより頻繁に、均一に発火し、スパイク記録がびっしり埋まります。入力ごとの発火パターンの違いが小さくなり、デコード層が区別できる情報が減るので、精度が下がるかシードによってばらつきます。抑制は活動を制限して、パターンをスパースで見分けやすいものにします（特別編 1のケニオン細胞「上位8%」ルールと同じ役割）。</p><p class="pt">採点ポイント · スパイク記録の比較（6） · 2シードの精度（6） · 抑制の役割の解釈（8）</p></div></div></section>
+<footer><div class="wrap"><p><b style="color:var(--text)">ディープラーニング A to Z · ショウジョウバエ特別編</b> — 文 · Sangsun Ahn（株式会社M-Robo 代表）。</p><p class="cc"><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.ja" target="_blank" rel="license noopener" aria-label="クリエイティブ・コモンズ 表示-非営利 4.0 国際"><span class="ccb">cc</span><span class="ccb">BY</span><span class="ccb">NC</span></a> この著作物は<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.ja" target="_blank" rel="license noopener">クリエイティブ・コモンズ 表示-非営利 4.0 国際ライセンス（CC BY-NC 4.0）</a>のもとで公開しています。非営利目的に限り自由に共有・改変できますが、<b>出典の表示は必須</b>です。出典表示の例：Sangsun Ahn『ディープラーニング A to Z · ショウジョウバエ特別編』、AI Model Review。</p></div></footer>

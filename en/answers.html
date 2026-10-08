@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Answer Key for Educators — Deep Learning A to Z · Fruit Fly Special</title>
+<meta name="description" content="Answers to the check questions, grading rubrics and sample answers for the Colab assignments in Fruit Fly Special 1–3.">
+<meta name="author" content="Sangsun Ahn">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>@import url("https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css");
+:root{--night:#1b1533;--deep:#120e24;--panel:#261e45;--line:#3d3170;--text:#efe9ff;--muted:#b5abd6;--violet:#b07cff;--pink:#ff86b8;--red:#ef5b5b;--cyan:#57d0dc;--amber:#ffc65c;
+  --pix:"Galmuri11","Galmuri9","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;--body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);line-height:1.7;font-size:16px}
+a{color:var(--cyan)} a:focus-visible,button:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.pix{font-family:var(--pix);letter-spacing:0}
+h2{font-size:clamp(24px,3.4vw,34px);margin:0 0 6px;text-shadow:3px 3px 0 #5a2fa8}
+.sub{color:var(--muted);margin:0 0 22px}
+section{padding:56px 0;border-top:4px solid var(--line)}
+.btn{display:inline-block;font-family:var(--pix);font-size:15px;color:var(--text);text-decoration:none;background:var(--panel);border:3px solid var(--line);padding:10px 16px;box-shadow:4px 4px 0 #0b0818;cursor:pointer}
+.btn:hover{border-color:var(--cyan)} .btn.main{border-color:var(--violet);background:#3a2370}
+.box{background:var(--panel);border:3px solid var(--line);box-shadow:4px 4px 0 #0b0818;padding:16px 18px}
+img.px{image-rendering:auto;filter:drop-shadow(3px 3px 0 #0d0a1c)}
+footer{background:var(--deep);padding:30px 0 40px;color:var(--muted);font-size:14px;border-top:4px solid var(--line)}
+.cc{margin-top:14px;padding-top:12px;border-top:1px solid rgba(181,171,214,.3);font-size:13px;line-height:1.7}
+.cc .ccb{display:inline-block;border:2px solid currentColor;border-radius:3px;padding:0 5px;margin-right:4px;font-weight:700;font-size:11.5px}
+.cc a{color:inherit}
+
+header.top{background:var(--deep);padding:44px 0 26px;border-bottom:4px solid var(--line)}
+header.top h1{font-size:clamp(26px,4vw,40px);margin:0 0 10px;text-shadow:3px 3px 0 #5a2fa8}
+header.top p{color:var(--muted);max-width:70ch;margin:0}
+nav.bar{position:sticky;top:0;z-index:5;background:var(--night);border-bottom:4px solid var(--line)}
+nav.bar .wrap{display:flex;flex-wrap:wrap;gap:8px;padding-top:10px;padding-bottom:10px}
+nav.bar a{font-family:var(--pix);font-size:13px;color:var(--text);text-decoration:none;border:3px solid var(--line);padding:5px 10px;background:var(--panel)}
+nav.bar a:hover{border-color:var(--cyan)}
+section.ans{scroll-margin-top:70px}
+.ah{display:flex;gap:14px;align-items:center;margin-bottom:8px}
+.ah .no{font-family:var(--pix);font-size:16px;border:4px solid var(--violet);padding:6px 10px;color:var(--violet)}
+.ah h2{margin:0}
+.back{font-size:14px;margin:0 0 18px}
+.q{margin:0 0 14px}
+.q h4{margin:0 0 6px;font-size:16px}
+.q p{margin:4px 0;color:var(--text)} .q .pt{color:var(--amber);font-size:14px}
+h3{font-size:18px;color:var(--amber);margin:26px 0 10px}
+</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ko" href="../answers.html">
+<link rel="alternate" hreflang="en" href="../en/answers.html">
+<link rel="alternate" hreflang="zh-CN" href="../zh/answers.html">
+<link rel="alternate" hreflang="ja" href="../ja/answers.html">
+<link rel="alternate" hreflang="uz-Latn" href="../uz/answers.html">
+<link rel="alternate" hreflang="ru" href="../ru/answers.html">
+<style id="i18n-style">
+.i18n-banner{position:relative;z-index:40;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 10px;padding:8px 44px 8px 14px;background:#0d0a1c;color:#efe9ff;border-bottom:2px solid #57d0dc;font:500 14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+.i18n-banner .i18n-lab{font-weight:700;color:#57d0dc;white-space:nowrap}
+.i18n-banner a{color:#efe9ff;text-decoration:none;border:1px solid rgba(239,233,255,.35);border-radius:999px;padding:3px 11px;white-space:nowrap;line-height:1.4}
+.i18n-banner a:hover{border-color:#57d0dc;color:#57d0dc}
+.i18n-banner a[aria-current="true"]{background:#57d0dc;border-color:#57d0dc;color:#0d0a1c;font-weight:700}
+.i18n-banner .i18n-x{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:#b5abd6;font-size:20px;line-height:1;cursor:pointer;padding:4px 8px}
+.i18n-banner .i18n-x:hover{color:#efe9ff}
+.i18n-pick{display:inline-flex;align-items:center;gap:4px;flex:none;white-space:nowrap}
+.i18n-pick select{font:600 13.5px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;color:#efe9ff;background:#261e45;border:1px solid #57d0dc;border-radius:6px;padding:5px 6px;cursor:pointer;max-width:9.5em}
+.i18n-pick select:focus-visible{outline:2px solid #57d0dc;outline-offset:2px}
+.i18n-pick .i18n-globe{font-size:15px}
+nav.top.i18n-has{display:flex;align-items:center}
+nav.top.i18n-has>.wrap{flex:1 1 auto;min-width:0}
+nav.top>.i18n-pick{flex:none;padding:0 14px 0 10px;border-left:1px solid rgba(181,171,214,.25);margin-left:4px}
+.bar .i18n-pick{margin-left:auto}
+nav.i18n-top{position:sticky;top:0;z-index:35;background:rgba(18,14,36,.94);border-bottom:4px solid #3d3170;backdrop-filter:blur(6px)}
+nav.i18n-top .i18n-wrap{max-width:1120px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:12px}
+nav.i18n-top .i18n-brand{color:#efe9ff;text-decoration:none;font-weight:700;margin-right:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+nav.i18n-top a.i18n-link{color:#b5abd6;text-decoration:none;white-space:nowrap;font-size:14px}
+nav.i18n-top a.i18n-link:hover{color:#57d0dc}
+@media (max-width:560px){nav.i18n-top a.i18n-link{display:none}.i18n-banner{font-size:13px;padding-right:38px}}
+@media print{.i18n-banner,.i18n-pick,nav.i18n-top{display:none!important}}
+</style>
+<script id="i18n-script">
+(function(){
+var CUR='en', FILE='answers.html', KEY='fly-lang';
+var L=[['ko','한국어',''],['en','English','en/'],['zh','中文','zh/'],['ja','日本語','ja/'],['uz','Oʻzbekcha','uz/'],['ru','Русский','ru/']];
+var LAB={ko:'언어',en:'Language',zh:'语言',ja:'言語',uz:'Til',ru:'Язык'};
+var CLOSE={ko:'배너 닫기',en:'Close banner',zh:'关闭横幅',ja:'バナーを閉じる',uz:'Bannerni yopish',ru:'Закрыть баннер'};
+var ROOT=CUR==='ko'?'':'../';
+function dir(c){for(var i=0;i<L.length;i++) if(L[i][0]===c) return L[i][2]; return null;}
+function url(c){return ROOT+dir(c)+FILE+(location.hash||'');}
+function get(k,s){try{return (s||localStorage).getItem(k);}catch(e){return null;}}
+function set(k,v,s){try{(s||localStorage).setItem(k,v);}catch(e){}}
+function detect(){var ls=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];
+  for(var i=0;i<ls.length;i++){var p=String(ls[i]).toLowerCase().split('-')[0]; if(dir(p)!==null) return p;} return null;}
+// 1) automatic switching: the reader's saved choice wins; otherwise the Korean default follows the browser language
+var pref=get(KEY), target=null;
+if(pref&&dir(pref)!==null&&pref!==CUR) target=pref;
+else if(!pref&&CUR==='ko'){var d=detect(); if(d&&d!=='ko') target=d;}
+if(target&&!/[?&]lang=stay\b/.test(location.search)){location.replace(url(target)); return;}
+function go(c){set(KEY,c); if(c!==CUR) location.href=url(c);}
+function picker(){var w=document.createElement('span'); w.className='i18n-pick';
+  var g=document.createElement('span'); g.className='i18n-globe'; g.setAttribute('aria-hidden','true'); g.textContent='🌐'; w.appendChild(g);
+  var s=document.createElement('select'); s.setAttribute('aria-label',LAB[CUR]+' / Language');
+  L.forEach(function(x){var o=document.createElement('option'); o.value=x[0]; o.textContent=x[1]; o.lang=x[0]; if(x[0]===CUR) o.selected=true; s.appendChild(o);});
+  s.addEventListener('change',function(){go(s.value);}); w.appendChild(s); return w;}
+function banner(){var b=document.createElement('div'); b.className='i18n-banner'; b.setAttribute('role','navigation'); b.setAttribute('aria-label',LAB[CUR]+' / Language');
+  var t=document.createElement('span'); t.className='i18n-lab'; t.textContent='🌐 '+LAB[CUR]+(CUR==='en'?'':' · Language'); b.appendChild(t);
+  L.forEach(function(x){var a=document.createElement('a'); a.href=url(x[0]); a.textContent=x[1]; a.lang=x[0]; a.hreflang=x[0];
+    if(x[0]===CUR) a.setAttribute('aria-current','true');
+    a.addEventListener('click',function(e){e.preventDefault(); go(x[0]);}); b.appendChild(a);});
+  var c=document.createElement('button'); c.type='button'; c.className='i18n-x'; c.setAttribute('aria-label',CLOSE[CUR]); c.textContent='×';
+  c.addEventListener('click',function(){b.remove(); set('fly-lang-banner','off',sessionStorage);}); b.appendChild(c); return b;}
+function init(){var body=document.body;
+  // 2) language menu inside the topmost navigation
+  var nt=document.querySelector('nav.top'), nb=document.querySelector('nav.bar .wrap');
+  if(nt){nt.classList.add('i18n-has'); nt.appendChild(picker());}
+  else if(nb){nb.appendChild(picker());}
+  else{var n=document.createElement('nav'); n.className='i18n-top'; n.setAttribute('aria-label',LAB[CUR]);
+    var w=document.createElement('div'); w.className='i18n-wrap';
+    var br=document.createElement('a'); br.className='i18n-brand'; br.href='#'; br.textContent="Deep Learning A to Z · Fruit Fly Special"; w.appendChild(br);
+    [["1_fruitfly_brain_deep_learning.html", "Special 1"], ["2_fruitfly_memory_retrieval_paper.html", "Special 2"], ["3_fruitfly_minecraft_connectome.html", "Special 3"], ["answers.html", "Answer Key"]].forEach(function(x){var a=document.createElement('a'); a.className='i18n-link'; a.href=x[0]; a.textContent=x[1]; w.appendChild(a);});
+    w.appendChild(picker()); n.appendChild(w); body.insertBefore(n,body.firstChild);}
+  // 3) language banner at the very top
+  if(get('fly-lang-banner',sessionStorage)!=='off') body.insertBefore(banner(),body.firstChild);}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+<!-- i18n:end -->
+</head>
+<body>
+<header class="top"><div class="wrap"><h1>Answer Key for Educators</h1><p>If you're a learner, try the check questions in each part first, then come here to check. Each question is worth 20 points (100 per part); you'll find grading points and sample answers for the Colab assignments. Numbers in the sample answers may differ slightly depending on your environment.</p></div></header>
+<nav class="bar" aria-label="Jump to a part"><div class="wrap"><a href="index.html">Home</a><a href="#a-s1">Special 1 Exploring the Fruit Fly Brain</a><a href="#a-s2">Special 2 The Memory Retrieval Paper</a><a href="#a-s3">Special 3 A Fruit Fly Brain in Minecraft</a></div></nav>
+<section class="ans" id="a-s1"><div class="wrap"><div class="ah"><span class="no">Special 1</span><h2>Exploring the Fruit Fly Brain</h2></div><p class="back"><a href="1_fruitfly_brain_deep_learning.html#teach">Back to the Educator TIP on the Special 1 page</a></p><h3>Check question answers and grading rubric</h3><div class="q box"><h4>Q1. What does a perceptron output with two inputs (1, 0), weights (0.8, −0.5) and threshold 0.5?</h4><p><b>Answer</b> · Sum = 1×0.8 + 0×(−0.5) = 0.8. Since 0.8 ≥ 0.5, the output is 1.</p><p class="pt">20 points · Grading: working 10, result 10</p></div><div class="q box"><h4>Q2. Why can't a perceptron solve the "band" problem (food only in the middle)?</h4><p><b>Answer</b> · A perceptron divides space with only one straight line (plane). A band needs two boundaries, one on each side, so a single line can't separate it. A hidden layer creates several boundaries and combines them.</p><p class="pt">20 points · Grading: "a single line" 10, "needs two boundaries" 10</p></div><div class="q box"><h4>Q3. If training accuracy is 96% and validation accuracy is 59%, what has happened? Give two remedies.</h4><p><b>Answer</b> · Overfitting: the model memorized the training data. Remedies: any two of collecting more data, using fewer hidden neurons, or stopping training early.</p><p class="pt">20 points · Grading: diagnosing overfitting 10, each remedy 5</p></div><div class="q box"><h4>Q4. In the fly-style model, which connections are learned and which are fixed?</h4><p><b>Answer</b> · Fixed: projection neurons → Kenyon cells (random sparse connections). Learned: Kenyon cells → output neurons (changed by dopamine).</p><p class="pt">20 points · Grading: 10 each</p></div><div class="q box"><h4>Q5. In Code 2, the fly-style model (4,004 learned) reached accuracy similar to the MLP (16,708 learned). What does this tell us?</h4><p><b>Answer</b> · With just a wide, sparse, fixed representation, simple image problems can be solved well enough by training only the output layer. However, since the representation itself can't improve, it has limits on harder problems.</p><p class="pt">20 points · Grading: "a fixed representation is enough" 10, mentioning the limits 10</p></div><h3>Sample answers for the Colab assignments</h3><div class="q box"><h4>Basic</h4><p><b>Assignment</b> · In Code 1, change TOP (the fraction of cells that switch on) from 0.08 to 0.5. Report how training accuracy and the number of active Kenyon cells change, and explain in two sentences why sparsity is useful.</p><p><b>Sample answer</b> · Raising TOP to 0.5 switches on half the Kenyon cells, so the codes for different inputs overlap a lot. Because the toy data is easy, training accuracy can still come out high, but the number of active cells rises from about 80 to about 500, making memories more likely to blend together. A sparse code uses only a few non-overlapping cells per input, so it can tell similar smells apart, and editing one memory disturbs the others less.</p><p class="pt">Grading points · Confirms the change in active count (5) · Reports accuracy (5) · Two benefits of sparsity (less overlap, less interference) (10)</p></div><div class="q box"><h4>Challenge</h4><p><b>Assignment</b> · In Code 2, set the MLP hidden size to 8, 64 and 512, and compare validation accuracy with two seeds. Interpret whether overfitting appears, using the learning curves (cell 7).</p><p><b>Sample answer</b> · A larger hidden size makes training loss drop faster, but validation accuracy doesn't rise, or it wobbles depending on the seed. With 160 example images (96 for training), a 512-unit hidden layer easily memorizes the training data. Judge overfitting by pointing to the moment in the learning curves where the gap between training loss and validation accuracy starts to widen.</p><p class="pt">Grading points · Results table for three sizes × two seeds (8) · Evidence from learning curves (6) · Interpretation tied to data size (6)</p></div></div></section>
+<section class="ans" id="a-s2"><div class="wrap"><div class="ah"><span class="no">Special 2</span><h2>The Memory Retrieval Paper</h2></div><p class="back"><a href="2_fruitfly_memory_retrieval_paper.html#teach">Back to the Educator TIP on the Special 2 page</a></p><h3>Check question answers and grading rubric</h3><div class="q box"><h4>Q1. Sum up this paper's claim in one sentence.</h4><p><b>Answer</b> · A memory signal retrieved from the mushroom body must be passed to the convergence neurons (PD2a1/b1) in the lateral horn for the memory to become behavior.</p><p class="pt">20 points · Grading: "mushroom body → lateral horn" 10, "the convergence neurons are required" 10</p></div><div class="q box"><h4>Q2. In the experiment that switches off the convergence neurons, why is a "temperature-only control group" needed?</h4><p><b>Answer</b> · Temperature itself can change behavior, so we must tell whether the memory score dropped because the neurons were blocked or because of the temperature.</p><p class="pt">20 points · Grading: purpose of the control 20</p></div><div class="q box"><h4>Q3. In the model lab, the convergence formula is 1.0 × instinct + 0.6 × memory. If instinct = 0.2 and memory = −1.0, what is the convergence value? What if the memory input is blocked?</h4><p><b>Answer</b> · 0.2 + 0.6 × (−1.0) = −0.4 (toward avoid). If blocked, 0.2 (only instinct remains, toward approach).</p><p class="pt">20 points · Grading: 10 each</p></div><div class="q box"><h4>Q4. Why does switching off a single neuron make both memory retrieval and attraction to food disappear?</h4><p><b>Answer</b> · Because that neuron is a shared layer that receives both pathways (the memory signal from the mushroom body and the instinct signal from food-odor projection neurons) and outputs them together.</p><p class="pt">20 points · Grading: the concept of "sharing" 20</p></div><div class="q box"><h4>Q5. In Code 2, blocking memory retrieval dropped accuracy from 0.84 to 0.09. Why 0.09?</h4><p><b>Answer</b> · The instinct values are all 0, so every class gets the same score and the model always picks the first class. 0.09 is the fraction of the test data that belongs to the first class.</p><p class="pt">20 points · Grading: "the scores become equal" 10, "fraction of the first class" 10</p></div><h3>Sample answers for the Colab assignments</h3><div class="q box"><h4>Basic</h4><p><b>Assignment</b> · In Code 1, change innate to [0.0, 0.5] (instinct leaning toward avoid). Report in a table how the before-training, after-training and blocked results change, and compare the cases where instinct and memory point the same way versus opposite ways.</p><p><b>Sample answer</b> · With innate = [0.0, 0.5], the instinct score points to "avoid" even before training. Punishment training lowers the "approach" score on the memory side, so the fly still avoids after training, and blocking the memory input still gives avoid from instinct alone. With the original setting (innate = [0.5, 0.0]), blocking returned the fly to approach. When instinct and memory point the same way, behavior stays the same even after blocking, so memory's contribution stays hidden; only when they point opposite ways does the blocking experiment reveal memory's role.</p><p class="pt">Grading points · Results table for the three conditions (8) · Comparison with the original setting (6) · Interpretation that "it shows only when they point opposite ways" (6)</p></div><div class="q box"><h4>Challenge</h4><p><b>Assignment</b> · In Code 2's MemoryInnate, put a value into innate (e.g., 2.0 for the X class), train, then block the memory input. Compare the confusion matrices before and after blocking, and describe how instinct pulls on the decision.</p><p><b>Sample answer</b> · Putting 2.0 for the X class into innate makes the memory pathway learn to push back against this pull during training. When blocked, only instinct remains and most images get classified as X, so predictions pile up in the X column of the confusion matrix. Point out that instinct acts like a bias that isn't learned, and memory is a correction on top of it.</p><p class="pt">Grading points · Confusion matrices before and after blocking (8) · Explains the pile-up in the X column (6) · Bias + correction interpretation (6)</p></div></div></section>
+<section class="ans" id="a-s3"><div class="wrap"><div class="ah"><span class="no">Special 3</span><h2>A Fruit Fly Brain in Minecraft</h2></div><p class="back"><a href="3_fruitfly_minecraft_connectome.html#teach">Back to the Educator TIP on the Special 3 page</a></p><h3>Check question answers and grading rubric</h3><div class="q box"><h4>Q1. For a connection made of 30 synapses, how many mV of current g does a single input spike add? (0.275 mV × gain 0.65)</h4><p><b>Answer</b> · 30 × 0.275 × 0.65 ≈ 5.36 mV.</p><p class="pt">20 points · Grading: formula 10, value 10</p></div><div class="q box"><h4>Q2. With a resting voltage of −52 mV and a threshold of −45 mV, if one spike raises the membrane voltage by about 0.1575 times g, how large must g be to make the neuron fire on its own?</h4><p><b>Answer</b> · 7 mV to reach threshold. 7 / 0.1575 ≈ 44.4 mV. With gain 1.0 that takes about 162 synapses at once; with gain 0.65, about 249.</p><p class="pt">20 points · Grading: computing 7 mV 10, value of g 10</p></div><div class="q box"><h4>Q3. In the sugar + bitter scene, the proboscis motor neuron (MN9) is at 0 Hz while the second-order sweet neurons are active. At which stage does the inhibition happen?</h4><p><b>Answer</b> · The stage just before the motor output. The bitter brake (Scapula) blocks the feeding-command pathway.</p><p class="pt">20 points · Grading: "just before motor output" 20</p></div><div class="q box"><h4>Q4. What happens in the grooming scene if the gain is raised to 0.75?</h4><p><b>Answer</b> · Within 200 ms, spikes per tick multiply fivefold and Kenyon cells wake up at 39 Hz, and the resulting inhibition shuts off even the grooming command neurons (runaway).</p><p class="pt">20 points · Grading: runaway activity 10, grooming command shuts off 10</p></div><div class="q box"><h4>Q5. In Code 2, the fixed-wiring spiking model scored 0.75–0.81 on the test with 644 learned connections. How would you interpret this compared with the MLP (16,708 connections, 0.88–0.91)?</h4><p><b>Answer</b> · Learning only about 4% of the connections still gets a fair number right, but because it can't learn the representation itself, it scores lower than the MLP. Also mention that with so little data (32 test examples), the difference can wobble by ±0.1.</p><p class="pt">20 points · Grading: comparing the ratio 10, limits and uncertainty 10</p></div><h3>Sample answers for the Colab assignments</h3><div class="q box"><h4>Basic</h4><p><b>Assignment</b> · In Code 1, change the gain from 0.65 to 0.55 and 0.75, report the number of neurons that fired and the mean firing rate in a table, and interpret the results in two sentences, linking them to the runaway in the "Tuning the gain" section.</p><p><b>Sample answer</b> · Lowering the gain (0.55) reduces the current each input adds, so the number of firing neurons and the mean firing rate drop compared with 0.65; raising it (0.75) increases them. Even in Code 1's small network, firing that spreads through feedback grows quickly as the gain rises. In the mod's whole male nervous system, this growth shows up as runaway activity (five times the spikes per tick, Kenyon cells at 39 Hz), which is why 0.65 was chosen.</p><p class="pt">Grading points · Results table for the three gains (8) · Explains the direction of increase (6) · Link to runaway (6)</p></div><div class="q box"><h4>Challenge</h4><p><b>Assignment</b> · In Code 2's ConnectomeLIF, change every inhibitory neuron sign (−0.5) to +0.18 (removing inhibition) and retrain. Compare the spike raster (cell 8) and accuracy with two seeds, and describe what inhibition does in the network.</p><p><b>Sample answer</b> · Without inhibition, most hidden neurons fire more often and more uniformly, so the spike raster becomes dense. Firing patterns differ less from input to input, leaving the readout layer less information to tell them apart, so accuracy drops or wobbles depending on the seed. Inhibition limits activity, making patterns sparse and distinguishable (the same role as the Kenyon cell top-8% rule in Special 1).</p><p class="pt">Grading points · Spike raster comparison (6) · Accuracy for two seeds (6) · Interpretation of inhibition's role (8)</p></div></div></section>
+<footer><div class="wrap"><p><b style="color:var(--text)">Deep Learning A to Z · Fruit Fly Special</b> — Written by Sangsun Ahn (CEO of M-Robo Inc.).</p><p class="cc"><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en" target="_blank" rel="license noopener" aria-label="Creative Commons Attribution-NonCommercial 4.0 International"><span class="ccb">cc</span><span class="ccb">BY</span><span class="ccb">NC</span></a> This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en" target="_blank" rel="license noopener">Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0)</a>. You are free to share and adapt it for non-commercial purposes, but <b>you must give credit</b>. Example credit: Sangsun Ahn, “Deep Learning A to Z · Fruit Fly Special,” AI Model Review.</p></div></footer>

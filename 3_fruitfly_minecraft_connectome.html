@@ -811,6 +811,84 @@ footer p{max-width:none}
 </style>
 <style>.cc{margin-top:14px;padding-top:12px;border-top:1px solid rgba(181,171,214,.3);font-size:13px;line-height:1.7}.cc .ccb{display:inline-block;border:2px solid currentColor;border-radius:3px;padding:0 5px;margin-right:4px;font-weight:700;font-size:11.5px;letter-spacing:.02em}.cc a{color:inherit}</style>
 <style>nav.top a{padding-left:6px;padding-right:6px;font-size:13.5px}</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ko" href="3_fruitfly_minecraft_connectome.html">
+<link rel="alternate" hreflang="en" href="en/3_fruitfly_minecraft_connectome.html">
+<link rel="alternate" hreflang="zh-CN" href="zh/3_fruitfly_minecraft_connectome.html">
+<link rel="alternate" hreflang="ja" href="ja/3_fruitfly_minecraft_connectome.html">
+<link rel="alternate" hreflang="uz-Latn" href="uz/3_fruitfly_minecraft_connectome.html">
+<link rel="alternate" hreflang="ru" href="ru/3_fruitfly_minecraft_connectome.html">
+<style id="i18n-style">
+.i18n-banner{position:relative;z-index:40;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 10px;padding:8px 44px 8px 14px;background:#0d0a1c;color:#efe9ff;border-bottom:2px solid #57d0dc;font:500 14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+.i18n-banner .i18n-lab{font-weight:700;color:#57d0dc;white-space:nowrap}
+.i18n-banner a{color:#efe9ff;text-decoration:none;border:1px solid rgba(239,233,255,.35);border-radius:999px;padding:3px 11px;white-space:nowrap;line-height:1.4}
+.i18n-banner a:hover{border-color:#57d0dc;color:#57d0dc}
+.i18n-banner a[aria-current="true"]{background:#57d0dc;border-color:#57d0dc;color:#0d0a1c;font-weight:700}
+.i18n-banner .i18n-x{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:#b5abd6;font-size:20px;line-height:1;cursor:pointer;padding:4px 8px}
+.i18n-banner .i18n-x:hover{color:#efe9ff}
+.i18n-pick{display:inline-flex;align-items:center;gap:4px;flex:none;white-space:nowrap}
+.i18n-pick select{font:600 13.5px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;color:#efe9ff;background:#261e45;border:1px solid #57d0dc;border-radius:6px;padding:5px 6px;cursor:pointer;max-width:9.5em}
+.i18n-pick select:focus-visible{outline:2px solid #57d0dc;outline-offset:2px}
+.i18n-pick .i18n-globe{font-size:15px}
+nav.top.i18n-has{display:flex;align-items:center}
+nav.top.i18n-has>.wrap{flex:1 1 auto;min-width:0}
+nav.top>.i18n-pick{flex:none;padding:0 14px 0 10px;border-left:1px solid rgba(181,171,214,.25);margin-left:4px}
+.bar .i18n-pick{margin-left:auto}
+nav.i18n-top{position:sticky;top:0;z-index:35;background:rgba(18,14,36,.94);border-bottom:4px solid #3d3170;backdrop-filter:blur(6px)}
+nav.i18n-top .i18n-wrap{max-width:1120px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:12px}
+nav.i18n-top .i18n-brand{color:#efe9ff;text-decoration:none;font-weight:700;margin-right:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+nav.i18n-top a.i18n-link{color:#b5abd6;text-decoration:none;white-space:nowrap;font-size:14px}
+nav.i18n-top a.i18n-link:hover{color:#57d0dc}
+@media (max-width:560px){nav.i18n-top a.i18n-link{display:none}.i18n-banner{font-size:13px;padding-right:38px}}
+@media print{.i18n-banner,.i18n-pick,nav.i18n-top{display:none!important}}
+</style>
+<script id="i18n-script">
+(function(){
+var CUR='ko', FILE='3_fruitfly_minecraft_connectome.html', KEY='fly-lang';
+var L=[['ko','한국어',''],['en','English','en/'],['zh','中文','zh/'],['ja','日本語','ja/'],['uz','Oʻzbekcha','uz/'],['ru','Русский','ru/']];
+var LAB={ko:'언어',en:'Language',zh:'语言',ja:'言語',uz:'Til',ru:'Язык'};
+var CLOSE={ko:'배너 닫기',en:'Close banner',zh:'关闭横幅',ja:'バナーを閉じる',uz:'Bannerni yopish',ru:'Закрыть баннер'};
+var ROOT=CUR==='ko'?'':'../';
+function dir(c){for(var i=0;i<L.length;i++) if(L[i][0]===c) return L[i][2]; return null;}
+function url(c){return ROOT+dir(c)+FILE+(location.hash||'');}
+function get(k,s){try{return (s||localStorage).getItem(k);}catch(e){return null;}}
+function set(k,v,s){try{(s||localStorage).setItem(k,v);}catch(e){}}
+function detect(){var ls=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];
+  for(var i=0;i<ls.length;i++){var p=String(ls[i]).toLowerCase().split('-')[0]; if(dir(p)!==null) return p;} return null;}
+// 1) automatic switching: the reader's saved choice wins; otherwise the Korean default follows the browser language
+var pref=get(KEY), target=null;
+if(pref&&dir(pref)!==null&&pref!==CUR) target=pref;
+else if(!pref&&CUR==='ko'){var d=detect(); if(d&&d!=='ko') target=d;}
+if(target&&!/[?&]lang=stay\b/.test(location.search)){location.replace(url(target)); return;}
+function go(c){set(KEY,c); if(c!==CUR) location.href=url(c);}
+function picker(){var w=document.createElement('span'); w.className='i18n-pick';
+  var g=document.createElement('span'); g.className='i18n-globe'; g.setAttribute('aria-hidden','true'); g.textContent='🌐'; w.appendChild(g);
+  var s=document.createElement('select'); s.setAttribute('aria-label',LAB[CUR]+' / Language');
+  L.forEach(function(x){var o=document.createElement('option'); o.value=x[0]; o.textContent=x[1]; o.lang=x[0]; if(x[0]===CUR) o.selected=true; s.appendChild(o);});
+  s.addEventListener('change',function(){go(s.value);}); w.appendChild(s); return w;}
+function banner(){var b=document.createElement('div'); b.className='i18n-banner'; b.setAttribute('role','navigation'); b.setAttribute('aria-label',LAB[CUR]+' / Language');
+  var t=document.createElement('span'); t.className='i18n-lab'; t.textContent='🌐 '+LAB[CUR]+(CUR==='en'?'':' · Language'); b.appendChild(t);
+  L.forEach(function(x){var a=document.createElement('a'); a.href=url(x[0]); a.textContent=x[1]; a.lang=x[0]; a.hreflang=x[0];
+    if(x[0]===CUR) a.setAttribute('aria-current','true');
+    a.addEventListener('click',function(e){e.preventDefault(); go(x[0]);}); b.appendChild(a);});
+  var c=document.createElement('button'); c.type='button'; c.className='i18n-x'; c.setAttribute('aria-label',CLOSE[CUR]); c.textContent='×';
+  c.addEventListener('click',function(){b.remove(); set('fly-lang-banner','off',sessionStorage);}); b.appendChild(c); return b;}
+function init(){var body=document.body;
+  // 2) language menu inside the topmost navigation
+  var nt=document.querySelector('nav.top'), nb=document.querySelector('nav.bar .wrap');
+  if(nt){nt.classList.add('i18n-has'); nt.appendChild(picker());}
+  else if(nb){nb.appendChild(picker());}
+  else{var n=document.createElement('nav'); n.className='i18n-top'; n.setAttribute('aria-label',LAB[CUR]);
+    var w=document.createElement('div'); w.className='i18n-wrap';
+    var br=document.createElement('a'); br.className='i18n-brand'; br.href='#'; br.textContent="딥러닝 A to Z · 초파리 특별편"; w.appendChild(br);
+    [["1_fruitfly_brain_deep_learning.html", "특별 1"], ["2_fruitfly_memory_retrieval_paper.html", "특별 2"], ["3_fruitfly_minecraft_connectome.html", "특별 3"], ["answers.html", "교육자용 정답"]].forEach(function(x){var a=document.createElement('a'); a.className='i18n-link'; a.href=x[0]; a.textContent=x[1]; w.appendChild(a);});
+    w.appendChild(picker()); n.appendChild(w); body.insertBefore(n,body.firstChild);}
+  // 3) language banner at the very top
+  if(get('fly-lang-banner',sessionStorage)!=='off') body.insertBefore(banner(),body.firstChild);}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+<!-- i18n:end -->
 </head>
 <body>
 
@@ -1773,9 +1851,9 @@ var RINFO={
  ant:['더듬이','감각기관','냄새 수용 뉴런과 존스턴 기관(바람·소리·중력·먼지)이 있다.','냄새원마다 정해 둔 사구체 입력 세트를 거리에 따라 약하게 해 넣는다. 날아가는 속도와 비·먼지는 존스턴 기관을 자극한다.'],
  eye:['겹눈','감각기관','낱눈이 벌집처럼 모여 한 방향씩 밝기를 잰다.','게임 화면을 한쪽 약 130개 광선으로 훑어 1,769개 기둥의 밝기로 바꾼다. 광수용체가 억제성이라, 라미나 뉴런은 어두울 때 약 35 Hz, 밝을 때 약 10 Hz로 반대로 뛴다(저장소 검증 기록).'],
  la:['라미나','시각 · 1단계','낱눈 바로 뒤에서 밝기 변화를 처음 받는다.','밝기의 부호를 뒤집는 첫 단계는 배선도대로 잘 동작한다.'],
- me:['메둘라','시각 · 움직임','이웃 기둥을 비교해 움직임 방향을 계산한다(T4·T5).','<b>이 모형에서는 신호가 메둘라로 넘어가지 않아 T4·T5가 조용하다.</b> 그래서 다가옴·작은 물체 신호를 로뷸라 뉴런에 직접 계산해 넣는다(손으로).'],
+ me:['메둘라','시각 · 움직임','이웃 기둥을 비교해 움직임 방향을 계산한다(T4·T5).','<b>이 모형에서는 신호가 메둘라로 넘어가지 않아 T4·T5가 조용하다.<\/b> 그래서 다가옴·작은 물체 신호를 로뷸라 뉴런에 직접 계산해 넣는다(손으로).'],
  lo:['로뷸라','시각 · 다가옴','넓은 시야를 모아 다가오는 물체 같은 복잡한 패턴에 반응한다.','LC4(커지는 속도)와 LPLC2(각 크기 60° 근처)를 직접 자극한다. 거대 섬유 입력의 거의 전부가 이 둘에서 온다(LC4 6,362 · LPLC2 4,862 시냅스).'],
- al:['더듬이엽','냄새 · 정리','같은 종류의 냄새 수용 뉴런이 사구체로 모인다.','<b>40 Hz의 약한 사과 냄새에도 투사 뉴런이 약 410 Hz로 포화된다.</b> 모든 뉴런이 같은 값을 써서 조절 장치가 없기 때문이다. 방향 정보가 사라져 냄새 따라가기는 반사층이 맡는다.'],
+ al:['더듬이엽','냄새 · 정리','같은 종류의 냄새 수용 뉴런이 사구체로 모인다.','<b>40 Hz의 약한 사과 냄새에도 투사 뉴런이 약 410 Hz로 포화된다.<\/b> 모든 뉴런이 같은 값을 써서 조절 장치가 없기 때문이다. 방향 정보가 사라져 냄새 따라가기는 반사층이 맡는다.'],
  mb:['버섯체','학습과 기억','케니언 세포가 냄새를 넓게 표현하고, 도파민이 출력 연결을 바꿔 기억을 만든다.','케니언 세포 4,064개의 입력을 0.25배로 줄여 약 1 Hz로 거의 조용하게 두었다. 도파민에 의한 학습은 없다. ②번 페이지의 주제가 여기서 비어 있다.'],
  lh:['측각','타고난 반응','처음 맡는 냄새에도 다가가거나 피하게 한다.','배선은 들어 있지만 냄새 입력이 포화되어 뚜렷한 역할이 드러나지 않는다. ②번 페이지의 합류 뉴런(PD2a1/b1)이 있는 곳이다.'],
  cx:['중심복합체','방향과 이동','고리 모양 뉴런들이 머리 방향을 기억한다.','따로 읽지 않는다. 걷는 방향은 하강 뉴런 DNa02의 오른쪽 − 왼쪽 차이로 읽는다.'],
@@ -1799,17 +1877,17 @@ var PATHS={
             {pts:[[0.17,0.95,0.03],[0.15,0.66,-0.02],[0.17,0.3,-0.2],[0.2,0.05,0.05],[0.3,-0.24,0.28],[0.27,0.0,0.14],[0.25,0.2,0.06]],st:[0,0,1,1,2,2,2]}]}
 };
 var BI={
- taste:['<b>케이크 맛보기</b> — 다리가 먼저 맛을 보고, 신호가 목을 거슬러 뇌의 식도하 신경절로 올라간다. 주둥이를 뻗으면 입의 맛 뉴런도 더해진다. 주둥이 운동 뉴런 MN9가 켜지는 것은 <span class="org em">창발</span>이다.','g'],
- loom:['<b>달려드는 플레이어</b> — 겹눈 → 메둘라 → 로뷸라로 가야 하지만 이 모형에서는 메둘라가 조용해서, 다가옴 신호를 LC4·LPLC2에 직접 넣는다(<span class="org hb">손으로</span>). 그 뒤 거대 섬유 → 도약 근육 뉴런으로 가는 결정은 배선도에서 나온다(<span class="org em">창발</span>).','a'],
- groom:['<b>비·먼지</b> — 더듬이의 존스턴 기관이 흔들리면 손질 명령 뉴런 aDN1·aDN2가 약 200·150 Hz로 켜지고, 복부신경삭의 앞다리 운동 뉴런으로 내려간다. <span class="org em">창발</span>','g'],
- olf:['<b>멀리 있는 사과</b> — 이 모드의 가장 약한 고리다. 더듬이엽이 포화되어 하강 뉴런에 방향 신호가 남지 않는다. 그래서 뇌가 조용할 때 사람이 짠 반사층이 사과 쪽으로 걷게 한다(<span class="org hb">손으로</span>).','r'],
- '':['<b>경로 끄기</b> — 위쪽이 뇌, 아래 길쭉한 덩어리가 복부신경삭, 둘을 목 신경줄이 잇는다. 앞 페이지들의 3D 뇌에는 없던 아래쪽 절반 덕분에, 이 모드는 "행동"을 운동 뉴런 수준까지 읽는다.','m']
+ taste:['<b>케이크 맛보기<\/b> — 다리가 먼저 맛을 보고, 신호가 목을 거슬러 뇌의 식도하 신경절로 올라간다. 주둥이를 뻗으면 입의 맛 뉴런도 더해진다. 주둥이 운동 뉴런 MN9가 켜지는 것은 <span class="org em">창발<\/span>이다.','g'],
+ loom:['<b>달려드는 플레이어<\/b> — 겹눈 → 메둘라 → 로뷸라로 가야 하지만 이 모형에서는 메둘라가 조용해서, 다가옴 신호를 LC4·LPLC2에 직접 넣는다(<span class="org hb">손으로<\/span>). 그 뒤 거대 섬유 → 도약 근육 뉴런으로 가는 결정은 배선도에서 나온다(<span class="org em">창발<\/span>).','a'],
+ groom:['<b>비·먼지<\/b> — 더듬이의 존스턴 기관이 흔들리면 손질 명령 뉴런 aDN1·aDN2가 약 200·150 Hz로 켜지고, 복부신경삭의 앞다리 운동 뉴런으로 내려간다. <span class="org em">창발<\/span>','g'],
+ olf:['<b>멀리 있는 사과<\/b> — 이 모드의 가장 약한 고리다. 더듬이엽이 포화되어 하강 뉴런에 방향 신호가 남지 않는다. 그래서 뇌가 조용할 때 사람이 짠 반사층이 사과 쪽으로 걷게 한다(<span class="org hb">손으로<\/span>).','r'],
+ '':['<b>경로 끄기<\/b> — 위쪽이 뇌, 아래 길쭉한 덩어리가 복부신경삭, 둘을 목 신경줄이 잇는다. 앞 페이지들의 3D 뇌에는 없던 아래쪽 절반 덕분에, 이 모드는 "행동"을 운동 뉴런 수준까지 읽는다.','m']
 };
 var brainFlow=$('brainFlow'), curPath='taste';
-function buildFlow(){ if(!curPath){brainFlow.innerHTML='<span class="muted small">장면을 고르면 신호가 지나가는 단계가 여기에 불을 켠다.</span>'; return;}
+function buildFlow(){ if(!curPath){brainFlow.innerHTML='<span class="muted small">장면을 고르면 신호가 지나가는 단계가 여기에 불을 켠다.<\/span>'; return;}
   brainFlow.innerHTML=PATHS[curPath].stages.map(function(s,i){return (i?'<span class="a">→</span>':'')+'<span class="s" data-st="'+i+'">'+s+'</span>'}).join('');}
-function regionHTML(id){ if(!id) return '<p class="muted">그림의 영역이나 아래 버튼을 누르면 그 부분의 역할과 <b style="color:var(--stain)">이 모드에서 어떻게 다루는지</b>가 나온다.</p>';
-  var r=RINFO[id]; return '<div class="t">'+r[0]+' <span class="muted" style="font-size:.85rem;font-weight:500">· '+r[1]+'</span></div><p style="margin-top:6px">'+r[2]+'</p><div class="nn">이 모드에서는: '+r[3]+'</div>';}
+function regionHTML(id){ if(!id) return '<p class="muted">그림의 영역이나 아래 버튼을 누르면 그 부분의 역할과 <b style="color:var(--stain)">이 모드에서 어떻게 다루는지<\/b>가 나온다.<\/p>';
+  var r=RINFO[id]; return '<div class="t">'+r[0]+' <span class="muted" style="font-size:.85rem;font-weight:500">· '+r[1]+'</span></div><p style="margin-top:6px">'+r[2]+'<\/p><div class="nn">이 모드에서는: '+r[3]+'</div>';}
 function markRegionBtn(id){document.querySelectorAll('#regionBtns button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-r')===id?'true':'false')});}
 var brain=FlyBrain($('brainCv'),{height:500,zoom:0.92,cyf:0.37,elev:0.42,azim:-0.75,extra:EXTRA,stamp:'개략 모형 · 실제 해부 데이터 아님',paths:PATHS,path:'taste',
   labels:['eye','lo','al','mb','lh','ant','sez','neck','vnc'],
@@ -1872,13 +1950,13 @@ var lastL='';
 function updL(force){var jump=L.N*LIF.w*L.gain, peak=jump*0.1575, need=Math.ceil(7/(0.1575*LIF.w*L.gain)), rate=L.spk.length/(WIN/1000);
   var key=[Math.round(rate/5),L.N,L.gain,L.r,L.inh,Math.round(L.tot*2)].join('|'); if(!force&&key===lastL) return; lastL=key;
   kpis($('lK'),[[Math.round(rate)+' Hz'+(L.tot>0.3?' <small style="font-size:.6em;color:var(--muted)">누적 '+Math.round(L.nsp/L.tot)+'</small>':''),'출력 발화 빈도 (최근 600 ms · 누적 평균)','g'],[jump.toFixed(1)+' mV','입력 스파이크 1번이 더하는 g','m'],['+'+peak.toFixed(2)+' mV','그 결과 전압이 오르는 최대치','m'],['약 '+need+'개','혼자 발화시키는 데 필요한 동시 시냅스','a']]);
-  $('eqL').innerHTML='τ<sub>m</sub>·dv/dt = (<b>−52</b> − v) + g &nbsp;&nbsp; τ<sub>s</sub>·dg/dt = −g &nbsp;&nbsp;(τ<sub>m</sub> = 20 ms, τ<sub>s</sub> = 5 ms)<br>입력 스파이크마다 g += 부호 × <em>시냅스 수 '+L.N+'</em> × 0.275 mV × <i>이득 '+L.gain+'</i> = <b>'+jump.toFixed(1)+' mV</b><br>v &gt; −45 mV 이면 스파이크, v = −52 mV로 되돌리고 2.2 ms 쉰다'+'<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--rule);color:#d7d4e6"><b style="color:var(--amber)">말로 읽기</b> — 첫 줄: 전압은 들어온 입력(g)만큼 오르고, 가만두면 −52 mV로 천천히 돌아간다(20 ms). 입력 g 자신도 5 ms 만에 사라진다. 둘째 줄: 입력 스파이크 하나가 오면 g가 "시냅스 수 × 0.275 × 이득"만큼 튄다. 셋째 줄: 문턱을 넘으면 한 번 쏘고 처음으로 돌아간다.</div>';
+  $('eqL').innerHTML='τ<sub>m<\/sub>·dv/dt = (<b>−52<\/b> − v) + g &nbsp;&nbsp; τ<sub>s<\/sub>·dg/dt = −g &nbsp;&nbsp;(τ<sub>m<\/sub> = 20 ms, τ<sub>s<\/sub> = 5 ms)<br>입력 스파이크마다 g += 부호 × <em>시냅스 수 '+L.N+'<\/em> × 0.275 mV × <i>이득 '+L.gain+'</i> = <b>'+jump.toFixed(1)+' mV<\/b><br>v &gt; −45 mV 이면 스파이크, v = −52 mV로 되돌리고 2.2 ms 쉰다'+'<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--rule);color:#d7d4e6"><b style="color:var(--amber)">말로 읽기<\/b> — 첫 줄: 전압은 들어온 입력(g)만큼 오르고, 가만두면 −52 mV로 천천히 돌아간다(20 ms). 입력 g 자신도 5 ms 만에 사라진다. 둘째 줄: 입력 스파이크 하나가 오면 g가 "시냅스 수 × 0.275 × 이득"만큼 튄다. 셋째 줄: 문턱을 넘으면 한 번 쏘고 처음으로 돌아간다.<\/div>';
   var ins=[];
-  if(rate<1) ins.push(['r','<b>발화하지 않는다.</b> 입력이 문턱까지 쌓이기 전에 새어 나간다. 입력 빈도를 올리거나, 연결을 굵게(시냅스 수를 많이) 해 보자.']);
-  else if(rate>250) ins.push(['a','<b>거의 쉬지 않고 쏜다.</b> 불응기 2.2 ms 때문에 최고 빈도는 약 450 Hz다. 이득을 키우면 온 신경망이 이렇게 되는 것이 "폭주"다.']);
-  else ins.push(['g','<b>입력이 쌓여 문턱을 넘는다.</b> 한 번에 넘는 것이 아니라 여러 입력이 짧은 시간에 겹쳐야 넘는다. 그래서 스파이크 모형에서는 입력의 "타이밍"도 정보가 된다.']);
-  if(L.inh) ins.push(['r','<b>억제 입력</b>은 g를 음수 쪽으로 끌어내린다. 쓴맛 브레이크(Scapula)가 주둥이 경로를 끄는 방식이 이것이다. 부호는 배선도의 신경전달물질로 정해진다.']);
-  if(L.gain===1) ins.push(['a','<b>이득 1.0</b>은 암컷 뇌에 맞춘 원래 값이다. 수컷 신경계 전체에서는 과하게 흥분해서 모드는 0.65로 낮췄다.']);
+  if(rate<1) ins.push(['r','<b>발화하지 않는다.<\/b> 입력이 문턱까지 쌓이기 전에 새어 나간다. 입력 빈도를 올리거나, 연결을 굵게(시냅스 수를 많이) 해 보자.']);
+  else if(rate>250) ins.push(['a','<b>거의 쉬지 않고 쏜다.<\/b> 불응기 2.2 ms 때문에 최고 빈도는 약 450 Hz다. 이득을 키우면 온 신경망이 이렇게 되는 것이 "폭주"다.']);
+  else ins.push(['g','<b>입력이 쌓여 문턱을 넘는다.<\/b> 한 번에 넘는 것이 아니라 여러 입력이 짧은 시간에 겹쳐야 넘는다. 그래서 스파이크 모형에서는 입력의 "타이밍"도 정보가 된다.']);
+  if(L.inh) ins.push(['r','<b>억제 입력<\/b>은 g를 음수 쪽으로 끌어내린다. 쓴맛 브레이크(Scapula)가 주둥이 경로를 끄는 방식이 이것이다. 부호는 배선도의 신경전달물질로 정해진다.']);
+  if(L.gain===1) ins.push(['a','<b>이득 1.0<\/b>은 암컷 뇌에 맞춘 원래 값이다. 수컷 신경계 전체에서는 과하게 흥분해서 모드는 0.65로 낮췄다.']);
   $('insL').innerHTML=ins.map(function(x){return '<p class="'+x[0]+'">'+x[1]+'</p>'}).join('');}
 function lifLabels(){ $('lRV').textContent=L.r+' Hz ×'+L.K; $('lNV').textContent=L.N+'개'; }
 $('lR').addEventListener('input',function(){L.r=+this.value; L.nsp=0; L.tot=0; lifLabels(); updL(true); if(!L.run) drawLIF(0);});
@@ -1895,22 +1973,22 @@ var TYPEC={in:COL.eye,mid:COL.stain,out:COL.gfp,kc:COL.info};
 var SC={
  idle:{pops:[['감각 뉴런 전체','자극 없음',0,0,'in'],['하강 뉴런 전체','DN 1,314개',0,0,'mid'],['운동 뉴런 전체','MN',0,0,'out']],
    mode:'idle',org:'em',spk:[0,0],act:[0,0],rtf:'1000× 이상',
-   ins:[['g','<b>자극이 없으면 뇌 전체가 0 스파이크다.</b> 이 모형에는 자발 활동이 없어서, 스파이크는 감각 뉴런 자극에서 시작된다. 예외로 라미나 뉴런에는 사람이 일정한 전류를 직접 넣는데, 이 장면의 시험에서는 시각 입력을 쓰지 않았다. 몹이 가만히 있으면 사람이 만든 탐색 규칙(반사층)이 가끔 걷게 한다.']]},
+   ins:[['g','<b>자극이 없으면 뇌 전체가 0 스파이크다.<\/b> 이 모형에는 자발 활동이 없어서, 스파이크는 감각 뉴런 자극에서 시작된다. 예외로 라미나 뉴런에는 사람이 일정한 전류를 직접 넣는데, 이 장면의 시험에서는 시각 입력을 쓰지 않았다. 몹이 가만히 있으면 사람이 만든 탐색 규칙(반사층)이 가끔 걷게 한다.']]},
  sugar:{pops:[['단맛 맛 뉴런','LB3b·LB3c·PhG1·LgLG3 (입력)',80,120,'in'],['단맛 2차 뉴런','G2N-1 (GNG232)',20,60,'mid'],['섭식 명령 뉴런','Fudog (DNg67)',10,40,'mid'],['섭식 명령 뉴런 2','Rounddown (DNge080)',50,120,'mid'],['주둥이 운동 뉴런','MN9',30,90,'out'],['케니언 세포','KC 4,064개',0,0,'kc']],
    mode:'feed',org:'em',spk:[1824,6950],act:[15617,92982],rtf:'1.49×',
-   ins:[['g','<b>설탕 → 주둥이 뻗기가 배선도에서 저절로 나온다.</b> 단맛 맛 뉴런을 120 Hz로 자극하면 첫 틱부터 MN9가 30–90 Hz로 켜진다. Shiu 외 (2024)가 암컷 뇌에서 예측하고 실험으로 확인한 경로와 같다.'],['m','케니언 세포(학습 중추)는 0 Hz. 먹기는 배울 필요가 없는 타고난 반사로 나온다.']]},
+   ins:[['g','<b>설탕 → 주둥이 뻗기가 배선도에서 저절로 나온다.<\/b> 단맛 맛 뉴런을 120 Hz로 자극하면 첫 틱부터 MN9가 30–90 Hz로 켜진다. Shiu 외 (2024)가 암컷 뇌에서 예측하고 실험으로 확인한 경로와 같다.'],['m','케니언 세포(학습 중추)는 0 Hz. 먹기는 배울 필요가 없는 타고난 반사로 나온다.']]},
  bitter:{pops:[['단맛 맛 뉴런','LB3b·LB3c … (입력)',80,120,'in'],['쓴맛 맛 뉴런','LB1a–d (입력)',120,120,'in'],['쓴맛 브레이크','Scapula (GNG087)',247,320,'mid'],['단맛 2차 뉴런','G2N-1',10,40,'mid'],['섭식 명령 뉴런','Fudog',20,60,'mid'],['주둥이 운동 뉴런','MN9',0,0,'out']],
    mode:'nofeed',org:'em',spk:[2567,38174],act:[25009,104928],rtf:'0.83×',
-   ins:[['r','<b>쓴맛이 섞이면 MN9가 끝까지 0 Hz다.</b> 단맛 2차 뉴런과 섭식 명령 뉴런은 계속 켜져 있는데도 그렇다. 즉 억제는 운동 직전 단계에서 일어난다. 게임에서는 케이크 위에서도 거미 눈을 함께 맛보면 주둥이를 뻗지 않는다.'],['a','쓴맛은 가장 무거운 자극이다. 활성 뉴런 약 10만, 틱당 스파이크 약 3.6만 개로 실시간보다 느려진다.']]},
+   ins:[['r','<b>쓴맛이 섞이면 MN9가 끝까지 0 Hz다.<\/b> 단맛 2차 뉴런과 섭식 명령 뉴런은 계속 켜져 있는데도 그렇다. 즉 억제는 운동 직전 단계에서 일어난다. 게임에서는 케이크 위에서도 거미 눈을 함께 맛보면 주둥이를 뻗지 않는다.'],['a','쓴맛은 가장 무거운 자극이다. 활성 뉴런 약 10만, 틱당 스파이크 약 3.6만 개로 실시간보다 느려진다.']]},
  loom:{pops:[['다가옴 검출 뉴런','LC4·LPLC2 오른쪽 (직접 입력)',150,150,'in'],['거대 섬유','DNp01',330,380,'mid'],['이륙 하강 뉴런','DNp04',230,250,'mid'],['이륙 하강 뉴런 2','DNp02',150,170,'mid'],['이륙 하강 뉴런 3','DNp11',140,160,'mid'],['도약 근육 뉴런','TTMn',60,80,'out']],
    mode:'escape',org:'mix',spk:[5878,7646],act:[55287,74056],rtf:'1.43×',
-   ins:[['g','<b>거대 섬유가 330–380 Hz로 켜지고, 첫 스파이크가 나오는 틱에 해독기가 탈출로 바뀐다.</b> 다가옴이 시작된 뒤 100 ms 안이다. 거대 섬유의 스파이크 한 번이 곧 "뛴다"는 결정이다.'],['a','<b>앞단은 대역이다.</b> 메둘라가 조용해서, 다가오는 물체의 크기와 속도를 게임에서 계산해 LC4·LPLC2에 직접 넣는다. ①번 페이지 ④칸이 움직임을 직접 계산한 것과 같은 지름길이다.']]},
+   ins:[['g','<b>거대 섬유가 330–380 Hz로 켜지고, 첫 스파이크가 나오는 틱에 해독기가 탈출로 바뀐다.<\/b> 다가옴이 시작된 뒤 100 ms 안이다. 거대 섬유의 스파이크 한 번이 곧 "뛴다"는 결정이다.'],['a','<b>앞단은 대역이다.<\/b> 메둘라가 조용해서, 다가오는 물체의 크기와 속도를 게임에서 계산해 LC4·LPLC2에 직접 넣는다. ①번 페이지 ④칸이 움직임을 직접 계산한 것과 같은 지름길이다.']]},
  groom:{pops:[['존스턴 기관','바람·중력 475 + 손질 65 (입력)',150,150,'in'],['더듬이 손질 명령','aDN1 (DNg62)',180,210,'mid'],['더듬이 손질 명령 2','aDN2 (DNge078)',130,150,'mid'],['멈춤 뉴런','bluebell (DNg60)',0,0,'mid'],['케니언 세포','KC',0,0,'kc']],
    mode:'groom',org:'em',spk:[8392,13727],act:[81778,92321],rtf:'1.12×',
-   ins:[['g','<b>비나 먼지가 더듬이에 닿으면 손질 명령 뉴런이 약 200·150 Hz로 꾸준히 켜진다.</b> Hampel 외 (2015)가 밝히고 Shiu 외 (2024)가 모형으로 재현한 경로다. 어느 부위를 손질할지도 가장 강한 하강 뉴런 무리로 정한다.']]},
+   ins:[['g','<b>비나 먼지가 더듬이에 닿으면 손질 명령 뉴런이 약 200·150 Hz로 꾸준히 켜진다.<\/b> Hampel 외 (2015)가 밝히고 Shiu 외 (2024)가 모형으로 재현한 경로다. 어느 부위를 손질할지도 가장 강한 하강 뉴런 무리로 정한다.']]},
  odor:{pops:[['냄새 수용 뉴런','ORN DM1·VA2 (입력)',40,40,'in'],['투사 뉴런 (DM1)','DM1_lPN · 포화',370,430,'mid'],['투사 뉴런 평균','ALPN 686개',93,135,'mid'],['케니언 세포','KC · 입력 0.25배',0.3,1.1,'kc'],['하강 뉴런 평균','DN 1,314개 · 방향 없음',5,9.4,'out']],
    mode:'forward',org:'hb',spk:[15503,27898],act:[88443,102069],rtf:'0.80×',
-   ins:[['r','<b>40 Hz의 약한 냄새에도 투사 뉴런이 약 410 Hz로 포화된다.</b> 실제 더듬이엽에는 입력 세기를 고르게 맞추는 조절 장치가 있는데, 모든 뉴런이 같은 값을 쓰는 이 모형에는 그것이 없다. ①번 페이지가 더듬이엽을 "정규화 층"에 비유한 바로 그 기능이 빠진 셈이다.'],['a','<b>[REFLEX]</b> 하강 뉴런에 방향 신호가 남지 않아서, 뇌가 걷기 명령을 내지 않을 때 사람이 짠 반사층이 사과 쪽으로 걷게 한다. 화면에 [REFLEX]가 뜨면 이 대역이 운전 중이라는 뜻이다.']]}
+   ins:[['r','<b>40 Hz의 약한 냄새에도 투사 뉴런이 약 410 Hz로 포화된다.<\/b> 실제 더듬이엽에는 입력 세기를 고르게 맞추는 조절 장치가 있는데, 모든 뉴런이 같은 값을 쓰는 이 모형에는 그것이 없다. ①번 페이지가 더듬이엽을 "정규화 층"에 비유한 바로 그 기능이 빠진 셈이다.'],['a','<b>[REFLEX]<\/b> 하강 뉴런에 방향 신호가 남지 않아서, 뇌가 걷기 명령을 내지 않을 때 사람이 짠 반사층이 사과 쪽으로 걷게 한다. 화면에 [REFLEX]가 뜨면 이 대역이 운전 중이라는 뜻이다.']]}
 };
 var LADDER=[['escape','탈출'],['land','착지'],['fly','비행'],['brake','급정지'],['halt','멈춤'],['back','뒤로'],['forward','앞으로'],['feed','먹기'],['groom','손질'],['song','노래'],['idle','쉬기']];
 var MODEN={idle:['쉬기','IDLE'],feed:['먹기','FEED'],nofeed:['먹지 않음','먹기 억제'],escape:['탈출','ESCAPE · JUMP'],groom:['손질','GROOM'],forward:['앞으로 걷기','[REFLEX]']};
@@ -1919,10 +1997,10 @@ var S={sc:'sugar',t:0,tick:0,vals:[],R:rng(3),rows:[],flowT:0};
 function buildPops(){var sc=SC[S.sc], MAX=450;
   $('pops').innerHTML=sc.pops.map(function(p,i){var c=TYPEC[p[4]];
     return '<div class="pop"><div class="lab"><b style="color:'+c+'">'+p[0]+'</b><small>'+p[1]+'</small></div><div class="track"><div class="rng" style="left:'+(p[2]/MAX*100)+'%;width:'+Math.max(0.6,(p[3]-p[2])/MAX*100)+'%"></div><div class="fill" id="pf'+i+'" style="background:'+c+';width:0"></div></div><div class="v"><span id="pv'+i+'">0</span><small>'+(p[3]?(p[2]===p[3]?p[2]+' Hz':p[2]+'–'+p[3]+' Hz'):'0 Hz')+'</small></div></div>';}).join('')+
-    '<p class="note" style="margin:4px 0 0"><b style="color:var(--amber)">옅은 띠만 측정값</b>(저장소 검증 기록)이다. 진한 막대와 숫자는 그 범위 안에서 흔들리게 만든 연출값이다. 최대 450 Hz(불응기 한계) 기준 <a class="fn" href="#src">[3]</a></p>';
+    '<p class="note" style="margin:4px 0 0"><b style="color:var(--amber)">옅은 띠만 측정값<\/b>(저장소 검증 기록)이다. 진한 막대와 숫자는 그 범위 안에서 흔들리게 만든 연출값이다. 최대 450 Hz(불응기 한계) 기준 <a class="fn" href="#src">[3]<\/a><\/p>';
   var m=sc.mode, on=m==='nofeed'?'idle':m;
   $('ladder').innerHTML=LADDER.map(function(l,i){var cls=l[0]===on?' class="on'+(sc.org==='hb'?' hb':'')+'"':'';
-    var txt=l[1]; if(m==='nofeed'&&l[0]==='feed') txt='<s>먹기</s>';
+    var txt=l[1]; if(m==='nofeed'&&l[0]==='feed') txt='<s>먹기<\/s>';
     return (i?'<i>›</i>':'')+'<span'+cls+'>'+txt+'</span>';}).join('');
   $('insS').innerHTML=sc.ins.map(function(x){return '<p class="'+x[0]+'">'+x[1]+'</p>'}).join('');
   S.rows=sc.pops.map(function(){return {sp:[]};});
@@ -1987,11 +2065,11 @@ PX.add($('cB'),drawB);
 /* ══ D) 전체 이득 맞추기 (VALIDATION.md §9) ═══════════════════════ */
 var GD={
  '0.55':{mn9:[10,60],mn9t:'10–60 Hz, 끊김',sp:22907,spG:null,kcG:null,cls:'r',
-   txt:'<b>0.55 — 너무 약하다.</b> 설탕을 줘도 MN9가 10–60 Hz로 들쭉날쭉하고, 네 틱은 20 Hz 이하로 떨어진다. 해독기가 "먹기"를 안정적으로 읽을 수 없다.'},
+   txt:'<b>0.55 — 너무 약하다.<\/b> 설탕을 줘도 MN9가 10–60 Hz로 들쭉날쭉하고, 네 틱은 20 Hz 이하로 떨어진다. 해독기가 "먹기"를 안정적으로 읽을 수 없다.'},
  '0.65':{mn9:[30,90],mn9t:'30–90 Hz, 꾸준함',sp:59957,spG:133674,kcG:0,cls:'g',
-   txt:'<b>0.65 — 채택.</b> 먹기(MN9 30–90 Hz), 손질(aDN1 180–210 Hz), 탈출이 모두 안정적이고 케니언 세포는 0 Hz다. 세 조건을 모두 만족하는 가장 작은 값이다. 시냅스 하나당 실제로는 0.179 mV.'},
+   txt:'<b>0.65 — 채택.<\/b> 먹기(MN9 30–90 Hz), 손질(aDN1 180–210 Hz), 탈출이 모두 안정적이고 케니언 세포는 0 Hz다. 세 조건을 모두 만족하는 가장 작은 값이다. 시냅스 하나당 실제로는 0.179 mV.'},
  '0.75':{mn9:[40,110],mn9t:'40–110 Hz',sp:100201,spG:481561,kcG:39,cls:'r',
-   txt:'<b>0.75 — 폭주한다.</b> 먹기는 되지만, 손질 자극을 주면 200 ms 만에 틱당 스파이크가 다섯 배로 불어나고 케니언 세포가 39 Hz로 깨어난다. 그 결과 생긴 억제가 손질 명령 뉴런까지 꺼 버린다.'}
+   txt:'<b>0.75 — 폭주한다.<\/b> 먹기는 되지만, 손질 자극을 주면 200 ms 만에 틱당 스파이크가 다섯 배로 불어나고 케니언 세포가 39 Hz로 깨어난다. 그 결과 생긴 억제가 손질 명령 뉴런까지 꺼 버린다.'}
 };
 var gCur='0.65';
 function drawG(){var d=GD[gCur], c=$('cG'), H=250, W=fit(c,H), ctx=c.getContext('2d'); ctx.clearRect(0,0,W,H); grid(ctx,W,H);
@@ -2015,7 +2093,7 @@ function drawG(){var d=GD[gCur], c=$('cG'), H=250, W=fit(c,H), ctx=c.getContext(
   stamp(ctx,W,'측정 요약을 옮긴 도식');
   var M=[['설탕 → MN9 최고 빈도',d.mn9[1]/120,d.mn9t,gCur==='0.55'?'harsh':'soft'],['설탕 600 ms 전체 스파이크',d.sp/500000,fmt(d.sp),''],['손질 600 ms 전체 스파이크',d.spG==null?0:d.spG/500000,d.spG==null?'—':fmt(d.spG),d.spG>200000?'harsh':''],['손질 중 케니언 세포',d.kcG==null?0:d.kcG/40,d.kcG==null?'—':d.kcG+' Hz',d.kcG>0?'harsh':'soft']];
   $('gM').innerHTML=M.map(function(m){return '<div class="lab">'+m[0]+'</div><div class="track"><div class="fill '+m[3]+'" style="width:'+(clamp(m[1],0,1)*100)+'%"></div></div><div class="num" style="font-size:13px;white-space:nowrap">'+m[2]+'</div>'}).join('');
-  $('insG').innerHTML='<p class="'+d.cls+'">'+d.txt+'</p><p class="m">탈출 경로(거대 섬유)는 세 이득 모두에서 안정적이었다. 저장소는 이와 별도로, 독립 재현 실험이 더 낮은 이득(약 0.45)과 더듬이엽 보정을 권한다는 사실도 숨기지 않고 적어 두었다 <a class="fn" href="#src">[4]</a>.</p>';}
+  $('insG').innerHTML='<p class="'+d.cls+'">'+d.txt+'<\/p><p class="m">탈출 경로(거대 섬유)는 세 이득 모두에서 안정적이었다. 저장소는 이와 별도로, 독립 재현 실험이 더 낮은 이득(약 0.45)과 더듬이엽 보정을 권한다는 사실도 숨기지 않고 적어 두었다 <a class="fn" href="#src">[4]<\/a>.<\/p>';}
 segGroup('#gain [data-gs]','data-gs',function(v){gCur=v; drawG();});
 drawG(); window.addEventListener('resize',drawG);
 
@@ -2038,11 +2116,11 @@ $('behTable').innerHTML=BEH.map(function(b){return '<tr><td style="color:var(--t
   var h='';
   for(var i=0;i<=4;i++){h+='<line x1="'+X(i/4)+'" y1="'+y0+'" x2="'+X(i/4)+'" y2="'+y1+'" stroke="#363a52" stroke-width="1" opacity=".5"/><line x1="'+x0+'" y1="'+Y(i/4)+'" x2="'+x1+'" y2="'+Y(i/4)+'" stroke="#363a52" stroke-width="1" opacity=".5"/>';}
   h+='<rect x="'+X(0.6)+'" y="'+Y(1)+'" width="'+(X(1)-X(0.6))+'" height="'+(Y(0.55)-Y(1))+'" fill="rgba(241,182,70,.07)" stroke="#f1b646" stroke-dasharray="5 4" rx="8"/>';
-  h+='<text x="'+X(0.8)+'" y="'+(Y(1)+20)+'" text-anchor="middle" fill="#f1b646" font-size="13" font-weight="700">막 시작된 곳</text><text x="'+X(0.8)+'" y="'+(Y(1)+36)+'" text-anchor="middle" fill="#f1b646" font-size="12">실제 배선도 + 학습</text>';
+  h+='<text x="'+X(0.8)+'" y="'+(Y(1)+20)+'" text-anchor="middle" fill="#f1b646" font-size="13" font-weight="700">막 시작된 곳<\/text><text x="'+X(0.8)+'" y="'+(Y(1)+36)+'" text-anchor="middle" fill="#f1b646" font-size="12">실제 배선도 + 학습<\/text>';
   h+='<line x1="'+x0+'" y1="'+y1+'" x2="'+(x1+6)+'" y2="'+y1+'" stroke="#9d9bb8" stroke-width="1.5"/><line x1="'+x0+'" y1="'+y1+'" x2="'+x0+'" y2="'+(y0-6)+'" stroke="#9d9bb8" stroke-width="1.5"/>';
-  h+='<text x="'+x0+'" y="'+(y1+22)+'" fill="#9d9bb8" font-size="12">원리 설명용 모형</text><text x="'+x1+'" y="'+(y1+22)+'" text-anchor="end" fill="#9d9bb8" font-size="12">실제 배선도 그대로 →</text>';
-  h+='<text x="'+(x0-10)+'" y="'+y1+'" text-anchor="end" fill="#9d9bb8" font-size="12">배선</text><text x="'+(x0-10)+'" y="'+(y1+14)+'" text-anchor="end" fill="#9d9bb8" font-size="12">고정</text>';
-  h+='<text x="'+(x0-10)+'" y="'+(y0+4)+'" text-anchor="end" fill="#9d9bb8" font-size="12">경험</text><text x="'+(x0-10)+'" y="'+(y0+18)+'" text-anchor="end" fill="#9d9bb8" font-size="12">으로</text><text x="'+(x0-10)+'" y="'+(y0+32)+'" text-anchor="end" fill="#9d9bb8" font-size="12">학습</text>';
+  h+='<text x="'+x0+'" y="'+(y1+22)+'" fill="#9d9bb8" font-size="12">원리 설명용 모형<\/text><text x="'+x1+'" y="'+(y1+22)+'" text-anchor="end" fill="#9d9bb8" font-size="12">실제 배선도 그대로 →<\/text>';
+  h+='<text x="'+(x0-10)+'" y="'+y1+'" text-anchor="end" fill="#9d9bb8" font-size="12">배선<\/text><text x="'+(x0-10)+'" y="'+(y1+14)+'" text-anchor="end" fill="#9d9bb8" font-size="12">고정<\/text>';
+  h+='<text x="'+(x0-10)+'" y="'+(y0+4)+'" text-anchor="end" fill="#9d9bb8" font-size="12">경험<\/text><text x="'+(x0-10)+'" y="'+(y0+18)+'" text-anchor="end" fill="#9d9bb8" font-size="12">으로<\/text><text x="'+(x0-10)+'" y="'+(y0+32)+'" text-anchor="end" fill="#9d9bb8" font-size="12">학습<\/text>';
   var P=[[0.18,0.86,'#d672d6','① 초파리 뇌 탐사','작은 신경망을 직접 학습',1],[0.34,0.5,'#82b8ff','② 기억 인출 논문 도해','실제 실험 결과 + 도식 모형',1],[0.9,0.1,'#5ee39c','마인크래프트 모드','17.6만 뉴런, 학습 없음',-1],[0.93,0.72,'#f1b646','Lappalainen 외 (2024)','값만 딥러닝으로 학습',-1]];
   P.forEach(function(p){var cx=X(p[0]), cy=Y(p[1]);
     h+='<circle cx="'+cx+'" cy="'+cy+'" r="16" fill="'+p[2]+'" opacity=".18"/><circle cx="'+cx+'" cy="'+cy+'" r="7" fill="'+p[2]+'"/>';
@@ -2051,30 +2129,30 @@ $('behTable').innerHTML=BEH.map(function(b){return '<tr><td style="color:var(--t
   svg.innerHTML=h;})();
 
 var TOPIC={
- loom:{name:'다가오는 물체와 도약',head:'<b>세 작업 중 가장 크게 겹치는 주제.</b> 같은 뉴런(LPLC2, 거대 섬유)을 다루고, 흥미롭게도 둘 다 앞단의 움직임 검출을 지름길로 처리했다. 이 빈칸(T4·T5)을 실제 배선도 위의 딥러닝 학습으로 채운 연구가 Lappalainen 외 (2024)다.',
+ loom:{name:'다가오는 물체와 도약',head:'<b>세 작업 중 가장 크게 겹치는 주제.<\/b> 같은 뉴런(LPLC2, 거대 섬유)을 다루고, 흥미롭게도 둘 다 앞단의 움직임 검출을 지름길로 처리했다. 이 빈칸(T4·T5)을 실제 배선도 위의 딥러닝 학습으로 채운 연구가 Lappalainen 외 (2024)다.',
   c:['④ 여러 층 칸. 169개 낱눈에서 밝기 변화 → 가장자리 속도 → "사방으로 퍼짐" 점수(로뷸라) → 거대 섬유 도약을 직접 계산한다. 실제 T4·T5의 시간차 비교 대신 속도를 바로 구했다고 밝혔다.','다루지 않는다.','LC4·LPLC2 → 거대 섬유 DNp01 → TTMn. 뒤쪽 결정은 배선도에서 저절로 나오지만, 메둘라가 조용해서 LC4·LPLC2에는 다가옴 신호를 계산해 직접 넣는다.']},
- mb:{name:'버섯체와 학습',head:'<b>앞의 두 페이지의 중심이, 이 모드에서는 일부러 비워 둔 칸이다.</b>',
+ mb:{name:'버섯체와 학습',head:'<b>앞의 두 페이지의 중심이, 이 모드에서는 일부러 비워 둔 칸이다.<\/b>',
   c:['규칙 파리 vs 학습 파리 실험장, ③ 일반 칸의 "초파리 방식"(무작위로 고정된 넓은 은닉층 + 출력층만 학습 = 케니언 세포 → 출력 뉴런).','도파민이 케니언 세포 → 기억 출력 뉴런 연결을 약하게 하고, 그 기억이 측각의 합류 뉴런을 거쳐야 행동이 된다.','케니언 세포 4,064개의 입력을 0.25배로 줄여 약 1 Hz로 조용하게 둔다. 도파민 같은 신경조절물질과 학습 규칙이 없다. 배선은 들어 있지만 쓰이지 않는다.']},
- taste:{name:'맛과 먹기',head:'<b>모드가 가장 잘 해내는 부분.</b> 페이지에서는 짧게 스친 "다리로 맛보기"가 모드에서는 먹기 결정의 입력이다.',
+ taste:{name:'맛과 먹기',head:'<b>모드가 가장 잘 해내는 부분.<\/b> 페이지에서는 짧게 스친 "다리로 맛보기"가 모드에서는 먹기 결정의 입력이다.',
   c:['전기 신호 칸에서 "초파리는 다리로도 맛을 본다"고 소개하고, 맛도 하나의 입력 채널이라고 설명한다.','먹이 냄새 투사 뉴런이 합류 뉴런에 직접 들어와 타고난 끌림을 만든다(맛이 아니라 냄새 쪽).','다리·주둥이·인두의 맛 뉴런 → G2N-1 → Fudog·Rounddown → MN9. 쓴맛은 Scapula가 운동 직전에 MN9를 끈다. 모두 배선도에서 창발.']},
- olf:{name:'냄새 경로',head:'<b>앞의 두 페이지는 냄새가 주인공인데, 모드에서는 냄새가 가장 약한 고리다.</b>',
+ olf:{name:'냄새 경로',head:'<b>앞의 두 페이지는 냄새가 주인공인데, 모드에서는 냄새가 가장 약한 고리다.<\/b>',
   c:['3D 뇌의 냄새 경로: 더듬이 → 더듬이엽(정규화 층) → 버섯체·측각 → 행동.','논문 전체가 냄새 기억의 인출 경로다. 전기충격과 짝지은 냄새 A를 T자 미로에서 피한다.','더듬이엽이 포화되어(투사 뉴런 약 410 Hz) 방향 신호가 사라진다. 냄새 쪽으로 걷기는 사람이 짠 반사층이 맡고 화면에 [REFLEX]로 표시한다.']},
- spike:{name:'전기 신호와 스파이크',head:'<b>같은 원리, 다른 깊이.</b> 페이지는 "발화 빈도 = 출력 숫자"로 요약했고, 모드는 스파이크 하나하나를 계산한다.',
+ spike:{name:'전기 신호와 스파이크',head:'<b>같은 원리, 다른 깊이.<\/b> 페이지는 "발화 빈도 = 출력 숫자"로 요약했고, 모드는 스파이크 하나하나를 계산한다.',
   c:['자극 세기가 클수록 스파이크가 잦아지고, 시냅스 강도가 가중치라는 것을 예시값으로 보여 준다. 계산은 발화 빈도(숫자) 수준.','칼슘 반응 곡선을 도식으로 그렸다(실제 측정값 아님).','17.6만 뉴런이 모두 스파이크를 쏜다. 감각 뉴런은 무작위(푸아송) 스파이크로 자극한다. 단, 발화 빈도의 절댓값은 믿지 말라고 스스로 경고한다.']},
- knock:{name:'뉴런 끄고 켜기',head:'<b>"하나를 바꾸고 결과를 본다"는 실험 논리는 셋이 같다.</b>',
+ knock:{name:'뉴런 끄고 켜기',head:'<b>"하나를 바꾸고 결과를 본다"는 실험 논리는 셋이 같다.<\/b>',
   c:['"원하는 뉴런만 켜고 끌 수 있다"를 초파리 연구의 이유로 들고, 신경망에서 유닛을 지워 보는 실험에 비유한다.','온도 스위치로 합류 뉴런을 끄면 기억 인출이 줄어든다(통계값 포함).','/fruitfly stim 명령으로 아무 뉴런 무리나 원하는 빈도로 켤 수 있다. 예: MDN을 60 Hz로 켜면 뒤로 걷는다. 끄는 명령은 기본으로 없다.']}
 };
 var tCur='loom';
 $('topicBtns').innerHTML=Object.keys(TOPIC).map(function(k){return '<button class="bt" data-tp="'+k+'" aria-pressed="'+(k===tCur)+'">'+TOPIC[k].name+'</button>'}).join('');
 function drawTopic(){var T=TOPIC[tCur]; $('topicHead').innerHTML=T.head;
-  $('topicCmp').innerHTML=['<div class="tag t1">①번 페이지 · 초파리 뇌 탐사</div>','<div class="tag t2">②번 페이지 · 기억 인출 논문</div>','<div class="tag t3">마인크래프트 모드</div>'].map(function(tg,i){return '<div>'+tg+'<p>'+T.c[i]+'</p></div>'}).join('');}
+  $('topicCmp').innerHTML=['<div class="tag t1">①번 페이지 · 초파리 뇌 탐사<\/div>','<div class="tag t2">②번 페이지 · 기억 인출 논문<\/div>','<div class="tag t3">마인크래프트 모드<\/div>'].map(function(tg,i){return '<div>'+tg+'<p>'+T.c[i]+'</p></div>'}).join('');}
 segGroup('#topicBtns [data-tp]','data-tp',function(v){tCur=v; drawTopic();});
 drawTopic();
 
 var CMP=[
  ['형태','한 장짜리 HTML 교육 페이지','한 장짜리 HTML 논문 도해','마인크래프트 Fabric 모드 (Java)'],
  ['중심 질문','신경망은 어떻게 배우나','배운 기억은 어디를 거쳐 행동이 되나','배우지 않고 연결만으로 행동이 나오나'],
- ['참고 연구','FlyWire (2024) 외 교과서적 사실','Dolan 외 (2018) <i>Neuron</i>','Berg 외 (2026) <i>Cell</i> + Shiu 외 (2024) <i>Nature</i>'],
+ ['참고 연구','FlyWire (2024) 외 교과서적 사실','Dolan 외 (2018) <i>Neuron<\/i>','Berg 외 (2026) <i>Cell<\/i> + Shiu 외 (2024) <i>Nature<\/i>'],
  ['배선도 사용','개념으로 소개 (약 14만 뉴런)','쓰지 않음 (실험 결과 중심)','17.6만 뉴런·629만 연결을 그대로'],
  ['뉴런 모형','문턱·시그모이드·tanh·ReLU','도식 식 (합류 = 먹이 + 0.6 × 기억)','누설 적분 발화 (스파이크)'],
  ['학습','핵심 (경사하강법, 역전파, 예측 오차)','핵심 (도파민이 바꾼 연결)','없음 (이득 0.65 등 몇 개의 값만 보정)'],
@@ -2087,7 +2165,7 @@ var CMP=[
  ['실행','브라우저로 열기, 설치 없음','브라우저로 열기, 설치 없음','Java 21 + Fabric, 8코어 이상 권장'],
  ['대상','한국어 입문자','한국어 입문자','영어권 게이머·연구자·교육자']
 ];
-$('cmpTable').innerHTML='<thead><tr><th>항목</th><th class="c1">① 초파리 뇌 탐사</th><th class="c2">② 기억 인출 논문 도해</th><th class="c3">마인크래프트 모드</th></tr></thead><tbody>'+CMP.map(function(r){return '<tr><td>'+r[0]+'</td><td class="c1">'+r[1]+'</td><td class="c2">'+r[2]+'</td><td class="c3">'+r[3]+'</td></tr>'}).join('')+'</tbody>';
+$('cmpTable').innerHTML='<thead><tr><th>항목<\/th><th class="c1">① 초파리 뇌 탐사<\/th><th class="c2">② 기억 인출 논문 도해<\/th><th class="c3">마인크래프트 모드<\/th><\/tr><\/thead><tbody>'+CMP.map(function(r){return '<tr><td>'+r[0]+'</td><td class="c1">'+r[1]+'</td><td class="c2">'+r[2]+'</td><td class="c3">'+r[3]+'</td></tr>'}).join('')+'</tbody>';
 
 var SAME=[['흐름','감각 → 뇌 → 행동','셋 모두 입력(더듬이·겹눈·맛)에서 출력(행동)까지 한 줄기를 따라간다. 모드의 세계 → 인코더 → 뇌 → 해독기 → 몸은 ①번 페이지의 입력 → 전처리 → 은닉 → 출력과 같은 뼈대다.'],
  ['등장 뉴런','같은 뉴런들','LPLC2·거대 섬유, 버섯체·케니언 세포, 존스턴 기관, 다리 맛 뉴런이 세 작업에 걸쳐 되풀이해 나온다.'],
@@ -2288,7 +2366,7 @@ function hl(code){var rx=/(#[^\n]*)|("""[\s\S]*?"""|f?"[^"\n]*"|f?'[^'\n]*')|([A
     else if(m[3]) out+=KW.test(m[3])?'<span class="ad-k">'+m[3]+'</span>':esc(m[3]); else out+='<span class="ad-n">'+m[4]+'</span>';
     last=rx.lastIndex;}
   return out+esc(code.slice(last));}
-function codeBox(el,code,name){el.innerHTML='<div class="ad-codebar"><span>'+esc(name)+'</span><span><button class="bt ad-copy" type="button">복사</button> <button class="bt ad-dl" type="button">.py 받기</button></span></div><pre class="ad-code"><code>'+hl(code)+'</code></pre>';
+function codeBox(el,code,name){el.innerHTML='<div class="ad-codebar"><span>'+esc(name)+'<\/span><span><button class="bt ad-copy" type="button">복사<\/button> <button class="bt ad-dl" type="button">.py 받기<\/button><\/span><\/div><pre class="ad-code"><code>'+hl(code)+'</code></pre>';
   el.querySelector('.ad-copy').addEventListener('click',function(){copyText(code,this)});
   el.querySelector('.ad-dl').addEventListener('click',function(){download(name,code,'text/x-python')});}
 
@@ -2381,18 +2459,18 @@ DIAG.p3=function(){var h='',R=FE.rng(5),sens=col(70,5,70,230),cx=330,cy=155,n=14
 var INFO={
  mlp:['범용 단일 신경망 (MLP)','입력 벡터 전체를 한 번에 받아 층을 차례로 지난다. 층끼리 모두 연결되어 있고, 모든 가중치를 역전파로 학습한다. 순서나 공간 구조를 따로 알지 못한다.','h = ReLU(W₁x + b₁),  y = softmax(W₂h + b₂)'],
  rnn:['순환 신경망 (RNN)','입력을 한 시점씩 읽으며, 이전 시점의 은닉 상태 h를 다음 시점에 되먹인다. 같은 가중치를 모든 시점에 쓴다. 순서가 길어지면 기울기가 사라져 먼 과거를 잘 기억하지 못한다.','h(t) = tanh(W·x(t) + U·h(t−1) + b)'],
- gru:['GRU (게이트 순환 유닛)','RNN에 게이트 두 개를 달았다. 업데이트 게이트 z가 옛 기억과 새 후보를 섞는 비율을, 리셋 게이트 r이 후보를 만들 때 옛 기억을 얼마나 참고할지 정한다. LSTM보다 가볍다.','z = σ(W_z x + U_z h),  r = σ(W_r x + U_r h),  h̃ = tanh(W x + U(r⊙h)),  h(t) = (1−z)⊙h(t−1) + z⊙h̃<br><small style="color:var(--amber)">표기 주의: 교재마다 z의 역할이 다르다. 코랩에서 쓰는 PyTorch nn.GRU는 반대로 h(t) = (1−z)⊙h̃ + z⊙h(t−1), 즉 z가 옛 기억을 남기는 비율이다.</small>'],
+ gru:['GRU (게이트 순환 유닛)','RNN에 게이트 두 개를 달았다. 업데이트 게이트 z가 옛 기억과 새 후보를 섞는 비율을, 리셋 게이트 r이 후보를 만들 때 옛 기억을 얼마나 참고할지 정한다. LSTM보다 가볍다.','z = σ(W_z x + U_z h),  r = σ(W_r x + U_r h),  h̃ = tanh(W x + U(r⊙h)),  h(t) = (1−z)⊙h(t−1) + z⊙h̃<br><small style="color:var(--amber)">표기 주의: 교재마다 z의 역할이 다르다. 코랩에서 쓰는 PyTorch nn.GRU는 반대로 h(t) = (1−z)⊙h̃ + z⊙h(t−1), 즉 z가 옛 기억을 남기는 비율이다.<\/small>'],
  lstm:['LSTM (장단기 기억)','은닉 상태와 따로 "셀 상태" c라는 기억 통로를 둔다. 망각 게이트가 지우고, 입력 게이트가 더하고, 출력 게이트가 꺼낸다. 덧셈으로 이어지는 통로 덕분에 먼 과거의 정보도 잘 전달된다.','c(t) = f⊙c(t−1) + i⊙g,  h(t) = o⊙tanh(c(t))'],
  cnn:['합성곱 신경망 (CNN)','작은 필터를 이미지 위로 밀며 같은 계산을 반복한다. 위치마다 같은 가중치를 공유해 파라미터가 적고, 가장자리 같은 국소 패턴을 어디서든 찾는다. 필터 값도 학습된다.','특징(i,j) = ReLU( Σ K(a,b) · x(i+a, j+b) + b ) → 풀링 → 완전 연결']
 };
 
 var ROWS=['입력을 읽는 방식','시간(순서) 처리','기억은 어디에','가중치 공유','학습되는 곳','학습 규칙','잘하는 일','약점','초파리에서 닮은 곳 · 근거 수준'];
 var COLS={
- mlp:['벡터 전체를 한 번에','없음','없음 (학습된 가중치뿐)','없음','모든 층','역전파','고정 크기 입력의 분류·회귀','순서·공간 구조를 모름','더듬이엽 → 버섯체 → 출력의 층 구조 <span class="ad-ev b">느슨한 비유</span>'],
- rnn:['한 시점씩 차례로','은닉 상태를 다음 시점에 전달','은닉 상태 h (짧게)','시간마다 같은 가중치','모든 층','시간을 거슬러 역전파 (BPTT)','짧은 순서 데이터','긴 순서에서 기울기 소실','중심복합체의 고리 모양 되먹임 (방향 유지) <span class="ad-ev s">구조가 닮음</span>'],
- gru:['한 시점씩 차례로','게이트로 유지·갱신 비율 조절','h (게이트로 보존)','시간마다 같은 가중치','모든 층','BPTT','중간 길이 순서, 가벼움','게이트 해석이 어려움','상황에 따라 유지 시간을 바꾸는 신경조절 <span class="ad-ev p">순수 비유</span>'],
- lstm:['한 시점씩 차례로','셀 상태 통로 + 게이트 3개','셀 상태 c (길게) + h','시간마다 같은 가중치','모든 층','BPTT','긴 순서 데이터','파라미터가 가장 많고 느림','장기 기억을 따로 두는 발상 (버섯체 기억) <span class="ad-ev p">순수 비유</span>'],
- cnn:['작은 창을 밀며','없음 (공간 구조 이용)','없음','위치마다 같은 필터','모든 층 (필터 포함)','역전파','이미지, 국소 패턴','먼 위치 사이의 관계에 약함','겹눈의 기둥마다 같은 회로 반복 (시엽) <span class="ad-ev s">구조가 닮음</span>']
+ mlp:['벡터 전체를 한 번에','없음','없음 (학습된 가중치뿐)','없음','모든 층','역전파','고정 크기 입력의 분류·회귀','순서·공간 구조를 모름','더듬이엽 → 버섯체 → 출력의 층 구조 <span class="ad-ev b">느슨한 비유<\/span>'],
+ rnn:['한 시점씩 차례로','은닉 상태를 다음 시점에 전달','은닉 상태 h (짧게)','시간마다 같은 가중치','모든 층','시간을 거슬러 역전파 (BPTT)','짧은 순서 데이터','긴 순서에서 기울기 소실','중심복합체의 고리 모양 되먹임 (방향 유지) <span class="ad-ev s">구조가 닮음<\/span>'],
+ gru:['한 시점씩 차례로','게이트로 유지·갱신 비율 조절','h (게이트로 보존)','시간마다 같은 가중치','모든 층','BPTT','중간 길이 순서, 가벼움','게이트 해석이 어려움','상황에 따라 유지 시간을 바꾸는 신경조절 <span class="ad-ev p">순수 비유<\/span>'],
+ lstm:['한 시점씩 차례로','셀 상태 통로 + 게이트 3개','셀 상태 c (길게) + h','시간마다 같은 가중치','모든 층','BPTT','긴 순서 데이터','파라미터가 가장 많고 느림','장기 기억을 따로 두는 발상 (버섯체 기억) <span class="ad-ev p">순수 비유<\/span>'],
+ cnn:['작은 창을 밀며','없음 (공간 구조 이용)','없음','위치마다 같은 필터','모든 층 (필터 포함)','역전파','이미지, 국소 패턴','먼 위치 사이의 관계에 약함','겹눈의 기둥마다 같은 회로 반복 (시엽) <span class="ad-ev s">구조가 닮음<\/span>']
 };
 
 /* 파라미터 수: 입력 16×16, 클래스 3, 은닉 64 기준 (코랩 코드와 같은 모델) */
@@ -2402,9 +2480,9 @@ function initArch(){var opts=[['this',CFG.thisShort],['mlp','MLP'],['rnn','RNN']
   $('adArchBtns').innerHTML=opts.map(function(o,i){return '<button class="bt" type="button" data-ar="'+o[0]+'" aria-pressed="'+(i===0)+'">'+o[1]+'</button>'}).join('');
   function show(k){var key=k==='this'?CFG.page:k, inf=k==='this'?CFG.thisInfo:INFO[k];
     $('adDiag').innerHTML='<svg viewBox="0 0 760 300" role="img" aria-label="'+esc(inf[0])+' 구조 다이어그램">'+defs()+DIAG[key]()+'</svg>';
-    $('adArchInfo').innerHTML='<div class="ad-t">'+inf[0]+(k==='this'?' <span class="ad-chip">이 페이지</span>':'')+'</div><p>'+inf[1]+'</p><div class="ad-eq">'+inf[2]+'</div>';}
+    $('adArchInfo').innerHTML='<div class="ad-t">'+inf[0]+(k==='this'?' <span class="ad-chip">이 페이지<\/span>':'')+'</div><p>'+inf[1]+'</p><div class="ad-eq">'+inf[2]+'</div>';}
   seg('#adArchBtns [data-ar]','data-ar',show); show('this');
-  var head='<thead><tr><th>구분</th><th class="ad-this">'+CFG.thisShort+'</th><th>MLP</th><th>RNN</th><th>GRU</th><th>LSTM</th><th>CNN</th></tr></thead>';
+  var head='<thead><tr><th>구분<\/th><th class="ad-this">'+CFG.thisShort+'</th><th>MLP</th><th>RNN</th><th>GRU</th><th>LSTM</th><th>CNN</th></tr></thead>';
   $('adArchTable').innerHTML=head+'<tbody>'+ROWS.map(function(r,i){return '<tr><td>'+r+'</td><td class="ad-this">'+CFG.thisCol[i]+'</td>'+['mlp','rnn','gru','lstm','cnn'].map(function(k){return '<td>'+COLS[k][i]+'</td>'}).join('')+'</tr>'}).join('')+'</tbody>';
   var rows=PCOUNT.concat([[CFG.thisShort,CFG.thisCount[0],CFG.thisCount[1],1]]), mx=21187;
   $('adParams').innerHTML=rows.map(function(r){var w1=r[1]/mx*100,w2=r[2]/mx*100;
@@ -2412,7 +2490,7 @@ function initArch(){var opts=[['this',CFG.thisShort],['mlp','MLP'],['rnn','RNN']
 
 /* ══ 2) 파이썬 비교 ═══════════════════════════════════════════ */
 function initPy(){codeBox($('adPyThis'),CFG.pyThis,CFG.pyThisName); codeBox($('adPyDL'),CFG.pyDL,CFG.pyDLName);
-  $('adPyDiff').innerHTML='<thead><tr><th>항목</th><th class="ad-this">'+CFG.thisShort+'</th><th>일반 딥러닝 코드</th></tr></thead><tbody>'+CFG.diffs.map(function(d){return '<tr><td>'+d[0]+'</td><td class="ad-this">'+d[1]+'</td><td>'+d[2]+'</td></tr>'}).join('')+'</tbody>';}
+  $('adPyDiff').innerHTML='<thead><tr><th>항목<\/th><th class="ad-this">'+CFG.thisShort+'<\/th><th>일반 딥러닝 코드<\/th><\/tr><\/thead><tbody>'+CFG.diffs.map(function(d){return '<tr><td>'+d[0]+'</td><td class="ad-this">'+d[1]+'</td><td>'+d[2]+'</td></tr>'}).join('')+'</tbody>';}
 
 window.ADUI={cv:cv,esc:esc,seg:seg,download:download,copyText:copyText,hl:hl,codeBox:codeBox,reduce:reduce};
 initArch(); if($('adPyThis')) initPy();
@@ -2453,8 +2531,8 @@ function thumb(x,c){var cvs=document.createElement('canvas');cvs.width=cvs.heigh
   for(var i=0;i<256;i++){var v=Math.round(x[i]*255);im.data[i*4]=v;im.data[i*4+1]=v;im.data[i*4+2]=v;im.data[i*4+3]=255;}t.putImageData(im,0,0);cvs.className='ad-th';cvs.style.borderColor=c;return cvs;}
 function renderClasses(){var box=$('adClasses');box.innerHTML='';
   st.classes.forEach(function(k,ci){var c='var('+PAL[ci]+')',d=document.createElement('div');d.className='ad-class';d.style.borderLeftColor=c;
-    d.innerHTML='<div class="ad-chead"><input class="ad-name" value="'+U.esc(k.name)+'" aria-label="클래스 이름" maxlength="24"><span class="ad-cnt">'+k.samples.length+'개</span>'+(st.classes.length>2?'<button class="ad-x" type="button" title="클래스 삭제" aria-label="클래스 삭제">✕</button>':'')+'</div>'+
-      '<div class="ad-cbtn"><button class="bt ad-add" type="button">그림 추가</button>'+(st.cam?'<button class="bt ad-hold" type="button">웹캠 누르고 있기</button>':'')+'<button class="bt ad-clr" type="button">비우기</button></div><div class="ad-thumbs"></div>';
+    d.innerHTML='<div class="ad-chead"><input class="ad-name" value="'+U.esc(k.name)+'" aria-label="클래스 이름" maxlength="24"><span class="ad-cnt">'+k.samples.length+'개<\/span>'+(st.classes.length>2?'<button class="ad-x" type="button" title="클래스 삭제" aria-label="클래스 삭제">✕<\/button>':'')+'</div>'+
+      '<div class="ad-cbtn"><button class="bt ad-add" type="button">그림 추가<\/button>'+(st.cam?'<button class="bt ad-hold" type="button">웹캠 누르고 있기<\/button>':'')+'<button class="bt ad-clr" type="button">비우기<\/button><\/div><div class="ad-thumbs"><\/div>';
     var th=d.querySelector('.ad-thumbs');k.samples.slice(-18).forEach(function(x){th.appendChild(thumb(x,c));});
     d.querySelector('.ad-name').addEventListener('input',function(){k.name=this.value;renderBars(lastP);});
     d.querySelector('.ad-add').addEventListener('click',function(){if(!dirty){msg('그림판에 먼저 그림을 그리자.','a');return;}k.samples.push(bufFrom(pad,true));markStale();clearPad();renderClasses();});
@@ -2496,7 +2574,7 @@ $('adTrain').addEventListener('click',function(){if(st.training){st.training=fal
     st.hist.push([loss/ids.length,FE.accuracy(st.model,ds.X,ds.Y,st.split.tr),FE.accuracy(st.model,ds.X,ds.Y,st.split.va)]);ep++;drawCurve();updateTrainKpis();setTimeout(tick,0);})();
   function done(){var h=st.hist[st.hist.length-1],gap=h[2]!=null?h[1]-h[2]:0;
     var t='학습 완료 ('+Math.round(performance.now()-st.t0)+' ms). ';
-    if(h[2]==null) t+='검증 데이터가 없어 일반화는 알 수 없다.'; else if(gap>0.2) t+='<b>훈련 정확도('+pct(h[1])+')가 검증 정확도('+pct(h[2])+')보다 훨씬 높다 — 과적합이다.</b> 샘플을 더 모으거나 에포크를 줄여 보자.'; else t+='검증 정확도 '+pct(h[2])+'. 그림판에 새로 그려 ③ 미리보기에서 확인하자.';
+    if(h[2]==null) t+='검증 데이터가 없어 일반화는 알 수 없다.'; else if(gap>0.2) t+='<b>훈련 정확도('+pct(h[1])+')가 검증 정확도('+pct(h[2])+')보다 훨씬 높다 — 과적합이다.<\/b> 샘플을 더 모으거나 에포크를 줄여 보자.'; else t+='검증 정확도 '+pct(h[2])+'. 그림판에 새로 그려 ③ 미리보기에서 확인하자.';
     msg(t,gap>0.2?'a':'g');renderCM();livePredict();}});
 function pct(v){return v==null?'—':Math.round(v*100)+'%';}
 function drawCurve(){var c=$('adCurve'),W=c.clientWidth||300,H=150,dpr=window.devicePixelRatio||1;c.width=W*dpr;c.height=H*dpr;c.style.height=H+'px';var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);x.clearRect(0,0,W,H);
@@ -2512,12 +2590,12 @@ function updateTrainKpis(){var ds=dataset(),m=st.model&&!st.stale?st.model:FE.ma
 
 /* ── 페이지별 추가 조절 ── */
 function renderExtra(){var el=$('adExtra');el.innerHTML='';
-  if(CFG.page==='p2'&&st.kind==='mblh'){el.innerHTML='<div class="ad-sub">측각의 타고난 끌림 (학습하지 않는 값)</div>'+st.classes.map(function(k,i){return '<div class="ad-slider"><span>'+U.esc(k.name)+'</span><input type="range" min="-2" max="2" step="0.1" value="'+st.innate[i]+'" data-i="'+i+'" aria-label="'+U.esc(k.name)+' 타고난 끌림"><b>'+st.innate[i].toFixed(1)+'</b></div>'}).join('')+
-      '<button class="bt" type="button" id="adRet" aria-pressed="false">합류 뉴런의 기억 입력 차단</button><p class="note">학습 뒤에 바꿔도 바로 미리보기에 반영된다. 차단하면 본능 값만 남는다 (②번 페이지 3장의 실험).</p><p class="note" style="color:var(--amber)">참고: 여기서 기억 출력 연결은 "정답 − 예측" 오차로 바뀐다. 실제 도파민 신호(보상·처벌 한 가지 값)를 정답 라벨로 단순화한 것이다. 보상·처벌만으로 배우는 규칙은 공통 섹션 A의 코드 1에 있다.</p>';
+  if(CFG.page==='p2'&&st.kind==='mblh'){el.innerHTML='<div class="ad-sub">측각의 타고난 끌림 (학습하지 않는 값)<\/div>'+st.classes.map(function(k,i){return '<div class="ad-slider"><span>'+U.esc(k.name)+'</span><input type="range" min="-2" max="2" step="0.1" value="'+st.innate[i]+'" data-i="'+i+'" aria-label="'+U.esc(k.name)+' 타고난 끌림"><b>'+st.innate[i].toFixed(1)+'</b></div>'}).join('')+
+      '<button class="bt" type="button" id="adRet" aria-pressed="false">합류 뉴런의 기억 입력 차단<\/button><p class="note">학습 뒤에 바꿔도 바로 미리보기에 반영된다. 차단하면 본능 값만 남는다 (②번 페이지 3장의 실험).<\/p><p class="note" style="color:var(--amber)">참고: 여기서 기억 출력 연결은 "정답 − 예측" 오차로 바뀐다. 실제 도파민 신호(보상·처벌 한 가지 값)를 정답 라벨로 단순화한 것이다. 보상·처벌만으로 배우는 규칙은 공통 섹션 A의 코드 1에 있다.<\/p>';
     el.querySelectorAll('input[type=range]').forEach(function(r){r.addEventListener('input',function(){var i=+this.dataset.i;st.innate[i]=+this.value;this.nextElementSibling.textContent=(+this.value).toFixed(1);if(st.model&&st.model.innate) st.model.innate[i]=st.innate[i];livePredict();});});
     $('adRet').addEventListener('click',function(){st.retrieve=!st.retrieve;this.setAttribute('aria-pressed',!st.retrieve);this.textContent=st.retrieve?'합류 뉴런의 기억 입력 차단':'기억 입력 다시 연결';if(st.model&&'retrieve' in st.model) st.model.retrieve=st.retrieve;livePredict();});}
-  if(CFG.page==='p3'&&st.kind==='snn') el.innerHTML='<p class="note">숨은 뉴런 160개의 연결은 무작위로 한 번 정해진 뒤 고정된다(80% 흥분, 20% 억제). 학습되는 것은 발화 빈도를 클래스로 읽는 해독층뿐이다 — 마인크래프트 모드가 배선도는 그대로 두고 해독기만 사람이 맞춘 것과 같은 구도다.</p>';
-  if(CFG.page==='p1'&&st.kind==='fly') el.innerHTML='<p class="note">케니언 세포 1,000개가 각각 입력 10개를 무작위로 받고, 상위 8%만 켜진다. 딥러닝 MLP로 바꿔 같은 데이터로 학습해 보고 학습되는 연결 수와 검증 정확도를 비교하자.</p>';}
+  if(CFG.page==='p3'&&st.kind==='snn') el.innerHTML='<p class="note">숨은 뉴런 160개의 연결은 무작위로 한 번 정해진 뒤 고정된다(80% 흥분, 20% 억제). 학습되는 것은 발화 빈도를 클래스로 읽는 해독층뿐이다 — 마인크래프트 모드가 배선도는 그대로 두고 해독기만 사람이 맞춘 것과 같은 구도다.<\/p>';
+  if(CFG.page==='p1'&&st.kind==='fly') el.innerHTML='<p class="note">케니언 세포 1,000개가 각각 입력 10개를 무작위로 받고, 상위 8%만 켜진다. 딥러닝 MLP로 바꿔 같은 데이터로 학습해 보고 학습되는 연결 수와 검증 정확도를 비교하자.<\/p>';}
 
 /* ── 미리보기 ── */
 var lastP=null;
@@ -2525,12 +2603,12 @@ function livePredict(){var x=currentX();if(!x||!st.model||!st.trained){lastP=nul
 function renderBars(p,x){var el=$('adBars');
   el.innerHTML=st.classes.map(function(k,i){var v=p&&i<p.length?p[i]:0;return '<div class="ad-bar"><span>'+U.esc(k.name)+'</span><div class="track"><div class="fill" style="width:'+(v*100)+'%;background:var('+PAL[i]+')"></div></div><b>'+(p?Math.round(v*100)+'%':'—')+'</b></div>'}).join('');
   var r=$('adReact');
-  if(!st.trained){r.innerHTML='<p class="muted">② 학습을 마치면, 그림판에 그리는 동안 판단이 실시간으로 나온다.</p>';return;}
+  if(!st.trained){r.innerHTML='<p class="muted">② 학습을 마치면, 그림판에 그리는 동안 판단이 실시간으로 나온다.<\/p>';return;}
   if(!p){r.innerHTML='<p class="muted">그림판에 그려 보자'+(st.cam?' (또는 입력을 웹캠으로 바꾸자)':'')+'.</p>';return;}
   var b=0;for(var i=1;i<p.length;i++) if(p[i]>p[b]) b=i;
-  var t='<p><b style="color:var('+PAL[b]+')">'+U.esc(st.classes[b].name)+'</b> · 확신 '+Math.round(p[b]*100)+'%'+(p[b]<0.6?' — <span style="color:var(--amber)">확신이 낮다. 이 모양의 샘플을 더 모으자.</span>':'')+'</p>';
+  var t='<p><b style="color:var('+PAL[b]+')">'+U.esc(st.classes[b].name)+'<\/b> · 확신 '+Math.round(p[b]*100)+'%'+(p[b]<0.6?' — <span style="color:var(--amber)">확신이 낮다. 이 모양의 샘플을 더 모으자.<\/span>':'')+'</p>';
   if(CFG.page==='p2'&&st.model.parts){var pt=st.model.parts(x);t+='<div class="ad-mini">'+st.classes.map(function(k,i){return '<span>'+U.esc(k.name)+': 본능 '+(st.model.wI*st.model.innate[i]).toFixed(2)+' + 기억 '+(st.model.retrieve?(st.model.wM*pt.memory[i]).toFixed(2):'차단')+'</span>'}).join('')+'</div>';}
-  if(CFG.page==='p3'&&st.model.run){t+='<canvas id="adRaster" class="ad-raster" aria-label="숨은 뉴런의 스파이크"></canvas><p class="note">숨은 뉴런 160개의 스파이크 (가로 = 시간 40스텝). 해독층은 이 발화 빈도만 보고 판단한다.</p>';}
+  if(CFG.page==='p3'&&st.model.run){t+='<canvas id="adRaster" class="ad-raster" aria-label="숨은 뉴런의 스파이크"><\/canvas><p class="note">숨은 뉴런 160개의 스파이크 (가로 = 시간 40스텝). 해독층은 이 발화 빈도만 보고 판단한다.<\/p>';}
   r.innerHTML=t;
   if(CFG.page==='p3'&&st.model.run) drawRaster(st.model.run(x,5,true).raster);}
 function drawRaster(ras){var c=$('adRaster');if(!c) return;var W=c.clientWidth||280,H=110,dpr=window.devicePixelRatio||1;c.width=W*dpr;c.height=H*dpr;c.style.height=H+'px';var x=c.getContext('2d');x.setTransform(dpr,0,0,dpr,0,0);
@@ -2584,10 +2662,10 @@ function renderCM(){var el=$('adCM'),ds=dataset(),C=st.classes.length;if(!st.mod
   var M=[];for(var a=0;a<C;a++){M.push([]);for(var b=0;b<C;b++) M[a].push(0);}
   ids.forEach(function(i){var p=st.model.predict(ds.X[i]),k=0;for(var c=1;c<p.length;c++) if(p[c]>p[k]) k=c;if(ds.Y[i]<C&&k<C) M[ds.Y[i]][k]++;});
   var sh=function(n){n=String(n);return U.esc(n.length>7?n.slice(0,6)+'…':n);};
-  var h='<div class="ad-sub">혼동 행렬 · '+basis+' (행 = 정답, 열 = 모델의 판단)</div><div style="overflow-x:auto"><table class="ad-cm"><tr><th></th>'+st.classes.map(function(k){return '<th title="'+U.esc(k.name)+'">'+sh(k.name)+'</th>'}).join('')+'</tr>';
+  var h='<div class="ad-sub">혼동 행렬 · '+basis+' (행 = 정답, 열 = 모델의 판단)<\/div><div style="overflow-x:auto"><table class="ad-cm"><tr><th><\/th>'+st.classes.map(function(k){return '<th title="'+U.esc(k.name)+'">'+sh(k.name)+'</th>'}).join('')+'</tr>';
   M.forEach(function(row,a){h+='<tr><th title="'+U.esc(st.classes[a].name)+'">'+sh(st.classes[a].name)+'</th>'+row.map(function(v,b){return '<td class="'+(a===b?'d':(v?'x':''))+'">'+v+'</td>'}).join('')+'</tr>';});
   var worst=null;M.forEach(function(row,a){row.forEach(function(v,b){if(a!==b&&v&&(!worst||v>worst[2])) worst=[a,b,v];});});
-  h+='</table></div>'+(worst?'<p class="note">가장 많이 헷갈린 쌍: <b>'+U.esc(st.classes[worst[0]].name)+'</b>을(를) <b>'+U.esc(st.classes[worst[1]].name)+'</b>(으)로 '+worst[2]+'번. 이 두 클래스의 샘플을 더 모으면 좋아진다.</p>':'<p class="note">헷갈린 경우가 없다.</p>');
+  h+='</table></div>'+(worst?'<p class="note">가장 많이 헷갈린 쌍: <b>'+U.esc(st.classes[worst[0]].name)+'<\/b>을(를) <b>'+U.esc(st.classes[worst[1]].name)+'<\/b>(으)로 '+worst[2]+'번. 이 두 클래스의 샘플을 더 모으면 좋아진다.<\/p>':'<p class="note">헷갈린 경우가 없다.<\/p>');
   el.innerHTML=h;}
 var restored=restore();
 clearPad();renderClasses();renderExtra();drawCurve();renderBars(null);
@@ -2982,7 +3060,7 @@ torch.save(best.state_dict(), "fly_model.pt"); print("저장: fly_model.pt")
 (function(){
 var $=function(id){return document.getElementById(id)};
 var SERIES=[{"f": "1_fruitfly_brain_deep_learning.html", "n": "특별 1", "t": "초파리 뇌 탐사", "ready": 1}, {"f": "2_fruitfly_memory_retrieval_paper.html", "n": "특별 2", "t": "기억 인출 논문", "ready": 1}, {"f": "3_fruitfly_minecraft_connectome.html", "n": "특별 3", "t": "마인크래프트 속 초파리 뇌", "ready": 1}], cur='특별 3';
-var el=$('series'); if(el) el.innerHTML='<span class="lab">딥러닝 A to Z · 초파리 특별편</span>'+SERIES.map(function(s){
+var el=$('series'); if(el) el.innerHTML='<span class="lab">딥러닝 A to Z · 초파리 특별편<\/span>'+SERIES.map(function(s){
   return s.n===cur?'<a class="cur" href="#top" aria-current="page">'+s.n+' '+s.t+'</a>':'<a href="'+s.f+'">'+s.n+' '+s.t+'</a>';}).join('');
 function src(id){var e=$('src-'+id); return e?e.textContent.replace(/^\n/,''):''}
 var CODE={code1:{name:'fly-3_code1',title:"초파리 특별편 3 · 코드 1: 배선도로 고정된 누설 적분 발화 신경망을 넘파이로",text:src('code1')},code2:{name:'fly-3_code2',title:"초파리 특별편 3 · 코드 2: PyTorch로 일반 딥러닝 다섯 가지 대 초파리 모델 세 가지",text:src('code2')}};
@@ -3010,14 +3088,14 @@ $('run1').textContent="발화한 뉴런 190개 · 평균 14.4 Hz · 학습된 �
 var dl=$('dlcode'); if(dl) dl.innerHTML=hl("# 일반 딥러닝의 짝: 스파이킹 신경망도 가중치를 \"학습\"한다 — 대리 기울기(surrogate gradient)\nimport torch, torch.nn as nn\ntorch.manual_seed(0)\n\nclass Spike(torch.autograd.Function):    # 앞으로는 계단(0/1), 뒤로는 부드러운 기울기로 속인다\n    @staticmethod\n    def forward(ctx, v):\n        ctx.save_for_backward(v); return (v > 0).float()\n    @staticmethod\n    def backward(ctx, grad):\n        v, = ctx.saved_tensors; return grad / (1 + 10 * v.abs()) ** 2\n\nfc1, fc2 = nn.Linear(256, 200), nn.Linear(200, 3)    # 연결을 무작위로 시작해서 학습한다\nopt = torch.optim.Adam(list(fc1.parameters()) + list(fc2.parameters()), lr=2e-3)\nX = torch.rand(60, 256); Y = torch.arange(60) % 3; X[Y == 0, :80] += 1; X[Y == 1, 80:160] += 1; X[Y == 2, 160:] += 1\nX = X / X.max()\n\nfor epoch in range(30):\n    mem = torch.zeros(60, 200); out = torch.zeros(60, 3)\n    for t in range(20):                               # 시간 루프는 ③번과 같다\n        inp = (torch.rand_like(X) < X).float()        # 푸아송 입력\n        mem = 0.9 * mem + fc1(inp)                    # 새는 양동이\n        spk = Spike.apply(mem - 1.0); mem = mem - spk # 쏘면 리셋\n        out = out + fc2(spk)\n    loss = nn.functional.cross_entropy(out, Y)\n    opt.zero_grad(); loss.backward(); opt.step()      # 시간을 거슬러 역전파 (BPTT)\n\nprint(f\"훈련 정확도 {(out.argmax(1) == Y).float().mean():.2f} · 학습된 가중치 {sum(p.numel() for p in fc1.parameters()) + sum(p.numel() for p in fc2.parameters()):,}개\")\n");
 /* 프롬프트 */
 var P=[{"t": "응용 분야 찾기", "use": "이 코드로 무엇을 할 수 있을지 감을 잡고 싶을 때", "tip": "관심 분야를 구체적으로 쓸수록(예: \"제조 공정의 불량 검사\") 쓸모 있는 답이 나온다.", "p": "너는 딥러닝 교육과 현업 적용에 밝은 멘토다. 아래 파이썬 코드는 딥러닝 입문 자료 \"특별편 3 마인크래프트 속 초파리 뇌\"의 실습 코드다. 실제 배선도로 고정된 스파이킹 신경망을 돌리고, 해독층만 학습한 모델과 일반 딥러닝 모델을 비교한다.\n\n1. 이 코드가 하는 일을 비전공자도 알 수 있게 3줄로 요약해 줘.\n2. 이 코드를 출발점으로 삼을 수 있는 응용 분야 5가지를 〔관심 분야: 예) 제조 품질, 금융, 헬스케어〕 중심으로 제안해 줘.\n3. 분야마다 표로 정리해 줘: ① 입력 데이터 예시 ② 정답(레이블) 예시 ③ 코드에서 바꿔야 할 부분(함수·변수 이름까지) ④ 예상되는 어려움.\n4. 내 수준은 〔예) 파이썬 기초, 딥러닝 처음〕이다. 첫 주에 해 볼 수 있는 가장 작은 실험 하나를 추천해 줘."}, {"t": "해커톤 48시간 계획", "use": "해커톤·아이디어톤에서 이 코드로 시제품을 만들 때", "tip": "팀원 역할과 데이터 확보 가능 여부를 먼저 적어 주면 계획이 현실적이 된다.", "p": "너는 해커톤 멘토다. 아래 코드를 바탕으로 48시간 해커톤에 낼 시제품을 기획하려 한다.\n\n- 해커톤 주제: 〔예) 공공데이터로 안전한 일터 만들기〕\n- 팀 구성: 〔예) 개발 2명, 기획 1명, 디자인 1명〕\n- 쓸 수 있는 데이터: 〔예) 공공데이터포털의 ○○ 데이터〕\n\n1. 이 코드의 고정 배선 스파이킹 신경망과 해독층 학습 구조을 확장한 서비스 아이디어 3개와, 심사위원이 좋아할 만한 차별점을 하나씩 써 줘.\n2. 가장 실현 가능한 아이디어 하나로 48시간 일정을 6시간 단위로 짜 줘(역할별 할 일 포함).\n3. 코드에서 바꿀 부분과 추가할 부분(데이터 불러오기, 평가 지표, 간단한 화면)을 순서대로 알려 줘.\n4. 3분 발표의 데모 시나리오와 예상 질문 3개, 답변 요지를 써 줘."}, {"t": "공모전 기획서 초안", "use": "데이터·AI 공모전에 낼 기획서의 뼈대가 필요할 때", "tip": "공모전의 평가 기준표를 함께 붙여 넣으면 기준에 맞춘 초안을 받을 수 있다.", "p": "너는 데이터·AI 공모전 심사 경험이 많은 컨설턴트다. 아래 코드를 기술 기반으로 삼아 공모전 기획서 초안을 쓰려 한다.\n\n- 공모전: 〔공모전 이름과 주제〕\n- 평가 기준: 〔예) 창의성 30, 실현 가능성 30, 데이터 활용 20, 파급 효과 20〕\n\n다음 목차로 초안을 써 줘: ① 배경과 문제 정의 ② 활용 데이터와 확보 방법 ③ 방법(고정 배선 스파이킹 신경망과 해독층 학습 구조을 어떻게 쓰는지, 학습·검증·시험 데이터 나누기 포함) ④ 평가 계획(정확도 외에 업무에 맞는 지표, 일반 MLP·RNN과 고정 배선 스파이킹 모델) ⑤ 기대 효과 ⑥ 한계와 위험(개인정보, 편향, 과적합, 학습 데이터에 없던 현장 상황).\n\n마지막에 \"AI 도구 활용 고지\" 문단을 따로 써 줘. 이 기획서 작성에 AI 도움을 받은 범위를 밝히는 문단이다. 공모전 규정에 AI 사용 관련 조항이 있는지 내가 확인해야 할 점도 알려 줘."}, {"t": "논문 아이디어와 실험 설계", "use": "수업 과제·학위 논문·학회 발표의 연구 설계를 잡을 때", "tip": "AI가 제시한 선행 연구는 실제로 있는지 반드시 직접 검색해 확인한다.", "p": "너는 기계학습 분야 지도교수다. 아래 코드를 출발점으로 〔연구 분야: 예) 경영학, 보건, 사회과학〕에서 작은 실증 연구를 설계하려 한다.\n\n1. 이 코드로 검증할 수 있는 연구 질문 3개를 제안하고, 각각의 가설을 한 문장으로 써 줘.\n2. 가장 좋은 질문 하나로 실험을 설계해 줘: 비교할 모델(일반 MLP·RNN과 고정 배선 스파이킹 모델), 데이터 나누기 방법, 평가 지표, 반복 실험 횟수와 통계 검정.\n3. 결과를 해석할 때 주의할 점(과적합, 데이터 누수, 표본 크기)을 짚어 줘.\n4. 찾아봐야 할 선행 연구의 검색 키워드를 한국어·영어로 알려 줘. 특정 논문을 추천할 때는 실제로 존재한다고 확신하는 것만 쓰고, 확실하지 않으면 \"확인 필요\"라고 표시해 줘. 인용은 내가 원문을 직접 확인한다.\n\n논문에 AI 도움을 받았다면 투고할 학술지의 AI 사용 규정을 따른다는 전제로 답해 줘."}], pc='code1';
-function render(){var c=CODE[pc];$('prompts').innerHTML=P.map(function(o,i){return '<article class="pcard"><h4>'+o.t+'</h4><div class="use">'+o.use+'</div><pre>'+esc(o.p)+'\n\n[아래에 '+(pc==='code1'?'코드 1 (넘파이)':'코드 2 (PyTorch)')+'가 함께 붙습니다]</pre><div class="tip">팁 · '+o.tip+'</div><button class="bt" data-pi="'+i+'">프롬프트 + 코드 복사</button></article>';}).join('');
+function render(){var c=CODE[pc];$('prompts').innerHTML=P.map(function(o,i){return '<article class="pcard"><h4>'+o.t+'</h4><div class="use">'+o.use+'</div><pre>'+esc(o.p)+'\n\n[아래에 '+(pc==='code1'?'코드 1 (넘파이)':'코드 2 (PyTorch)')+'가 함께 붙습니다]<\/pre><div class="tip">팁 · '+o.tip+'</div><button class="bt" data-pi="'+i+'">프롬프트 + 코드 복사<\/button><\/article>';}).join('');
   document.querySelectorAll('#prompts [data-pi]').forEach(function(b){b.addEventListener('click',function(){var o=P[+b.getAttribute('data-pi')];copy(o.p+'\n\n```python\n'+c.text+'\n```','프롬프트와 코드를 복사했습니다');});});}
 var pbs=document.querySelectorAll('#prompt [data-pcode]');pbs.forEach(function(b){b.addEventListener('click',function(){pbs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});pc=b.getAttribute('data-pcode');render();});});
 render();
 /* 용어표: 본문 말풍선 사전과 같은 내용 */
 var TM=window.__TERMS||{};
 function cl(s){return String(s).replace(/<[^>]+>/g,'')}
-$('termTable').innerHTML='<thead><tr><th>용어</th><th>다른 이름 · 분류</th><th>뜻</th></tr></thead><tbody>'+Object.keys(TM).sort(function(a,b){return a.localeCompare(b,'ko')}).map(function(k){var g=TM[k];
+$('termTable').innerHTML='<thead><tr><th>용어<\/th><th>다른 이름 · 분류<\/th><th>뜻<\/th><\/tr><\/thead><tbody>'+Object.keys(TM).sort(function(a,b){return a.localeCompare(b,'ko')}).map(function(k){var g=TM[k];
   return '<tr><td><b>'+cl(k)+'</b></td><td>'+cl(g[0]===k?g[1]:g[0]+(g[1]?' · '+g[1]:''))+'</td><td>'+cl(g[2]||'')+'</td></tr>';}).join('')+'</tbody>';
 })();
 

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ответы для преподавателя — Глубокое обучение от A до Z · Специальный выпуск о дрозофиле</title>
+<meta name="description" content="Ответы на контрольные вопросы выпусков 1–3 о дрозофиле, критерии оценивания и примеры решений заданий в Colab.">
+<meta name="author" content="Sangsun Ahn">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>@import url("https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css");
+:root{--night:#1b1533;--deep:#120e24;--panel:#261e45;--line:#3d3170;--text:#efe9ff;--muted:#b5abd6;--violet:#b07cff;--pink:#ff86b8;--red:#ef5b5b;--cyan:#57d0dc;--amber:#ffc65c;
+  --pix:"Galmuri11","Galmuri9","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;--body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);line-height:1.7;font-size:16px}
+a{color:var(--cyan)} a:focus-visible,button:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.pix{font-family:var(--pix);letter-spacing:0}
+h2{font-size:clamp(24px,3.4vw,34px);margin:0 0 6px;text-shadow:3px 3px 0 #5a2fa8}
+.sub{color:var(--muted);margin:0 0 22px}
+section{padding:56px 0;border-top:4px solid var(--line)}
+.btn{display:inline-block;font-family:var(--pix);font-size:15px;color:var(--text);text-decoration:none;background:var(--panel);border:3px solid var(--line);padding:10px 16px;box-shadow:4px 4px 0 #0b0818;cursor:pointer}
+.btn:hover{border-color:var(--cyan)} .btn.main{border-color:var(--violet);background:#3a2370}
+.box{background:var(--panel);border:3px solid var(--line);box-shadow:4px 4px 0 #0b0818;padding:16px 18px}
+img.px{image-rendering:auto;filter:drop-shadow(3px 3px 0 #0d0a1c)}
+footer{background:var(--deep);padding:30px 0 40px;color:var(--muted);font-size:14px;border-top:4px solid var(--line)}
+.cc{margin-top:14px;padding-top:12px;border-top:1px solid rgba(181,171,214,.3);font-size:13px;line-height:1.7}
+.cc .ccb{display:inline-block;border:2px solid currentColor;border-radius:3px;padding:0 5px;margin-right:4px;font-weight:700;font-size:11.5px}
+.cc a{color:inherit}
+
+header.top{background:var(--deep);padding:44px 0 26px;border-bottom:4px solid var(--line)}
+header.top h1{font-size:clamp(26px,4vw,40px);margin:0 0 10px;text-shadow:3px 3px 0 #5a2fa8}
+header.top p{color:var(--muted);max-width:70ch;margin:0}
+nav.bar{position:sticky;top:0;z-index:5;background:var(--night);border-bottom:4px solid var(--line)}
+nav.bar .wrap{display:flex;flex-wrap:wrap;gap:8px;padding-top:10px;padding-bottom:10px}
+nav.bar a{font-family:var(--pix);font-size:13px;color:var(--text);text-decoration:none;border:3px solid var(--line);padding:5px 10px;background:var(--panel)}
+nav.bar a:hover{border-color:var(--cyan)}
+section.ans{scroll-margin-top:70px}
+.ah{display:flex;gap:14px;align-items:center;margin-bottom:8px}
+.ah .no{font-family:var(--pix);font-size:16px;border:4px solid var(--violet);padding:6px 10px;color:var(--violet)}
+.ah h2{margin:0}
+.back{font-size:14px;margin:0 0 18px}
+.q{margin:0 0 14px}
+.q h4{margin:0 0 6px;font-size:16px}
+.q p{margin:4px 0;color:var(--text)} .q .pt{color:var(--amber);font-size:14px}
+h3{font-size:18px;color:var(--amber);margin:26px 0 10px}
+</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ko" href="../answers.html">
+<link rel="alternate" hreflang="en" href="../en/answers.html">
+<link rel="alternate" hreflang="zh-CN" href="../zh/answers.html">
+<link rel="alternate" hreflang="ja" href="../ja/answers.html">
+<link rel="alternate" hreflang="uz-Latn" href="../uz/answers.html">
+<link rel="alternate" hreflang="ru" href="../ru/answers.html">
+<style id="i18n-style">
+.i18n-banner{position:relative;z-index:40;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 10px;padding:8px 44px 8px 14px;background:#0d0a1c;color:#efe9ff;border-bottom:2px solid #57d0dc;font:500 14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+.i18n-banner .i18n-lab{font-weight:700;color:#57d0dc;white-space:nowrap}
+.i18n-banner a{color:#efe9ff;text-decoration:none;border:1px solid rgba(239,233,255,.35);border-radius:999px;padding:3px 11px;white-space:nowrap;line-height:1.4}
+.i18n-banner a:hover{border-color:#57d0dc;color:#57d0dc}
+.i18n-banner a[aria-current="true"]{background:#57d0dc;border-color:#57d0dc;color:#0d0a1c;font-weight:700}
+.i18n-banner .i18n-x{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:#b5abd6;font-size:20px;line-height:1;cursor:pointer;padding:4px 8px}
+.i18n-banner .i18n-x:hover{color:#efe9ff}
+.i18n-pick{display:inline-flex;align-items:center;gap:4px;flex:none;white-space:nowrap}
+.i18n-pick select{font:600 13.5px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;color:#efe9ff;background:#261e45;border:1px solid #57d0dc;border-radius:6px;padding:5px 6px;cursor:pointer;max-width:9.5em}
+.i18n-pick select:focus-visible{outline:2px solid #57d0dc;outline-offset:2px}
+.i18n-pick .i18n-globe{font-size:15px}
+nav.top.i18n-has{display:flex;align-items:center}
+nav.top.i18n-has>.wrap{flex:1 1 auto;min-width:0}
+nav.top>.i18n-pick{flex:none;padding:0 14px 0 10px;border-left:1px solid rgba(181,171,214,.25);margin-left:4px}
+.bar .i18n-pick{margin-left:auto}
+nav.i18n-top{position:sticky;top:0;z-index:35;background:rgba(18,14,36,.94);border-bottom:4px solid #3d3170;backdrop-filter:blur(6px)}
+nav.i18n-top .i18n-wrap{max-width:1120px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:12px}
+nav.i18n-top .i18n-brand{color:#efe9ff;text-decoration:none;font-weight:700;margin-right:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+nav.i18n-top a.i18n-link{color:#b5abd6;text-decoration:none;white-space:nowrap;font-size:14px}
+nav.i18n-top a.i18n-link:hover{color:#57d0dc}
+@media (max-width:560px){nav.i18n-top a.i18n-link{display:none}.i18n-banner{font-size:13px;padding-right:38px}}
+@media print{.i18n-banner,.i18n-pick,nav.i18n-top{display:none!important}}
+</style>
+<script id="i18n-script">
+(function(){
+var CUR='ru', FILE='answers.html', KEY='fly-lang';
+var L=[['ko','한국어',''],['en','English','en/'],['zh','中文','zh/'],['ja','日本語','ja/'],['uz','Oʻzbekcha','uz/'],['ru','Русский','ru/']];
+var LAB={ko:'언어',en:'Language',zh:'语言',ja:'言語',uz:'Til',ru:'Язык'};
+var CLOSE={ko:'배너 닫기',en:'Close banner',zh:'关闭横幅',ja:'バナーを閉じる',uz:'Bannerni yopish',ru:'Закрыть баннер'};
+var ROOT=CUR==='ko'?'':'../';
+function dir(c){for(var i=0;i<L.length;i++) if(L[i][0]===c) return L[i][2]; return null;}
+function url(c){return ROOT+dir(c)+FILE+(location.hash||'');}
+function get(k,s){try{return (s||localStorage).getItem(k);}catch(e){return null;}}
+function set(k,v,s){try{(s||localStorage).setItem(k,v);}catch(e){}}
+function detect(){var ls=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];
+  for(var i=0;i<ls.length;i++){var p=String(ls[i]).toLowerCase().split('-')[0]; if(dir(p)!==null) return p;} return null;}
+// 1) automatic switching: the reader's saved choice wins; otherwise the Korean default follows the browser language
+var pref=get(KEY), target=null;
+if(pref&&dir(pref)!==null&&pref!==CUR) target=pref;
+else if(!pref&&CUR==='ko'){var d=detect(); if(d&&d!=='ko') target=d;}
+if(target&&!/[?&]lang=stay\b/.test(location.search)){location.replace(url(target)); return;}
+function go(c){set(KEY,c); if(c!==CUR) location.href=url(c);}
+function picker(){var w=document.createElement('span'); w.className='i18n-pick';
+  var g=document.createElement('span'); g.className='i18n-globe'; g.setAttribute('aria-hidden','true'); g.textContent='🌐'; w.appendChild(g);
+  var s=document.createElement('select'); s.setAttribute('aria-label',LAB[CUR]+' / Language');
+  L.forEach(function(x){var o=document.createElement('option'); o.value=x[0]; o.textContent=x[1]; o.lang=x[0]; if(x[0]===CUR) o.selected=true; s.appendChild(o);});
+  s.addEventListener('change',function(){go(s.value);}); w.appendChild(s); return w;}
+function banner(){var b=document.createElement('div'); b.className='i18n-banner'; b.setAttribute('role','navigation'); b.setAttribute('aria-label',LAB[CUR]+' / Language');
+  var t=document.createElement('span'); t.className='i18n-lab'; t.textContent='🌐 '+LAB[CUR]+(CUR==='en'?'':' · Language'); b.appendChild(t);
+  L.forEach(function(x){var a=document.createElement('a'); a.href=url(x[0]); a.textContent=x[1]; a.lang=x[0]; a.hreflang=x[0];
+    if(x[0]===CUR) a.setAttribute('aria-current','true');
+    a.addEventListener('click',function(e){e.preventDefault(); go(x[0]);}); b.appendChild(a);});
+  var c=document.createElement('button'); c.type='button'; c.className='i18n-x'; c.setAttribute('aria-label',CLOSE[CUR]); c.textContent='×';
+  c.addEventListener('click',function(){b.remove(); set('fly-lang-banner','off',sessionStorage);}); b.appendChild(c); return b;}
+function init(){var body=document.body;
+  // 2) language menu inside the topmost navigation
+  var nt=document.querySelector('nav.top'), nb=document.querySelector('nav.bar .wrap');
+  if(nt){nt.classList.add('i18n-has'); nt.appendChild(picker());}
+  else if(nb){nb.appendChild(picker());}
+  else{var n=document.createElement('nav'); n.className='i18n-top'; n.setAttribute('aria-label',LAB[CUR]);
+    var w=document.createElement('div'); w.className='i18n-wrap';
+    var br=document.createElement('a'); br.className='i18n-brand'; br.href='#'; br.textContent="Глубокое обучение от A до Z · Специальный выпуск о дрозофиле"; w.appendChild(br);
+    [["1_fruitfly_brain_deep_learning.html", "Выпуск 1"], ["2_fruitfly_memory_retrieval_paper.html", "Выпуск 2"], ["3_fruitfly_minecraft_connectome.html", "Выпуск 3"], ["answers.html", "Ответы"]].forEach(function(x){var a=document.createElement('a'); a.className='i18n-link'; a.href=x[0]; a.textContent=x[1]; w.appendChild(a);});
+    w.appendChild(picker()); n.appendChild(w); body.insertBefore(n,body.firstChild);}
+  // 3) language banner at the very top
+  if(get('fly-lang-banner',sessionStorage)!=='off') body.insertBefore(banner(),body.firstChild);}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+<!-- i18n:end -->
+</head>
+<body>
+<header class="top"><div class="wrap"><h1>Ответы для преподавателя</h1><p>Если вы учащийся, сначала решите контрольные вопросы каждого выпуска, а потом сверяйтесь. Здесь приведены критерии оценивания (20 баллов за вопрос, 100 баллов за выпуск) и примеры решений заданий в Colab. Числа в примерах могут немного отличаться в зависимости от среды выполнения.</p></div></header>
+<nav class="bar" aria-label="Переход к выпускам"><div class="wrap"><a href="index.html">Главная</a><a href="#a-s1">Выпуск 1 Путешествие по мозгу дрозофилы</a><a href="#a-s2">Выпуск 2 Статья об извлечении памяти</a><a href="#a-s3">Выпуск 3 Мозг дрозофилы в Minecraft</a></div></nav>
+<section class="ans" id="a-s1"><div class="wrap"><div class="ah"><span class="no">Выпуск 1</span><h2>Путешествие по мозгу дрозофилы</h2></div><p class="back"><a href="1_fruitfly_brain_deep_learning.html#teach">Вернуться к совету для преподавателя на странице выпуска 1</a></p><h3>Ответы на контрольные вопросы и критерии оценивания</h3><div class="q box"><h4>Q1. Каков выход перцептрона с двумя входами (1, 0), весами (0,8, −0,5) и порогом 0,5?</h4><p><b>Ответ</b> · Сумма = 1×0,8 + 0×(−0,5) = 0,8. Поскольку 0,8 ≥ 0,5, выход равен 1.</p><p class="pt">20 баллов · Оценивание: ход вычислений 10, результат 10</p></div><div class="q box"><h4>Q2. Почему перцептрон не может решить задачу «полосы» (корм только посередине)?</h4><p><b>Ответ</b> · Перцептрон разделяет пространство только одной прямой (плоскостью). Полосе нужны две границы — с обеих сторон, поэтому одной прямой её не отделить. Скрытый слой строит несколько границ и объединяет их.</p><p class="pt">20 баллов · Оценивание: «одна прямая» 10, «нужны две границы» 10</p></div><div class="q box"><h4>Q3. Точность на обучающих данных 96%, на валидационных 59%. Что произошло? Назовите две меры.</h4><p><b>Ответ</b> · Переобучение: модель запомнила обучающие данные. Меры (любые две): собрать больше данных, уменьшить число скрытых нейронов, остановить обучение раньше.</p><p class="pt">20 баллов · Оценивание: диагноз «переобучение» 10, каждая мера по 5</p></div><div class="q box"><h4>Q4. Какие связи в «мушином» способе обучаются, а какие фиксированы?</h4><p><b>Ответ</b> · Фиксированы: проекционные нейроны → клетки Кеньона (случайные разреженные связи). Обучаются: клетки Кеньона → выходные нейроны (их меняет дофамин).</p><p class="pt">20 баллов · Оценивание: по 10 за каждую часть</p></div><div class="q box"><h4>Q5. В коде 2 «мушиный» способ (4 004 обучаемых параметра) дал точность, близкую к MLP (16 708 обучаемых параметров). О чём это говорит?</h4><p><b>Ответ</b> · Широкого разреженного фиксированного представления достаточно, чтобы простые задачи с рисунками решались обучением одного выходного слоя. Однако само представление не улучшается, поэтому на сложных задачах есть предел.</p><p class="pt">20 баллов · Оценивание: «фиксированного представления достаточно» 10, упоминание ограничения 10</p></div><h3>Примеры решений заданий в Colab</h3><div class="q box"><h4>Базовое</h4><p><b>Задание</b> · В коде 1 измените TOP (долю активных клеток) с 0,08 на 0,5, сообщите, как изменятся точность на обучающих данных и число активных клеток Кеньона, и в двух предложениях объясните, чем полезна разреженность.</p><p><b>Пример решения</b> · Если поднять TOP до 0,5, активируется половина клеток Кеньона, и коды разных входов сильно перекрываются. Игрушечные данные простые, поэтому точность на обучающих данных может остаться высокой, но число активных клеток вырастает примерно с 80 до примерно 500, и воспоминания легко смешиваются. Разреженный код использует для каждого входа лишь немногие неперекрывающиеся клетки, поэтому различает даже похожие запахи, а изменение одного воспоминания меньше задевает другие.</p><p class="pt">Критерии · проверено изменение числа активных клеток (5) · сообщена точность (5) · два преимущества разреженности (меньше перекрытия, меньше интерференции) (10)</p></div><div class="q box"><h4>Продвинутое</h4><p><b>Задание</b> · В коде 2 задайте размер скрытого слоя MLP 8, 64 и 512 и сравните точность на валидационных данных для двух сидов. Объясните, видно ли переобучение, опираясь на кривые обучения (ячейка 7).</p><p><b>Пример решения</b> · С ростом скрытого слоя функция потерь на обучающих данных падает быстрее, но точность на валидационных данных не растёт или колеблется в зависимости от сида. На примере из 160 образцов (96 обучающих) скрытый слой из 512 нейронов легко запоминает обучающие данные. О переобучении судят по моменту на кривых обучения, когда разрыв между потерями на обучении и точностью на валидации начинает расти.</p><p class="pt">Критерии · таблица: три размера × два сида (8) · обоснование по кривым обучения (6) · интерпретация с учётом объёма данных (6)</p></div></div></section>
+<section class="ans" id="a-s2"><div class="wrap"><div class="ah"><span class="no">Выпуск 2</span><h2>Статья об извлечении памяти</h2></div><p class="back"><a href="2_fruitfly_memory_retrieval_paper.html#teach">Вернуться к совету для преподавателя на странице выпуска 2</a></p><h3>Ответы на контрольные вопросы и критерии оценивания</h3><div class="q box"><h4>Q1. Сформулируйте главный тезис статьи одним предложением.</h4><p><b>Ответ</b> · Чтобы воспоминание превратилось в поведение, сигнал памяти, извлечённый в грибовидном теле, должен быть передан нейронам схождения (PD2a1/b1) в латеральном роге.</p><p class="pt">20 баллов · Оценивание: «грибовидное тело → латеральный рог» 10, «нужен нейрон схождения» 10</p></div><div class="q box"><h4>Q2. Зачем в эксперименте с отключением нейрона схождения нужна «контрольная группа, где только повышают температуру»?</h4><p><b>Ответ</b> · Температура сама по себе может менять поведение, поэтому нужно отличить, упал ли показатель памяти из-за блокировки нейрона или из-за температуры.</p><p class="pt">20 баллов · Оценивание: цель контроля 20</p></div><div class="q box"><h4>Q3. В модельной лаборатории формула схождения: 1,0 × инстинкт + 0,6 × память. Чему равно значение схождения при инстинкте = 0,2 и памяти = −1,0? А если заблокировать вход памяти?</h4><p><b>Ответ</b> · 0,2 + 0,6 × (−1,0) = −0,4 (в сторону избегания). При блокировке 0,2 (остаётся только инстинкт — в сторону приближения).</p><p class="pt">20 баллов · Оценивание: по 10 за каждую часть</p></div><div class="q box"><h4>Q4. Почему при отключении одного нейрона исчезают и извлечение памяти, и тяга к корму?</h4><p><b>Ответ</b> · Потому что этот нейрон — общий слой, который получает оба пути (сигнал памяти из грибовидного тела и инстинктивный сигнал от проекционных нейронов запаха корма) и выдаёт их на выход.</p><p class="pt">20 баллов · Оценивание: понятие «общего» слоя 20</p></div><div class="q box"><h4>Q5. В коде 2 при блокировке извлечения памяти точность упала с 0,84 до 0,09. Почему именно 0,09?</h4><p><b>Ответ</b> · Все значения инстинкта равны 0, поэтому оценки всех классов одинаковы, и модель всегда выбирает первый класс. 0,09 — это доля первого класса в тестовых данных.</p><p class="pt">20 баллов · Оценивание: «оценки становятся одинаковыми» 10, «доля первого класса» 10</p></div><h3>Примеры решений заданий в Colab</h3><div class="q box"><h4>Базовое</h4><p><b>Задание</b> · В коде 1 замените значение innate на [0.0, 0.5] (инстинкт в сторону избегания), представьте в таблице результаты до обучения, после обучения и при блокировке и сравните случаи, когда инстинкт и память направлены в одну сторону и в противоположные.</p><p><b>Пример решения</b> · При innate = [0.0, 0.5] оценка инстинкта указывает на «избегание» уже до обучения. Обучение с наказанием снижает оценку «приближения» со стороны памяти, поэтому после обучения тоже избегание, а при блокировке входа памяти — избегание за счёт одного инстинкта. В исходной настройке (innate = [0.5, 0.0]) при блокировке поведение возвращалось к приближению. Если инстинкт и память направлены одинаково, блокировка не меняет поведения и вклад памяти не виден; только при противоположных направлениях эксперимент с блокировкой показывает роль памяти.</p><p class="pt">Критерии · таблица трёх ситуаций (8) · сравнение с исходной настройкой (6) · вывод «видно только при противоположных направлениях» (6)</p></div><div class="q box"><h4>Продвинутое</h4><p><b>Задание</b> · В MemoryInnate из кода 2 задайте значение innate (например, 2.0 для класса «крестик»), обучите модель, затем заблокируйте вход памяти. Сравните матрицы ошибок до и после блокировки и опишите, как инстинкт притягивает решение.</p><p><b>Пример решения</b> · Если задать 2.0 для класса «крестик», во время обучения путь памяти подстраивается так, чтобы компенсировать это притяжение. При блокировке остаётся только инстинкт, и модель принимает большинство рисунков за крестик, так что значения в матрице ошибок скапливаются в столбце «крестик». Важно отметить: инстинкт работает как необучаемое смещение (bias), а память — как поправка поверх него.</p><p class="pt">Критерии · матрицы ошибок до и после блокировки (8) · объяснение перекоса в столбец «крестик» (6) · интерпретация «смещение + поправка» (6)</p></div></div></section>
+<section class="ans" id="a-s3"><div class="wrap"><div class="ah"><span class="no">Выпуск 3</span><h2>Мозг дрозофилы в Minecraft</h2></div><p class="back"><a href="3_fruitfly_minecraft_connectome.html#teach">Вернуться к совету для преподавателя на странице выпуска 3</a></p><h3>Ответы на контрольные вопросы и критерии оценивания</h3><div class="q box"><h4>Q1. Сколько мВ составляет ток g, который добавляет один входной спайк по связи из 30 синапсов? (0,275 мВ × коэффициент усиления 0,65)</h4><p><b>Ответ</b> · 30 × 0,275 × 0,65 ≈ 5,36 мВ.</p><p class="pt">20 баллов · Оценивание: формула 10, значение 10</p></div><div class="q box"><h4>Q2. Потенциал покоя −52 мВ, порог −45 мВ. Если один спайк поднимает мембранный потенциал примерно на 0,1575 × g, какое g нужно, чтобы нейрон сработал от одного спайка?</h4><p><b>Ответ</b> · До порога 7 мВ. 7 / 0,1575 ≈ 44,4 мВ. При коэффициенте усиления 1,0 нужно одновременно около 162 синапсов, при 0,65 — около 249.</p><p class="pt">20 баллов · Оценивание: расчёт 7 мВ 10, значение g 10</p></div><div class="q box"><h4>Q3. В сцене «сахар + горечь» мотонейрон хоботка (MN9) молчит (0 Гц), а сладкие нейроны второго порядка активны. На каком этапе происходит торможение?</h4><p><b>Ответ</b> · На этапе непосредственно перед моторным. Горький тормоз (Scapula) перекрывает путь команды «есть».</p><p class="pt">20 баллов · Оценивание: «непосредственно перед моторным» 20</p></div><div class="q box"><h4>Q4. Что произойдёт в сцене чистки, если поднять коэффициент усиления до 0,75?</h4><p><b>Ответ</b> · За 200 мс число спайков за тик вырастает в пять раз, клетки Кеньона просыпаются до 39 Гц, а возникшее торможение выключает даже командные нейроны чистки (разгон активности).</p><p class="pt">20 баллов · Оценивание: явление разгона 10, отключение команды чистки 10</p></div><div class="q box"><h4>Q5. В коде 2 модель с фиксированной схемой и спайками при 644 обучаемых связях показала на тесте 0,75–0,81. Как интерпретировать этот результат в сравнении с MLP (16 708 связей, 0,88–0,91)?</h4><p><b>Ответ</b> · Обучая лишь около 4% связей, модель угадывает довольно хорошо, но не может обучить само представление, поэтому уступает MLP. Стоит также отметить, что данных мало (32 тестовых примера), так что разница колеблется в пределах ±0,1.</p><p class="pt">20 баллов · Оценивание: сравнение долей 10, ограничения и неопределённость 10</p></div><h3>Примеры решений заданий в Colab</h3><div class="q box"><h4>Базовое</h4><p><b>Задание</b> · В коде 1 замените коэффициент усиления 0,65 на 0,55 и 0,75, представьте в таблице число сработавших нейронов и среднюю частоту разрядов и в двух предложениях свяжите это с разгоном активности из раздела «Подбор усиления».</p><p><b>Пример решения</b> · При меньшем усилении (0,55) ток от одного входа уменьшается, и число сработавших нейронов и средняя частота разрядов ниже, чем при 0,65; при большем (0,75) — выше. Даже в маленькой сети из кода 1 с ростом усиления разряды, распространяющиеся по обратным связям, быстро нарастают. Во всей нервной системе самца в моде этот рост проявляется как разгон активности (в пять раз больше спайков за тик, клетки Кеньона на 39 Гц), поэтому выбрано 0,65.</p><p class="pt">Критерии · таблица для трёх значений усиления (8) · объяснение направления роста (6) · связь с разгоном активности (6)</p></div><div class="q box"><h4>Продвинутое</h4><p><b>Задание</b> · В ConnectomeLIF из кода 2 замените знак всех тормозных нейронов (−0.5) на +0.18 (убрать торможение) и обучите заново. Сравните записи спайков (ячейка 8) и точность для двух сидов и опишите, что делает торможение в сети.</p><p><b>Пример решения</b> · Без торможения большинство скрытых нейронов срабатывает чаще и равномернее, и запись спайков становится плотной. Различия в паттернах разрядов для разных входов уменьшаются, у декодирующего слоя остаётся меньше информации для различения, поэтому точность падает или колеблется в зависимости от сида. Торможение ограничивает активность и делает паттерны разреженными и различимыми (ту же роль играет правило «верхние 8% клеток Кеньона» из выпуска 1).</p><p class="pt">Критерии · сравнение записей спайков (6) · точность для двух сидов (6) · интерпретация роли торможения (8)</p></div></div></section>
+<footer><div class="wrap"><p><b style="color:var(--text)">Глубокое обучение от A до Z · Специальный выпуск о дрозофиле</b> — Автор · Sangsun Ahn (генеральный директор M-Robo Inc.).</p><p class="cc"><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.ru" target="_blank" rel="license noopener" aria-label="Creative Commons «Атрибуция — Некоммерческое использование» 4.0 Международная"><span class="ccb">cc</span><span class="ccb">BY</span><span class="ccb">NC</span></a> Это произведение распространяется по <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.ru" target="_blank" rel="license noopener">лицензии Creative Commons «Атрибуция — Некоммерческое использование» 4.0 Международная (CC BY-NC 4.0)</a>. Его можно свободно распространять и перерабатывать в некоммерческих целях, но <b>указание источника обязательно</b>. Пример указания источника: Sangsun Ahn, «Глубокое обучение от A до Z · Специальный выпуск о дрозофиле», AI Model Review.</p></div></footer>

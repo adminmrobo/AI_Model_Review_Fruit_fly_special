@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>教师用答案 — 深度学习 A to Z · 果蝇特别篇</title>
+<meta name="description" content="果蝇特别篇 1~3 的练习题答案、评分标准及 Colab 作业参考答案。">
+<meta name="author" content="Sangsun Ahn">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>@import url("https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css");
+:root{--night:#1b1533;--deep:#120e24;--panel:#261e45;--line:#3d3170;--text:#efe9ff;--muted:#b5abd6;--violet:#b07cff;--pink:#ff86b8;--red:#ef5b5b;--cyan:#57d0dc;--amber:#ffc65c;
+  --pix:"Noto Sans SC","PingFang SC","Microsoft YaHei","Galmuri11","Galmuri9","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;--body:"Noto Sans SC","PingFang SC","Microsoft YaHei","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);line-height:1.7;font-size:16px}
+a{color:var(--cyan)} a:focus-visible,button:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.pix{font-family:var(--pix);letter-spacing:0}
+h2{font-size:clamp(24px,3.4vw,34px);margin:0 0 6px;text-shadow:3px 3px 0 #5a2fa8}
+.sub{color:var(--muted);margin:0 0 22px}
+section{padding:56px 0;border-top:4px solid var(--line)}
+.btn{display:inline-block;font-family:var(--pix);font-size:15px;color:var(--text);text-decoration:none;background:var(--panel);border:3px solid var(--line);padding:10px 16px;box-shadow:4px 4px 0 #0b0818;cursor:pointer}
+.btn:hover{border-color:var(--cyan)} .btn.main{border-color:var(--violet);background:#3a2370}
+.box{background:var(--panel);border:3px solid var(--line);box-shadow:4px 4px 0 #0b0818;padding:16px 18px}
+img.px{image-rendering:auto;filter:drop-shadow(3px 3px 0 #0d0a1c)}
+footer{background:var(--deep);padding:30px 0 40px;color:var(--muted);font-size:14px;border-top:4px solid var(--line)}
+.cc{margin-top:14px;padding-top:12px;border-top:1px solid rgba(181,171,214,.3);font-size:13px;line-height:1.7}
+.cc .ccb{display:inline-block;border:2px solid currentColor;border-radius:3px;padding:0 5px;margin-right:4px;font-weight:700;font-size:11.5px}
+.cc a{color:inherit}
+
+header.top{background:var(--deep);padding:44px 0 26px;border-bottom:4px solid var(--line)}
+header.top h1{font-size:clamp(26px,4vw,40px);margin:0 0 10px;text-shadow:3px 3px 0 #5a2fa8}
+header.top p{color:var(--muted);max-width:70ch;margin:0}
+nav.bar{position:sticky;top:0;z-index:5;background:var(--night);border-bottom:4px solid var(--line)}
+nav.bar .wrap{display:flex;flex-wrap:wrap;gap:8px;padding-top:10px;padding-bottom:10px}
+nav.bar a{font-family:var(--pix);font-size:13px;color:var(--text);text-decoration:none;border:3px solid var(--line);padding:5px 10px;background:var(--panel)}
+nav.bar a:hover{border-color:var(--cyan)}
+section.ans{scroll-margin-top:70px}
+.ah{display:flex;gap:14px;align-items:center;margin-bottom:8px}
+.ah .no{font-family:var(--pix);font-size:16px;border:4px solid var(--violet);padding:6px 10px;color:var(--violet)}
+.ah h2{margin:0}
+.back{font-size:14px;margin:0 0 18px}
+.q{margin:0 0 14px}
+.q h4{margin:0 0 6px;font-size:16px}
+.q p{margin:4px 0;color:var(--text)} .q .pt{color:var(--amber);font-size:14px}
+h3{font-size:18px;color:var(--amber);margin:26px 0 10px}
+</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ko" href="../answers.html">
+<link rel="alternate" hreflang="en" href="../en/answers.html">
+<link rel="alternate" hreflang="zh-CN" href="../zh/answers.html">
+<link rel="alternate" hreflang="ja" href="../ja/answers.html">
+<link rel="alternate" hreflang="uz-Latn" href="../uz/answers.html">
+<link rel="alternate" hreflang="ru" href="../ru/answers.html">
+<style id="i18n-style">
+.i18n-banner{position:relative;z-index:40;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 10px;padding:8px 44px 8px 14px;background:#0d0a1c;color:#efe9ff;border-bottom:2px solid #57d0dc;font:500 14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+.i18n-banner .i18n-lab{font-weight:700;color:#57d0dc;white-space:nowrap}
+.i18n-banner a{color:#efe9ff;text-decoration:none;border:1px solid rgba(239,233,255,.35);border-radius:999px;padding:3px 11px;white-space:nowrap;line-height:1.4}
+.i18n-banner a:hover{border-color:#57d0dc;color:#57d0dc}
+.i18n-banner a[aria-current="true"]{background:#57d0dc;border-color:#57d0dc;color:#0d0a1c;font-weight:700}
+.i18n-banner .i18n-x{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:#b5abd6;font-size:20px;line-height:1;cursor:pointer;padding:4px 8px}
+.i18n-banner .i18n-x:hover{color:#efe9ff}
+.i18n-pick{display:inline-flex;align-items:center;gap:4px;flex:none;white-space:nowrap}
+.i18n-pick select{font:600 13.5px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;color:#efe9ff;background:#261e45;border:1px solid #57d0dc;border-radius:6px;padding:5px 6px;cursor:pointer;max-width:9.5em}
+.i18n-pick select:focus-visible{outline:2px solid #57d0dc;outline-offset:2px}
+.i18n-pick .i18n-globe{font-size:15px}
+nav.top.i18n-has{display:flex;align-items:center}
+nav.top.i18n-has>.wrap{flex:1 1 auto;min-width:0}
+nav.top>.i18n-pick{flex:none;padding:0 14px 0 10px;border-left:1px solid rgba(181,171,214,.25);margin-left:4px}
+.bar .i18n-pick{margin-left:auto}
+nav.i18n-top{position:sticky;top:0;z-index:35;background:rgba(18,14,36,.94);border-bottom:4px solid #3d3170;backdrop-filter:blur(6px)}
+nav.i18n-top .i18n-wrap{max-width:1120px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:12px}
+nav.i18n-top .i18n-brand{color:#efe9ff;text-decoration:none;font-weight:700;margin-right:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+nav.i18n-top a.i18n-link{color:#b5abd6;text-decoration:none;white-space:nowrap;font-size:14px}
+nav.i18n-top a.i18n-link:hover{color:#57d0dc}
+@media (max-width:560px){nav.i18n-top a.i18n-link{display:none}.i18n-banner{font-size:13px;padding-right:38px}}
+@media print{.i18n-banner,.i18n-pick,nav.i18n-top{display:none!important}}
+</style>
+<script id="i18n-script">
+(function(){
+var CUR='zh', FILE='answers.html', KEY='fly-lang';
+var L=[['ko','한국어',''],['en','English','en/'],['zh','中文','zh/'],['ja','日本語','ja/'],['uz','Oʻzbekcha','uz/'],['ru','Русский','ru/']];
+var LAB={ko:'언어',en:'Language',zh:'语言',ja:'言語',uz:'Til',ru:'Язык'};
+var CLOSE={ko:'배너 닫기',en:'Close banner',zh:'关闭横幅',ja:'バナーを閉じる',uz:'Bannerni yopish',ru:'Закрыть баннер'};
+var ROOT=CUR==='ko'?'':'../';
+function dir(c){for(var i=0;i<L.length;i++) if(L[i][0]===c) return L[i][2]; return null;}
+function url(c){return ROOT+dir(c)+FILE+(location.hash||'');}
+function get(k,s){try{return (s||localStorage).getItem(k);}catch(e){return null;}}
+function set(k,v,s){try{(s||localStorage).setItem(k,v);}catch(e){}}
+function detect(){var ls=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];
+  for(var i=0;i<ls.length;i++){var p=String(ls[i]).toLowerCase().split('-')[0]; if(dir(p)!==null) return p;} return null;}
+// 1) automatic switching: the reader's saved choice wins; otherwise the Korean default follows the browser language
+var pref=get(KEY), target=null;
+if(pref&&dir(pref)!==null&&pref!==CUR) target=pref;
+else if(!pref&&CUR==='ko'){var d=detect(); if(d&&d!=='ko') target=d;}
+if(target&&!/[?&]lang=stay\b/.test(location.search)){location.replace(url(target)); return;}
+function go(c){set(KEY,c); if(c!==CUR) location.href=url(c);}
+function picker(){var w=document.createElement('span'); w.className='i18n-pick';
+  var g=document.createElement('span'); g.className='i18n-globe'; g.setAttribute('aria-hidden','true'); g.textContent='🌐'; w.appendChild(g);
+  var s=document.createElement('select'); s.setAttribute('aria-label',LAB[CUR]+' / Language');
+  L.forEach(function(x){var o=document.createElement('option'); o.value=x[0]; o.textContent=x[1]; o.lang=x[0]; if(x[0]===CUR) o.selected=true; s.appendChild(o);});
+  s.addEventListener('change',function(){go(s.value);}); w.appendChild(s); return w;}
+function banner(){var b=document.createElement('div'); b.className='i18n-banner'; b.setAttribute('role','navigation'); b.setAttribute('aria-label',LAB[CUR]+' / Language');
+  var t=document.createElement('span'); t.className='i18n-lab'; t.textContent='🌐 '+LAB[CUR]+(CUR==='en'?'':' · Language'); b.appendChild(t);
+  L.forEach(function(x){var a=document.createElement('a'); a.href=url(x[0]); a.textContent=x[1]; a.lang=x[0]; a.hreflang=x[0];
+    if(x[0]===CUR) a.setAttribute('aria-current','true');
+    a.addEventListener('click',function(e){e.preventDefault(); go(x[0]);}); b.appendChild(a);});
+  var c=document.createElement('button'); c.type='button'; c.className='i18n-x'; c.setAttribute('aria-label',CLOSE[CUR]); c.textContent='×';
+  c.addEventListener('click',function(){b.remove(); set('fly-lang-banner','off',sessionStorage);}); b.appendChild(c); return b;}
+function init(){var body=document.body;
+  // 2) language menu inside the topmost navigation
+  var nt=document.querySelector('nav.top'), nb=document.querySelector('nav.bar .wrap');
+  if(nt){nt.classList.add('i18n-has'); nt.appendChild(picker());}
+  else if(nb){nb.appendChild(picker());}
+  else{var n=document.createElement('nav'); n.className='i18n-top'; n.setAttribute('aria-label',LAB[CUR]);
+    var w=document.createElement('div'); w.className='i18n-wrap';
+    var br=document.createElement('a'); br.className='i18n-brand'; br.href='#'; br.textContent="深度学习 A to Z · 果蝇特别篇"; w.appendChild(br);
+    [["1_fruitfly_brain_deep_learning.html", "特别篇 1"], ["2_fruitfly_memory_retrieval_paper.html", "特别篇 2"], ["3_fruitfly_minecraft_connectome.html", "特别篇 3"], ["answers.html", "教师用答案"]].forEach(function(x){var a=document.createElement('a'); a.className='i18n-link'; a.href=x[0]; a.textContent=x[1]; w.appendChild(a);});
+    w.appendChild(picker()); n.appendChild(w); body.insertBefore(n,body.firstChild);}
+  // 3) language banner at the very top
+  if(get('fly-lang-banner',sessionStorage)!=='off') body.insertBefore(banner(),body.firstChild);}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+<!-- i18n:end -->
+</head>
+<body>
+<header class="top"><div class="wrap"><h1>教师用答案</h1><p>如果你是学习者，请先做完每篇的练习题再来核对。这里收录了每题 20 分、每篇满分 100 分的评分要点，以及 Colab 作业的参考答案。参考答案中的数字可能因运行环境不同而略有差异。</p></div></header>
+<nav class="bar" aria-label="快速跳转到各篇"><div class="wrap"><a href="index.html">首页</a><a href="#a-s1">特别篇 1 果蝇大脑探索</a><a href="#a-s2">特别篇 2 记忆提取论文</a><a href="#a-s3">特别篇 3 Minecraft 里的果蝇大脑</a></div></nav>
+<section class="ans" id="a-s1"><div class="wrap"><div class="ah"><span class="no">特别篇 1</span><h2>果蝇大脑探索</h2></div><p class="back"><a href="1_fruitfly_brain_deep_learning.html#teach">返回特别篇 1 页面的教师 TIP</a></p><h3>练习题答案与评分标准</h3><div class="q box"><h4>Q1. 两个输入（1, 0）、权重（0.8, −0.5）、阈值 0.5 的感知机，输出是多少？</h4><p><b>答案</b> · 总和 = 1×0.8 + 0×(−0.5) = 0.8。因为 0.8 ≥ 0.5，所以输出 1。</p><p class="pt">配分 20 分 · 评分：计算过程 10 分，结果 10 分</p></div><div class="q box"><h4>Q2. 感知机为什么解决不了“带状”（只有中间是食物）问题？</h4><p><b>答案</b> · 感知机只能用一条直线（一个平面）来划分。带状区域两侧需要两条边界，一条直线分不开。隐藏层可以造出多条边界再把它们组合起来。</p><p class="pt">配分 20 分 · 评分：“只有一条直线” 10 分，“需要两条边界” 10 分</p></div><div class="q box"><h4>Q3. 训练准确率 96%、验证准确率 59%，说明发生了什么？请给出两种对策。</h4><p><b>答案</b> · 过拟合：模型把训练数据背下来了。对策：从“收集更多数据、减少隐藏神经元、提早停止训练”中任选两种。</p><p class="pt">配分 20 分 · 评分：诊断出过拟合 10 分，对策各 5 分</p></div><div class="q box"><h4>Q4. 在果蝇方式中，哪些连接是学习的，哪些是固定的？</h4><p><b>答案</b> · 固定：投射神经元 → Kenyon 细胞（随机稀疏连接）。学习：Kenyon 细胞 → 输出神经元（由多巴胺改变）。</p><p class="pt">配分 20 分 · 评分：各 10 分</p></div><div class="q box"><h4>Q5. 在代码 2 中，果蝇方式（学习 4,004 个参数）取得了与 MLP（学习 16,708 个参数）相近的准确率。这说明了什么？</h4><p><b>答案</b> · 仅靠宽而稀疏的固定表示，只训练输出层就足以解决简单的图形问题。但由于表示本身无法改进，面对困难问题时会有局限。</p><p class="pt">配分 20 分 · 评分：“固定表示也足够” 10 分，提到局限 10 分</p></div><h3>Colab 作业参考答案</h3><div class="q box"><h4>基础</h4><p><b>作业</b> · 在代码 1 中把 TOP（激活比例）从 0.08 改为 0.5，报告训练准确率和被激活的 Kenyon 细胞数量如何变化，并用两句话说明稀疏性为什么有用。</p><p><b>参考答案</b> · 把 TOP 提高到 0.5 后，一半的 Kenyon 细胞被激活，不同输入的编码大量重叠。玩具数据很简单，训练准确率可能依然很高，但激活的细胞从约 80 个增加到约 500 个，记忆之间容易混淆。稀疏编码对每个输入只使用少数互不重叠的细胞，因此能区分相似的气味，修改一段记忆时也较少干扰其他记忆。</p><p class="pt">评分要点 · 确认激活数量的变化（5） · 报告准确率（5） · 稀疏性的两个好处（减少重叠、减少干扰）（10）</p></div><div class="q box"><h4>挑战</h4><p><b>作业</b> · 把代码 2 中 MLP 的隐藏层大小改为 8、64、512，用两个随机种子比较验证准确率。结合学习曲线（第 7 格）解释是否出现了过拟合。</p><p><b>参考答案</b> · 增大隐藏层后，训练损失下降得更快，但验证准确率并不上升，或随种子不同而波动。在 160 个示例数据（训练 96 个）上，512 个神经元的隐藏层很容易把训练数据背下来。在学习曲线上找出训练损失与验证准确率之间差距开始拉大的时刻，以此判断过拟合。</p><p class="pt">评分要点 · 三种大小 × 两个种子的结果表（8） · 学习曲线依据（6） · 结合数据量的解释（6）</p></div></div></section>
+<section class="ans" id="a-s2"><div class="wrap"><div class="ah"><span class="no">特别篇 2</span><h2>记忆提取论文</h2></div><p class="back"><a href="2_fruitfly_memory_retrieval_paper.html#teach">返回特别篇 2 页面的教师 TIP</a></p><h3>练习题答案与评分标准</h3><div class="q box"><h4>Q1. 用一句话概括这篇论文的主张。</h4><p><b>答案</b> · 从蘑菇体提取出的记忆信号必须传到侧角的汇合神经元（PD2a1/b1），记忆才能转化为行为。</p><p class="pt">配分 20 分 · 评分：“蘑菇体 → 侧角” 10 分，“需要汇合神经元” 10 分</p></div><div class="q box"><h4>Q2. 在关闭汇合神经元的实验中，为什么需要“只升高温度的对照组”？</h4><p><b>答案</b> · 温度本身就可能改变行为，所以必须分辨记忆分数下降是因为神经元被阻断，还是因为温度。</p><p class="pt">配分 20 分 · 评分：对照的目的 20 分</p></div><div class="q box"><h4>Q3. 模型实验室的汇合公式为 1.0 × 本能 + 0.6 × 记忆。当本能 = 0.2、记忆 = −1.0 时，汇合值是多少？如果阻断记忆输入呢？</h4><p><b>答案</b> · 0.2 + 0.6 × (−1.0) = −0.4（偏向回避）。阻断后为 0.2（只剩本能，偏向靠近）。</p><p class="pt">配分 20 分 · 评分：各 10 分</p></div><div class="q box"><h4>Q4. 为什么关掉一个神经元，记忆提取和对食物的趋向会一起消失？</h4><p><b>答案</b> · 因为这个神经元是共享层：它同时接收两条通路（蘑菇体的记忆信号、食物气味投射神经元的本能信号）并输出。</p><p class="pt">配分 20 分 · 评分：“共享”概念 20 分</p></div><div class="q box"><h4>Q5. 在代码 2 中阻断记忆提取后，准确率从 0.84 降到 0.09。为什么是 0.09？</h4><p><b>答案</b> · 本能值全为 0，所有类别的分数都相同，模型总是选择第一个类别。0.09 就是测试数据中第一个类别所占的比例。</p><p class="pt">配分 20 分 · 评分：“分数变得相同” 10 分，“第一个类别的比例” 10 分</p></div><h3>Colab 作业参考答案</h3><div class="q box"><h4>基础</h4><p><b>作业</b> · 在代码 1 中把 innate 值改为 [0.0, 0.5]（本能偏向回避），用表格报告训练前、训练后和阻断后的结果如何变化，并比较本能与记忆同向和反向两种情况。</p><p><b>参考答案</b> · innate = [0.0, 0.5] 时，训练前本能分数就已指向“回避”。惩罚训练会在记忆一侧降低“靠近”分数，所以训练后仍是回避；阻断记忆输入后，仅靠本能也是回避。在原始设置（innate = [0.5, 0.0]）下，阻断后会回到靠近。本能与记忆同向时，阻断后行为不变，记忆的贡献显现不出来；只有二者反向时，阻断实验才能揭示记忆的作用。</p><p class="pt">评分要点 · 三种情况的结果表（8） · 与原始设置的比较（6） · “只有反向时才会显现”的解释（6）</p></div><div class="q box"><h4>挑战</h4><p><b>作业</b> · 在代码 2 的 MemoryInnate 中给 innate 赋值（例如给叉号类别 2.0），训练后阻断记忆输入。比较阻断前后的混淆矩阵，并说明本能如何牵引判断。</p><p><b>参考答案</b> · 给叉号类别的 innate 设为 2.0 后，训练过程中记忆通路会逆着这股牵引进行调整。阻断后只剩本能，大多数图形都会被判为叉号，混淆矩阵集中在叉号这一列。要指出：本能像一个不参与学习的偏置（bias），而记忆是叠加在它之上的修正。</p><p class="pt">评分要点 · 阻断前后的混淆矩阵（8） · 解释为何集中于叉号列（6） · 偏置 + 修正的解释（6）</p></div></div></section>
+<section class="ans" id="a-s3"><div class="wrap"><div class="ah"><span class="no">特别篇 3</span><h2>Minecraft 里的果蝇大脑</h2></div><p class="back"><a href="3_fruitfly_minecraft_connectome.html#teach">返回特别篇 3 页面的教师 TIP</a></p><h3>练习题答案与评分标准</h3><div class="q box"><h4>Q1. 一个含 30 个突触的连接，每来一个输入脉冲增加的电流 g 是多少 mV？（0.275 mV × 增益 0.65）</h4><p><b>答案</b> · 30 × 0.275 × 0.65 ≈ 5.36 mV。</p><p class="pt">配分 20 分 · 评分：公式 10 分，数值 10 分</p></div><div class="q box"><h4>Q2. 静息电压 −52 mV、阈值 −45 mV。如果一次脉冲使膜电压升高约 g 的 0.1575 倍，那么要单独触发发放，g 需要多大？</h4><p><b>答案</b> · 距阈值 7 mV。7 / 0.1575 ≈ 44.4 mV。增益为 1.0 时需要约 162 个突触同时作用，增益为 0.65 时需要约 249 个。</p><p class="pt">配分 20 分 · 评分：算出 7 mV 10 分，g 值 10 分</p></div><div class="q box"><h4>Q3. 在“糖 + 苦味”场景中，口器运动神经元（MN9）为 0 Hz，而甜味二级神经元仍处于激活状态。抑制发生在哪个阶段？</h4><p><b>答案</b> · 运动之前的最后一步。苦味刹车（Scapula）阻断了进食指令通路。</p><p class="pt">配分 20 分 · 评分：“运动之前” 20 分</p></div><div class="q box"><h4>Q4. 把增益提高到 0.75，梳理场景中会发生什么？</h4><p><b>答案</b> · 仅 200 ms 内，每个时间步的脉冲数就膨胀到五倍，Kenyon 细胞以 39 Hz 被唤醒，由此产生的抑制甚至关掉了梳理指令神经元（失控）。</p><p class="pt">配分 20 分 · 评分：失控现象 10 分，梳理指令被关闭 10 分</p></div><div class="q box"><h4>Q5. 在代码 2 中，固定接线的脉冲模型只学习 644 个连接，测试准确率达到 0.75~0.81。与 MLP（16,708 个，0.88~0.91）相比，该如何解读这一结果？</h4><p><b>答案</b> · 只学习约 4% 的连接就能答对不少，但由于无法学习表示本身，准确率低于 MLP。还应指出数据很少（测试 32 个），差异会有 ±0.1 的波动。</p><p class="pt">配分 20 分 · 评分：比例比较 10 分，局限与不确定性 10 分</p></div><h3>Colab 作业参考答案</h3><div class="q box"><h4>基础</h4><p><b>作业</b> · 在代码 1 中把增益 0.65 改为 0.55 和 0.75，用表格报告发放的神经元数量和平均发放频率，并结合“调增益”一节中的失控现象，用两句话加以解释。</p><p><b>参考答案</b> · 降低增益（0.55）时，每个输入增加的电流变小，发放的神经元数量和平均发放频率都低于 0.65；提高增益（0.75）时则增加。即使在代码 1 的小型神经网络中，增益越大，通过反馈扩散的发放也增长得越快。在模组的雄性完整神经系统中，这种增长表现为失控（每个时间步的脉冲数增至五倍、Kenyon 细胞 39 Hz），因此选择了 0.65。</p><p class="pt">评分要点 · 三种增益的结果表（8） · 说明增长方向（6） · 与失控现象的联系（6）</p></div><div class="q box"><h4>挑战</h4><p><b>作业</b> · 在代码 2 的 ConnectomeLIF 中，把抑制神经元的符号（−0.5）全部改为 +0.18（去掉抑制）后重新训练。用两个随机种子比较脉冲记录（第 8 格）和准确率，并说明抑制在神经网络中起什么作用。</p><p><b>参考答案</b> · 去掉抑制后，大部分隐藏神经元发放得更频繁、更均匀，脉冲记录变得密密麻麻。不同输入之间发放模式的差异变小，解码层可用于区分的信息减少，因此准确率下降，或随种子不同而波动。抑制通过限制活动，使模式变得稀疏且易于区分（与特别篇 1 中 Kenyon 细胞“前 8%”规则的作用相同）。</p><p class="pt">评分要点 · 脉冲记录比较（6） · 两个种子的准确率（6） · 对抑制作用的解释（8）</p></div></div></section>
+<footer><div class="wrap"><p><b style="color:var(--text)">深度学习 A to Z · 果蝇特别篇</b> — 作者 · Sangsun Ahn（M-Robo 公司代表）。</p><p class="cc"><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans" target="_blank" rel="license noopener" aria-label="知识共享 署名-非商业性使用 4.0 国际"><span class="ccb">cc</span><span class="ccb">BY</span><span class="ccb">NC</span></a> 本作品采用<a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hans" target="_blank" rel="license noopener">知识共享 署名-非商业性使用 4.0 国际许可协议（CC BY-NC 4.0）</a>发布。仅限非商业目的，可自由分享和修改，但<b>必须注明出处</b>。出处标注示例：Sangsun Ahn，《深度学习 A to Z · 果蝇特别篇》，AI Model Review。</p></div></footer>

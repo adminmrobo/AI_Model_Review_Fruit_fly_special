@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uz-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oʻqituvchilar uchun javoblar — Chuqur oʻrganish A dan Z gacha · Meva pashshasi maxsus soni</title>
+<meta name="description" content="Meva pashshasi maxsus soni 1–3 dagi nazorat savollari javoblari, baholash mezonlari va Colab topshiriqlarining namunaviy javoblari.">
+<meta name="author" content="Sangsun Ahn">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>@import url("https://cdn.jsdelivr.net/npm/galmuri@2.40.3/dist/galmuri.css");
+:root{--night:#1b1533;--deep:#120e24;--panel:#261e45;--line:#3d3170;--text:#efe9ff;--muted:#b5abd6;--violet:#b07cff;--pink:#ff86b8;--red:#ef5b5b;--cyan:#57d0dc;--amber:#ffc65c;
+  --pix:"Galmuri11","Galmuri9","IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;--body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--night);color:var(--text);font-family:var(--body);line-height:1.7;font-size:16px}
+a{color:var(--cyan)} a:focus-visible,button:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,.pix{font-family:var(--pix);letter-spacing:0}
+h2{font-size:clamp(24px,3.4vw,34px);margin:0 0 6px;text-shadow:3px 3px 0 #5a2fa8}
+.sub{color:var(--muted);margin:0 0 22px}
+section{padding:56px 0;border-top:4px solid var(--line)}
+.btn{display:inline-block;font-family:var(--pix);font-size:15px;color:var(--text);text-decoration:none;background:var(--panel);border:3px solid var(--line);padding:10px 16px;box-shadow:4px 4px 0 #0b0818;cursor:pointer}
+.btn:hover{border-color:var(--cyan)} .btn.main{border-color:var(--violet);background:#3a2370}
+.box{background:var(--panel);border:3px solid var(--line);box-shadow:4px 4px 0 #0b0818;padding:16px 18px}
+img.px{image-rendering:auto;filter:drop-shadow(3px 3px 0 #0d0a1c)}
+footer{background:var(--deep);padding:30px 0 40px;color:var(--muted);font-size:14px;border-top:4px solid var(--line)}
+.cc{margin-top:14px;padding-top:12px;border-top:1px solid rgba(181,171,214,.3);font-size:13px;line-height:1.7}
+.cc .ccb{display:inline-block;border:2px solid currentColor;border-radius:3px;padding:0 5px;margin-right:4px;font-weight:700;font-size:11.5px}
+.cc a{color:inherit}
+
+header.top{background:var(--deep);padding:44px 0 26px;border-bottom:4px solid var(--line)}
+header.top h1{font-size:clamp(26px,4vw,40px);margin:0 0 10px;text-shadow:3px 3px 0 #5a2fa8}
+header.top p{color:var(--muted);max-width:70ch;margin:0}
+nav.bar{position:sticky;top:0;z-index:5;background:var(--night);border-bottom:4px solid var(--line)}
+nav.bar .wrap{display:flex;flex-wrap:wrap;gap:8px;padding-top:10px;padding-bottom:10px}
+nav.bar a{font-family:var(--pix);font-size:13px;color:var(--text);text-decoration:none;border:3px solid var(--line);padding:5px 10px;background:var(--panel)}
+nav.bar a:hover{border-color:var(--cyan)}
+section.ans{scroll-margin-top:70px}
+.ah{display:flex;gap:14px;align-items:center;margin-bottom:8px}
+.ah .no{font-family:var(--pix);font-size:16px;border:4px solid var(--violet);padding:6px 10px;color:var(--violet)}
+.ah h2{margin:0}
+.back{font-size:14px;margin:0 0 18px}
+.q{margin:0 0 14px}
+.q h4{margin:0 0 6px;font-size:16px}
+.q p{margin:4px 0;color:var(--text)} .q .pt{color:var(--amber);font-size:14px}
+h3{font-size:18px;color:var(--amber);margin:26px 0 10px}
+</style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ko" href="../answers.html">
+<link rel="alternate" hreflang="en" href="../en/answers.html">
+<link rel="alternate" hreflang="zh-CN" href="../zh/answers.html">
+<link rel="alternate" hreflang="ja" href="../ja/answers.html">
+<link rel="alternate" hreflang="uz-Latn" href="../uz/answers.html">
+<link rel="alternate" hreflang="ru" href="../ru/answers.html">
+<style id="i18n-style">
+.i18n-banner{position:relative;z-index:40;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 10px;padding:8px 44px 8px 14px;background:#0d0a1c;color:#efe9ff;border-bottom:2px solid #57d0dc;font:500 14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+.i18n-banner .i18n-lab{font-weight:700;color:#57d0dc;white-space:nowrap}
+.i18n-banner a{color:#efe9ff;text-decoration:none;border:1px solid rgba(239,233,255,.35);border-radius:999px;padding:3px 11px;white-space:nowrap;line-height:1.4}
+.i18n-banner a:hover{border-color:#57d0dc;color:#57d0dc}
+.i18n-banner a[aria-current="true"]{background:#57d0dc;border-color:#57d0dc;color:#0d0a1c;font-weight:700}
+.i18n-banner .i18n-x{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:#b5abd6;font-size:20px;line-height:1;cursor:pointer;padding:4px 8px}
+.i18n-banner .i18n-x:hover{color:#efe9ff}
+.i18n-pick{display:inline-flex;align-items:center;gap:4px;flex:none;white-space:nowrap}
+.i18n-pick select{font:600 13.5px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;color:#efe9ff;background:#261e45;border:1px solid #57d0dc;border-radius:6px;padding:5px 6px;cursor:pointer;max-width:9.5em}
+.i18n-pick select:focus-visible{outline:2px solid #57d0dc;outline-offset:2px}
+.i18n-pick .i18n-globe{font-size:15px}
+nav.top.i18n-has{display:flex;align-items:center}
+nav.top.i18n-has>.wrap{flex:1 1 auto;min-width:0}
+nav.top>.i18n-pick{flex:none;padding:0 14px 0 10px;border-left:1px solid rgba(181,171,214,.25);margin-left:4px}
+.bar .i18n-pick{margin-left:auto}
+nav.i18n-top{position:sticky;top:0;z-index:35;background:rgba(18,14,36,.94);border-bottom:4px solid #3d3170;backdrop-filter:blur(6px)}
+nav.i18n-top .i18n-wrap{max-width:1120px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:12px}
+nav.i18n-top .i18n-brand{color:#efe9ff;text-decoration:none;font-weight:700;margin-right:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+nav.i18n-top a.i18n-link{color:#b5abd6;text-decoration:none;white-space:nowrap;font-size:14px}
+nav.i18n-top a.i18n-link:hover{color:#57d0dc}
+@media (max-width:560px){nav.i18n-top a.i18n-link{display:none}.i18n-banner{font-size:13px;padding-right:38px}}
+@media print{.i18n-banner,.i18n-pick,nav.i18n-top{display:none!important}}
+</style>
+<script id="i18n-script">
+(function(){
+var CUR='uz', FILE='answers.html', KEY='fly-lang';
+var L=[['ko','한국어',''],['en','English','en/'],['zh','中文','zh/'],['ja','日本語','ja/'],['uz','Oʻzbekcha','uz/'],['ru','Русский','ru/']];
+var LAB={ko:'언어',en:'Language',zh:'语言',ja:'言語',uz:'Til',ru:'Язык'};
+var CLOSE={ko:'배너 닫기',en:'Close banner',zh:'关闭横幅',ja:'バナーを閉じる',uz:'Bannerni yopish',ru:'Закрыть баннер'};
+var ROOT=CUR==='ko'?'':'../';
+function dir(c){for(var i=0;i<L.length;i++) if(L[i][0]===c) return L[i][2]; return null;}
+function url(c){return ROOT+dir(c)+FILE+(location.hash||'');}
+function get(k,s){try{return (s||localStorage).getItem(k);}catch(e){return null;}}
+function set(k,v,s){try{(s||localStorage).setItem(k,v);}catch(e){}}
+function detect(){var ls=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];
+  for(var i=0;i<ls.length;i++){var p=String(ls[i]).toLowerCase().split('-')[0]; if(dir(p)!==null) return p;} return null;}
+// 1) automatic switching: the reader's saved choice wins; otherwise the Korean default follows the browser language
+var pref=get(KEY), target=null;
+if(pref&&dir(pref)!==null&&pref!==CUR) target=pref;
+else if(!pref&&CUR==='ko'){var d=detect(); if(d&&d!=='ko') target=d;}
+if(target&&!/[?&]lang=stay\b/.test(location.search)){location.replace(url(target)); return;}
+function go(c){set(KEY,c); if(c!==CUR) location.href=url(c);}
+function picker(){var w=document.createElement('span'); w.className='i18n-pick';
+  var g=document.createElement('span'); g.className='i18n-globe'; g.setAttribute('aria-hidden','true'); g.textContent='🌐'; w.appendChild(g);
+  var s=document.createElement('select'); s.setAttribute('aria-label',LAB[CUR]+' / Language');
+  L.forEach(function(x){var o=document.createElement('option'); o.value=x[0]; o.textContent=x[1]; o.lang=x[0]; if(x[0]===CUR) o.selected=true; s.appendChild(o);});
+  s.addEventListener('change',function(){go(s.value);}); w.appendChild(s); return w;}
+function banner(){var b=document.createElement('div'); b.className='i18n-banner'; b.setAttribute('role','navigation'); b.setAttribute('aria-label',LAB[CUR]+' / Language');
+  var t=document.createElement('span'); t.className='i18n-lab'; t.textContent='🌐 '+LAB[CUR]+(CUR==='en'?'':' · Language'); b.appendChild(t);
+  L.forEach(function(x){var a=document.createElement('a'); a.href=url(x[0]); a.textContent=x[1]; a.lang=x[0]; a.hreflang=x[0];
+    if(x[0]===CUR) a.setAttribute('aria-current','true');
+    a.addEventListener('click',function(e){e.preventDefault(); go(x[0]);}); b.appendChild(a);});
+  var c=document.createElement('button'); c.type='button'; c.className='i18n-x'; c.setAttribute('aria-label',CLOSE[CUR]); c.textContent='×';
+  c.addEventListener('click',function(){b.remove(); set('fly-lang-banner','off',sessionStorage);}); b.appendChild(c); return b;}
+function init(){var body=document.body;
+  // 2) language menu inside the topmost navigation
+  var nt=document.querySelector('nav.top'), nb=document.querySelector('nav.bar .wrap');
+  if(nt){nt.classList.add('i18n-has'); nt.appendChild(picker());}
+  else if(nb){nb.appendChild(picker());}
+  else{var n=document.createElement('nav'); n.className='i18n-top'; n.setAttribute('aria-label',LAB[CUR]);
+    var w=document.createElement('div'); w.className='i18n-wrap';
+    var br=document.createElement('a'); br.className='i18n-brand'; br.href='#'; br.textContent="Chuqur oʻrganish A dan Z gacha · Meva pashshasi maxsus soni"; w.appendChild(br);
+    [["1_fruitfly_brain_deep_learning.html", "Maxsus 1"], ["2_fruitfly_memory_retrieval_paper.html", "Maxsus 2"], ["3_fruitfly_minecraft_connectome.html", "Maxsus 3"], ["answers.html", "Javoblar"]].forEach(function(x){var a=document.createElement('a'); a.className='i18n-link'; a.href=x[0]; a.textContent=x[1]; w.appendChild(a);});
+    w.appendChild(picker()); n.appendChild(w); body.insertBefore(n,body.firstChild);}
+  // 3) language banner at the very top
+  if(get('fly-lang-banner',sessionStorage)!=='off') body.insertBefore(banner(),body.firstChild);}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+<!-- i18n:end -->
+</head>
+<body>
+<header class="top"><div class="wrap"><h1>Oʻqituvchilar uchun javoblar</h1><p>Agar oʻquvchi boʻlsangiz, avval har bir qismdagi nazorat savollarini oʻzingiz yechib koʻring, keyin bu yerda tekshiring. Har bir savol 20 ball, har bir qism 100 ball hisobidagi baholash nuqtalari va Colab topshiriqlarining namunaviy javoblari berilgan. Namunaviy javoblardagi sonlar ishga tushirish muhitiga qarab biroz farq qilishi mumkin.</p></div></header>
+<nav class="bar" aria-label="Qismga oʻtish"><div class="wrap"><a href="index.html">Bosh sahifa</a><a href="#a-s1">Maxsus 1 Meva pashshasi miyasini oʻrganish</a><a href="#a-s2">Maxsus 2 Xotirani chaqirib olish maqolasi</a><a href="#a-s3">Maxsus 3 Minecraft ichidagi meva pashshasi miyasi</a></div></nav>
+<section class="ans" id="a-s1"><div class="wrap"><div class="ah"><span class="no">Maxsus 1</span><h2>Meva pashshasi miyasini oʻrganish</h2></div><p class="back"><a href="1_fruitfly_brain_deep_learning.html#teach">Maxsus 1 sahifasidagi Oʻqituvchi uchun TIP ga qaytish</a></p><h3>Nazorat savollari javoblari va baholash mezonlari</h3><div class="q box"><h4>Q1. Ikki kirish (1, 0), ogʻirliklar (0.8, −0.5) va ostonasi 0.5 boʻlgan perseptronning chiqishi qanday?</h4><p><b>Javob</b> · Yigʻindi = 1×0.8 + 0×(−0.5) = 0.8. 0.8 ≥ 0.5 boʻlgani uchun chiqish 1.</p><p class="pt">20 ball · Baholash: hisoblash jarayoni 10 ball, natija 10 ball</p></div><div class="q box"><h4>Q2. Nega perseptron "tasma shaklidagi" (ovqat faqat oʻrtada) masalani yecha olmaydi?</h4><p><b>Javob</b> · Perseptron fazoni faqat bitta toʻgʻri chiziq (tekislik) bilan ajratadi. Tasma uchun ikki tomonda ikkita chegara kerak, shuning uchun uni bitta chiziq bilan ajratib boʻlmaydi. Yashirin qatlam bir nechta chegara yasab, ularni birlashtiradi.</p><p class="pt">20 ball · Baholash: "bitta toʻgʻri chiziq" 10 ball, "ikkita chegara kerak" 10 ball</p></div><div class="q box"><h4>Q3. Oʻqitish aniqligi 96%, tekshiruv aniqligi 59% boʻlsa, nima sodir boʻlgan? Ikkita chorasini ayting.</h4><p><b>Javob</b> · Ortiqcha moslashish: model oʻqitish maʼlumotlarini yodlab olgan. Choralar: koʻproq maʼlumot yigʻish, yashirin neyronlarni kamaytirish, oʻqitishni erta toʻxtatish — shulardan ikkitasi.</p><p class="pt">20 ball · Baholash: ortiqcha moslashish tashxisi 10 ball, har bir chora 5 ball</p></div><div class="q box"><h4>Q4. Pashsha usulida qaysi bogʻlanishlar oʻrganiladi va qaysilari qatʼiy belgilangan?</h4><p><b>Javob</b> · Qatʼiy: proyeksion neyronlar → Kenyon hujayralari (tasodifiy siyrak bogʻlanish). Oʻrganiladigan: Kenyon hujayralari → chiqish neyronlari (dofamin oʻzgartiradi).</p><p class="pt">20 ball · Baholash: har biri 10 ball</p></div><div class="q box"><h4>Q5. Kod 2 da pashsha usuli (4 004 ta oʻrganiladigan parametr) MLP (16 708 ta) bilan deyarli bir xil aniqlikka erishdi. Bundan qanday xulosa chiqadi?</h4><p><b>Javob</b> · Keng va siyrak qatʼiy tasvirlashning oʻzi bilan ham oddiy rasm masalalarini faqat chiqish qatlamini oʻqitib yetarlicha yechish mumkin. Biroq tasvirlashning oʻzi yaxshilanmagani uchun qiyinroq masalalarda cheklovlar bor.</p><p class="pt">20 ball · Baholash: "qatʼiy tasvirlash ham yetarli" 10 ball, cheklovni eslatish 10 ball</p></div><h3>Colab topshiriqlarining namunaviy javoblari</h3><div class="q box"><h4>Asosiy</h4><p><b>Topshiriq</b> · Kod 1 da TOP (yoqiladigan hujayralar ulushi) ni 0.08 dan 0.5 ga oʻzgartiring. Oʻqitish aniqligi va yoqilgan Kenyon hujayralari soni qanday oʻzgarishini yozing hamda siyraklik nima uchun foydali ekanini ikki gapda tushuntiring.</p><p><b>Namunaviy javob</b> · TOP 0.5 ga koʻtarilsa, Kenyon hujayralarining yarmi yonadi va turli kirishlarning kodlari bir-biriga koʻp ustma-ust tushadi. Oʻyinchoq maʼlumotlar oson boʻlgani uchun oʻqitish aniqligi hali ham yuqori chiqishi mumkin, ammo yoqilgan hujayralar taxminan 80 tadan taxminan 500 taga koʻpayib, xotiralar osonroq aralashib ketadi. Siyrak kod har bir kirish uchun bir-biri bilan ustma-ust tushmaydigan oz sonli hujayradan foydalanadi, shuning uchun oʻxshash hidlarni ham farqlaydi va bitta xotirani tuzatganda boshqalariga kamroq taʼsir qiladi.</p><p class="pt">Baholash nuqtalari · Yoqilganlar soni oʻzgarishini tekshirish (5) · Aniqlikni yozish (5) · Siyraklikning ikki afzalligi (ustma-ust tushishning kamayishi, xalaqitning kamayishi) (10)</p></div><div class="q box"><h4>Murakkab</h4><p><b>Topshiriq</b> · Kod 2 dagi MLP yashirin qatlam oʻlchamini 8, 64 va 512 ga oʻzgartirib, tekshiruv aniqligini ikkita seed bilan solishtiring. Ortiqcha moslashish koʻrinyaptimi — buni oʻrganish egri chiziqlari (7-katak) bilan birga talqin qiling.</p><p><b>Namunaviy javob</b> · Yashirin qatlam kattalashsa, oʻqitish yoʻqotishi tezroq tushadi, lekin tekshiruv aniqligi oshmaydi yoki seedga qarab tebranadi. 160 ta namunaviy rasmda (96 tasi oʻqitish uchun) 512 neyronli yashirin qatlam oʻqitish maʼlumotlarini oson yodlab oladi. Oʻrganish egri chiziqlarida oʻqitish yoʻqotishi va tekshiruv aniqligi orasidagi farq kengaya boshlagan nuqtani koʻrsatib, ortiqcha moslashishni aniqlang.</p><p class="pt">Baholash nuqtalari · Uch oʻlcham × ikki seed natijalar jadvali (8) · Oʻrganish egri chiziqlariga asoslanish (6) · Maʼlumotlar hajmi bilan bogʻlangan talqin (6)</p></div></div></section>
+<section class="ans" id="a-s2"><div class="wrap"><div class="ah"><span class="no">Maxsus 2</span><h2>Xotirani chaqirib olish maqolasi</h2></div><p class="back"><a href="2_fruitfly_memory_retrieval_paper.html#teach">Maxsus 2 sahifasidagi Oʻqituvchi uchun TIP ga qaytish</a></p><h3>Nazorat savollari javoblari va baholash mezonlari</h3><div class="q box"><h4>Q1. Ushbu maqolaning asosiy fikrini bitta gapda ifodalang.</h4><p><b>Javob</b> · Qoʻziqorinsimon tanadan chaqirib olingan xotira signali lateral shoxdagi birlashtiruvchi neyronlarga (PD2a1/b1) yetib borishi kerak — shundagina xotira xatti-harakatga aylanadi.</p><p class="pt">20 ball · Baholash: "qoʻziqorinsimon tana → lateral shox" 10 ball, "birlashtiruvchi neyron zarur" 10 ball</p></div><div class="q box"><h4>Q2. Birlashtiruvchi neyronlarni oʻchirish tajribasida "faqat harorat koʻtarilgan nazorat guruhi" nima uchun kerak?</h4><p><b>Javob</b> · Haroratning oʻzi xatti-harakatni oʻzgartirishi mumkin, shuning uchun xotira balli neyron toʻsilgani sababli tushdimi yoki harorat sababli — buni ajratish kerak.</p><p class="pt">20 ball · Baholash: nazoratning maqsadi 20 ball</p></div><div class="q box"><h4>Q3. Model laboratoriyasidagi birlashish formulasi 1.0 × instinkt + 0.6 × xotira boʻlsa, instinkt = 0.2, xotira = −1.0 boʻlganda birlashish qiymati qancha? Xotira kirishi toʻsilsa-chi?</h4><p><b>Javob</b> · 0.2 + 0.6 × (−1.0) = −0.4 (qochish tomonga). Toʻsilsa, 0.2 (faqat instinkt qoladi, yaqinlashish tomonga).</p><p class="pt">20 ball · Baholash: har biri 10 ball</p></div><div class="q box"><h4>Q4. Nega bitta neyron oʻchirilsa, xotirani chaqirib olish ham, ovqatga intilish ham birga yoʻqoladi?</h4><p><b>Javob</b> · Chunki bu neyron ikki yoʻlni (qoʻziqorinsimon tanadan keladigan xotira signali va ovqat hidi proyeksion neyronlaridan keladigan instinkt signali) birga qabul qilib, chiqishga uzatadigan umumiy qatlamdir.</p><p class="pt">20 ball · Baholash: "umumiylik" tushunchasi 20 ball</p></div><div class="q box"><h4>Q5. Kod 2 da xotirani chaqirib olish toʻsilganda aniqlik 0.84 dan 0.09 ga tushdi. Nega aynan 0.09?</h4><p><b>Javob</b> · Instinkt qiymatlari hammasi 0 boʻlgani uchun barcha sinflarning ballari tenglashadi va model doim birinchi sinfni tanlaydi. 0.09 — test maʼlumotlari ichida birinchi sinfning ulushi.</p><p class="pt">20 ball · Baholash: "ballar tenglashadi" 10 ball, "birinchi sinf ulushi" 10 ball</p></div><h3>Colab topshiriqlarining namunaviy javoblari</h3><div class="q box"><h4>Asosiy</h4><p><b>Topshiriq</b> · Kod 1 da innate qiymatini [0.0, 0.5] ga oʻzgartiring (instinkt qochish tomonga). Oʻqitishdan oldingi, keyingi va toʻsilgan holatdagi natijalar qanday oʻzgarishini jadvalda koʻrsating hamda instinkt va xotira bir yoʻnalishda va qarama-qarshi yoʻnalishda boʻlgan holatlarni solishtiring.</p><p><b>Namunaviy javob</b> · innate = [0.0, 0.5] boʻlsa, oʻqitishdan oldin ham instinkt balli "qochish"ni koʻrsatadi. Jazo bilan oʻqitish xotira tomonida "yaqinlashish" ballini pasaytiradi, shuning uchun oʻqitishdan keyin ham qochish boʻladi, xotira kirishi toʻsilganda ham faqat instinktning oʻzi bilan qochish boʻladi. Asl sozlamada (innate = [0.5, 0.0]) toʻsilganda yaqinlashishga qaytgan edi. Instinkt va xotira bir yoʻnalishda boʻlsa, toʻsilganda ham xatti-harakat oʻzgarmaydi va xotiraning hissasi koʻrinmaydi; faqat qarama-qarshi yoʻnalishda boʻlgandagina toʻsish tajribasi xotiraning rolini koʻrsatadi.</p><p class="pt">Baholash nuqtalari · Uch holat natijalar jadvali (8) · Asl sozlama bilan solishtirish (6) · "Faqat qarama-qarshi yoʻnalishda koʻrinadi" degan talqin (6)</p></div><div class="q box"><h4>Murakkab</h4><p><b>Topshiriq</b> · Kod 2 dagi MemoryInnate da innate ga qiymat bering (masalan, X sinfiga 2.0), oʻqiting, soʻng xotira kirishini toʻsing. Toʻsishdan oldingi va keyingi chalkashlik matritsalarini solishtiring va instinkt qarorni qanday oʻziga tortishini yozing.</p><p><b>Namunaviy javob</b> · innate ga X sinfi uchun 2.0 berilsa, oʻqitish davomida xotira yoʻli bu tortishishga qarshi turib, uni toʻgʻrilaydigan boʻlib oʻzgaradi. Toʻsilganda faqat instinkt qoladi va rasmlarning aksariyati X deb baholanadi, shuning uchun chalkashlik matritsasining X ustuniga toʻplanadi. Instinkt oʻrganilmaydigan siljish (bias) kabi ishlashini, xotira esa uning ustidagi tuzatish ekanini taʼkidlang.</p><p class="pt">Baholash nuqtalari · Toʻsishdan oldingi va keyingi chalkashlik matritsalari (8) · X ustuniga ogʻishni tushuntirish (6) · Siljish + tuzatish talqini (6)</p></div></div></section>
+<section class="ans" id="a-s3"><div class="wrap"><div class="ah"><span class="no">Maxsus 3</span><h2>Minecraft ichidagi meva pashshasi miyasi</h2></div><p class="back"><a href="3_fruitfly_minecraft_connectome.html#teach">Maxsus 3 sahifasidagi Oʻqituvchi uchun TIP ga qaytish</a></p><h3>Nazorat savollari javoblari va baholash mezonlari</h3><div class="q box"><h4>Q1. 30 ta sinapsdan iborat bogʻlanishda bitta kiruvchi spayk qoʻshadigan tok g necha mV? (0.275 mV × kuchaytirish 0.65)</h4><p><b>Javob</b> · 30 × 0.275 × 0.65 ≈ 5.36 mV.</p><p class="pt">20 ball · Baholash: formula 10 ball, qiymat 10 ball</p></div><div class="q box"><h4>Q2. Tinch holat kuchlanishi −52 mV, ostona −45 mV boʻlsa va bitta spayk membrana kuchlanishini g ning taxminan 0.1575 baravari qadar oshirsa, neyronni yolgʻiz oʻzi otishga majburlashi uchun g qancha boʻlishi kerak?</h4><p><b>Javob</b> · Ostonagacha 7 mV. 7 / 0.1575 ≈ 44.4 mV. Kuchaytirish 1.0 boʻlsa, bir vaqtda taxminan 162 ta sinaps, 0.65 boʻlsa, taxminan 249 ta sinaps kerak.</p><p class="pt">20 ball · Baholash: 7 mV hisobi 10 ball, g qiymati 10 ball</p></div><div class="q box"><h4>Q3. Shakar + achchiq sahnasida xartum motor neyroni (MN9) 0 Hz, lekin shirin taʼmning ikkinchi darajali neyronlari yoniq. Tormozlanish qaysi bosqichda yuz beradi?</h4><p><b>Javob</b> · Harakatdan oldingi bosqichda. Achchiq tormoz (Scapula) ovqatlanish buyrugʻi yoʻlini toʻsadi.</p><p class="pt">20 ball · Baholash: "harakatdan oldingi bosqich" 20 ball</p></div><div class="q box"><h4>Q4. Kuchaytirish 0.75 ga koʻtarilsa, tozalanish sahnasida nima sodir boʻladi?</h4><p><b>Javob</b> · 200 ms ichida har bir taktdagi spayklar besh baravar koʻpayadi, Kenyon hujayralari 39 Hz da uygʻonadi va hosil boʻlgan tormozlanish hatto tozalanish buyrugʻi neyronlarini ham oʻchirib qoʻyadi (nazoratsiz faollik).</p><p class="pt">20 ball · Baholash: nazoratsiz faollik hodisasi 10 ball, tozalanish buyrugʻining oʻchishi 10 ball</p></div><div class="q box"><h4>Q5. Kod 2 da qatʼiy ulanishli spaykli model 644 ta oʻrganiladigan bogʻlanish bilan testda 0.75–0.81 natija berdi. Buni MLP (16 708 ta, 0.88–0.91) bilan solishtirib qanday talqin qilasiz?</h4><p><b>Javob</b> · Bogʻlanishlarning atigi taxminan 4% ini oʻrgatish ham ancha toʻgʻri natija beradi, lekin tasvirlashning oʻzini oʻrgana olmagani uchun MLP dan pastroq. Maʼlumot kamligi sababli (32 ta test namunasi) farq ±0.1 atrofida tebranishini ham aytib oʻting.</p><p class="pt">20 ball · Baholash: nisbatni solishtirish 10 ball, cheklov va noaniqlik 10 ball</p></div><h3>Colab topshiriqlarining namunaviy javoblari</h3><div class="q box"><h4>Asosiy</h4><p><b>Topshiriq</b> · Kod 1 da kuchaytirishni 0.65 dan 0.55 va 0.75 ga oʻzgartirib, otgan neyronlar soni va oʻrtacha otish chastotasini jadvalda koʻrsating hamda "Kuchaytirishni sozlash" boʻlimidagi nazoratsiz faollik bilan bogʻlab, ikki gapda talqin qiling.</p><p><b>Namunaviy javob</b> · Kuchaytirish pasaytirilsa (0.55), bitta kirish qoʻshadigan tok kamayadi va otgan neyronlar soni hamda oʻrtacha otish chastotasi 0.65 dagidan kamayadi; oshirilsa (0.75), koʻpayadi. Kod 1 dagi kichik tarmoqda ham kuchaytirish ortgani sari teskari aloqa orqali tarqaladigan otishlar tez koʻpayadi. Modning butun erkak nerv tizimida bu oʻsish nazoratsiz faollik (har bir taktda besh baravar koʻp spayk, Kenyon hujayralari 39 Hz) sifatida namoyon boʻlgani uchun 0.65 tanlangan.</p><p class="pt">Baholash nuqtalari · Uch kuchaytirish natijalari jadvali (8) · Oʻsish yoʻnalishini tushuntirish (6) · Nazoratsiz faollik bilan bogʻlash (6)</p></div><div class="q box"><h4>Murakkab</h4><p><b>Topshiriq</b> · Kod 2 dagi ConnectomeLIF da tormozlovchi neyronlar ishorasini (−0.5) hammasini +0.18 ga oʻzgartirib (tormozlanishni olib tashlab), qayta oʻqiting. Spayk yozuvini (8-katak) va aniqlikni ikkita seed bilan solishtiring hamda tormozlanish tarmoqda qanday vazifani bajarishini yozing.</p><p><b>Namunaviy javob</b> · Tormozlanish olib tashlansa, yashirin neyronlarning aksariyati tez-tez va bir tekis otadi, spayk yozuvi zichlashadi. Kirishlar orasidagi otish naqshlari farqi kamayadi, dekodlovchi qatlam farqlash uchun kamroq maʼlumot oladi, shuning uchun aniqlik tushadi yoki seedga qarab tebranadi. Tormozlanish faollikni cheklab, naqshlarni siyrak va farqlanadigan qiladi (Maxsus 1 dagi Kenyon hujayralari uchun yuqori 8% qoidasi bilan bir xil rol).</p><p class="pt">Baholash nuqtalari · Spayk yozuvlarini solishtirish (6) · Ikki seed boʻyicha aniqlik (6) · Tormozlanish rolining talqini (8)</p></div></div></section>
+<footer><div class="wrap"><p><b style="color:var(--text)">Chuqur oʻrganish A dan Z gacha · Meva pashshasi maxsus soni</b> — Muallif · Sangsun Ahn (M-Robo MChJ rahbari).</p><p class="cc"><a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en" target="_blank" rel="license noopener" aria-label="Creative Commons Attribution-NonCommercial 4.0 International"><span class="ccb">cc</span><span class="ccb">BY</span><span class="ccb">NC</span></a> Ushbu asar <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.en" target="_blank" rel="license noopener">Creative Commons Attribution-NonCommercial 4.0 International litsenziyasi (CC BY-NC 4.0)</a> asosida eʼlon qilinadi. Uni faqat notijorat maqsadlarda erkin tarqatish va oʻzgartirish mumkin, biroq <b>manbani albatta koʻrsatish</b> shart. Manbani koʻrsatish namunasi: Sangsun Ahn, «Chuqur oʻrganish A dan Z gacha · Meva pashshasi maxsus soni», AI Model Review.</p></div></footer>
