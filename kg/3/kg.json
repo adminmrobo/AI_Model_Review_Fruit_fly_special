@@ -1,0 +1,2244 @@
+{
+ "version": "1.0",
+ "page": "3_fruitfly_minecraft_connectome",
+ "nodes": [
+  {
+   "id": "lab:question/behavior-from-wiring",
+   "type": "Question",
+   "label": {
+    "ko": "배우지 않아도 연결만으로 행동이 나올까",
+    "en": "Can behavior emerge from wiring alone, without learning?"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#top",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:method/fly-brain-minecraft",
+   "type": "Method",
+   "label": {
+    "ko": "fly-brain-minecraft 모드",
+    "en": "fly-brain-minecraft mod"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#what",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "수컷 초파리 신경계 배선도 전체를 누설 적분 발화 뉴런으로 돌려 마인크래프트 초파리 몹을 움직이는 Fabric 모드."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/connectome",
+   "type": "Concept",
+   "label": {
+    "ko": "커넥톰",
+    "en": "Connectome"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#what",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "신경계 전체의 뉴런과 연결을 담은 배선도. 이 모드에서는 연결의 시냅스 수가 곧 연결 강도다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/ventral-nerve-cord",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "복부신경삭",
+    "en": "Ventral nerve cord"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#brain",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "곤충의 척수에 해당하는 부분. 다리와 날개를 움직이는 운동 뉴런이 있다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/descending-neurons",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "하강 뉴런",
+    "en": "Descending neurons"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#scope",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "뇌의 명령을 복부신경삭으로 내려보내는 뉴런. 활동을 읽어 몹의 움직임으로 바꾼다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/mn9",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "주둥이 운동 뉴런 (MN9)",
+    "en": "Proboscis motor neuron MN9"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#scope",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/giant-fiber",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "거대 섬유",
+    "en": "Giant fiber"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#scope",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/kenyon-cells",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "케니언 세포",
+    "en": "Kenyon cells"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#gain",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/t4-t5",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "T4·T5 뉴런",
+    "en": "T4/T5 neurons"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#honest",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/antennal-lobe",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "더듬이엽",
+    "en": "Antennal lobe"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#honest",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:method/lif-neuron",
+   "type": "Method",
+   "label": {
+    "ko": "누설 적분 발화 뉴런",
+    "en": "Leaky integrate-and-fire neuron"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#lif",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "입력 스파이크로 전압이 오르고 가만두면 새어 내려가며, 문턱(−45 mV)을 넘으면 스파이크를 쏘고 −52 mV로 돌아가는 뉴런 모형."
+   },
+   "family": "neuro",
+   "altLabel": {
+    "ko": [
+     "LIF",
+     "새는 양동이"
+    ]
+   },
+   "match": []
+  },
+  {
+   "id": "lab:concept/spike",
+   "type": "Concept",
+   "label": {
+    "ko": "스파이크",
+    "en": "Spike (action potential)"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#lif",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "문턱을 넘을 때 나가는 전기 펄스."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:method/threshold-unit",
+   "type": "Method",
+   "label": {
+    "ko": "문턱 모델",
+    "en": "Threshold unit"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#lif",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/synapse-count-weight",
+   "type": "Concept",
+   "label": {
+    "ko": "시냅스 수 = 연결 강도",
+    "en": "Synapse count as weight"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#lif",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "가중치는 배선도의 시냅스 수 × 0.275 mV × 이득 0.65로 고정한다."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/dales-law",
+   "type": "Concept",
+   "label": {
+    "ko": "데일의 법칙 (부호는 신경전달물질에서)",
+    "en": "Dale's principle"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#lif",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "한 뉴런의 출력은 모두 같은 부호다. 아세틸콜린 등은 흥분, GABA·글루탐산·히스타민은 억제로 정한다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/inhibition",
+   "type": "Concept",
+   "label": {
+    "ko": "억제성 연결",
+    "en": "Inhibitory connections"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#lif",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "음수 가중치. 쓴맛 브레이크처럼 다른 경로를 끈다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/frozen-weights",
+   "type": "Concept",
+   "label": {
+    "ko": "동결된 사전학습 가중치",
+    "en": "Frozen pretrained weights"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#top",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "학습으로 바뀌지 않는 가중치. 이 모드에서는 학습되는 가중치가 0개다."
+   },
+   "family": "language",
+   "match": []
+  },
+  {
+   "id": "lab:concept/poisson-input",
+   "type": "Concept",
+   "label": {
+    "ko": "푸아송 스파이크 입력",
+    "en": "Poisson spike input"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#scope",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "감각 뉴런을 정해진 발화 빈도의 무작위 스파이크로 자극한다."
+   },
+   "family": "math",
+   "match": []
+  },
+  {
+   "id": "lab:concept/brain-tick",
+   "type": "Concept",
+   "label": {
+    "ko": "게임 1틱 = 뇌 시간 50 ms",
+    "en": "One game tick = 50 ms of brain time"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#scope",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "0.5 ms씩 100번 계산해 게임 한 틱을 만든다."
+   },
+   "family": "sequence",
+   "match": []
+  },
+  {
+   "id": "lab:method/priority-decoder",
+   "type": "Method",
+   "label": {
+    "ko": "해독기의 우선순위 사다리",
+    "en": "Priority-ladder decoder"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#scope",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "21개 명령 채널의 발화 빈도를 비교해 탈출 > 착지 > … > 노래 순서로 행동 하나를 고른다. 사다리와 문턱은 사람이 정했다."
+   },
+   "family": "ml-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/firing-rate",
+   "type": "Concept",
+   "label": {
+    "ko": "발화 빈도",
+    "en": "Firing rate"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#scope",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "뉴런 무리가 초당 쏘는 스파이크 수(Hz)."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/global-gain",
+   "type": "Concept",
+   "label": {
+    "ko": "전체 이득 보정",
+    "en": "Global gain calibration"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#gain",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "모든 연결에 곱하는 이득 하나를 세 조건으로 골랐다. 0.55는 먹기가 약하고 0.75는 폭주한다."
+   },
+   "family": "optimization",
+   "match": []
+  },
+  {
+   "id": "lab:concept/hyperparameter-tuning",
+   "type": "Concept",
+   "label": {
+    "ko": "하이퍼파라미터를 검증 실험으로 고르기",
+    "en": "Choosing hyperparameters by validation"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#gain",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "개별 가중치는 그대로 두고 초기화 크기 같은 값을 검증 실험으로 고른다."
+   },
+   "family": "ml-basics",
+   "match": []
+  },
+  {
+   "id": "lab:limitation/runaway-excitation",
+   "type": "Limitation",
+   "label": {
+    "ko": "폭주 (활성값이 층마다 불어남)",
+    "en": "Runaway excitation"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#gain",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "regularization",
+   "match": []
+  },
+  {
+   "id": "lab:concept/emergent-behavior",
+   "type": "Concept",
+   "label": {
+    "ko": "창발 (배선도에서 저절로)",
+    "en": "Emergent behavior (from wiring)"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#honest",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "규칙을 넣지 않았는데 이 컴퓨터 모형 안에서 먹기·탈출 같은 행동이 나온 것. 실제 동물 실험 결과는 아니다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/hand-built-proxy",
+   "type": "Concept",
+   "label": {
+    "ko": "사람이 만든 대역",
+    "en": "Hand-built proxy"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#honest",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "망막 그리기, 냄새 지도, 문턱, 비행 물리, 냄새 쪽 반사층처럼 사람이 짠 부분."
+   },
+   "family": "ml-basics",
+   "match": []
+  },
+  {
+   "id": "lab:limitation/connectome-model-gaps",
+   "type": "Limitation",
+   "label": {
+    "ko": "모든 뉴런이 같은 값 · 신경조절물질·전기 시냅스 없음",
+    "en": "Uniform neurons, no neuromodulation or gap junctions"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#honest",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:limitation/olfactory-saturation",
+   "type": "Limitation",
+   "label": {
+    "ko": "냄새를 맡으면 더듬이엽이 포화되어 방향 신호가 없다",
+    "en": "Antennal lobe saturates, no odor direction"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#honest",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/provenance-labeling",
+   "type": "Concept",
+   "label": {
+    "ko": "어디까지 진짜인지 표시하기",
+    "en": "Labeling provenance"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#honest",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "행동마다 창발·손으로·섞임을 붙여 출처를 밝힌다."
+   },
+   "family": "systems",
+   "match": []
+  },
+  {
+   "id": "lab:concept/frozen-model-inference",
+   "type": "Concept",
+   "label": {
+    "ko": "고정된 가중치로 추론만 하기 (생성 AI 비유)",
+    "en": "Inference with frozen weights (generative AI analogy)"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#apply",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "language",
+   "match": []
+  },
+  {
+   "id": "lab:concept/tool-selection-analogy",
+   "type": "Concept",
+   "label": {
+    "ko": "우선순위 사다리와 에이전트 도구 선택",
+    "en": "Priority ladder vs agent tool choice"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#apply",
+   "level": 4,
+   "status": "known",
+   "confidence": "low",
+   "coverage": "mentioned",
+   "family": "systems",
+   "match": []
+  },
+  {
+   "id": "lab:concept/rule-learning-hybrid",
+   "type": "Concept",
+   "label": {
+    "ko": "규칙과 학습을 섞어 쓰는 시스템",
+    "en": "Hybrid rule + learned system"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#apply",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "모델이 정하는 부분과 사람이 만든 규칙을 나눠 표시하고, 규칙이 개입하는 순간을 드러낸다."
+   },
+   "family": "ml-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/connectome-constrained-dl",
+   "type": "Method",
+   "label": {
+    "ko": "배선도 제약 딥러닝",
+    "en": "Connectome-constrained deep learning"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#compare",
+   "level": 4,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "실제 연결은 그대로 두고 알 수 없는 뉴런·시냅스 값만 딥러닝으로 학습한다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:method/rnn",
+   "type": "Method",
+   "label": {
+    "ko": "순환 신경망 (RNN)",
+    "en": "Recurrent neural network"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#arch",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "시간 루프와 되먹임 연결을 가진 신경망. 이 모델과 가장 닮았지만 가중치를 역전파로 배운다."
+   },
+   "family": "sequence",
+   "match": []
+  },
+  {
+   "id": "lab:method/lstm-gru",
+   "type": "Method",
+   "label": {
+    "ko": "LSTM·GRU",
+    "en": "LSTM and GRU"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#arch",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "게이트로 기억을 고르는 순환 신경망."
+   },
+   "family": "sequence",
+   "match": []
+  },
+  {
+   "id": "lab:method/mlp",
+   "type": "Method",
+   "label": {
+    "ko": "다층 퍼셉트론",
+    "en": "Multilayer perceptron"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#arch",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "모든 층을 역전파로 학습하는 일반 신경망."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/cnn",
+   "type": "Method",
+   "label": {
+    "ko": "합성곱 신경망",
+    "en": "Convolutional neural network"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#arch",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "같은 필터를 모든 위치에 반복하는 신경망."
+   },
+   "family": "vision",
+   "match": []
+  },
+  {
+   "id": "lab:method/connectome-lif-readout",
+   "type": "Method",
+   "label": {
+    "ko": "배선 고정 스파이킹 모델 (해독층만 학습)",
+    "en": "Fixed-wiring spiking model with trained readout"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#code",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "숨은 LIF 뉴런 160개의 연결을 고정하고 해독층만 학습한다."
+   },
+   "family": "representation",
+   "match": []
+  },
+  {
+   "id": "lab:method/surrogate-gradient",
+   "type": "Method",
+   "label": {
+    "ko": "대리 기울기",
+    "en": "Surrogate gradient"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#code",
+   "level": 4,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "스파이크는 계단 함수라 기울기가 0이므로, 부드러운 함수의 기울기로 대신해 스파이킹 신경망을 학습한다."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/transfer-learning-tm",
+   "type": "Concept",
+   "label": {
+    "ko": "전이 학습 (Teachable Machine)",
+    "en": "Transfer learning (Teachable Machine)"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#lab",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "language",
+   "match": []
+  },
+  {
+   "id": "lab:method/neuprint",
+   "type": "Method",
+   "label": {
+    "ko": "neuPrint (커넥톰 질의 도구)",
+    "en": "neuPrint"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#papers",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:question/whole-brain-learning-model",
+   "type": "Question",
+   "label": {
+    "ko": "뇌 전체와 몸을 함께 돌리며 학습·신경조절까지 넣은 모형은 가능한가",
+    "en": "Can a whole-brain-and-body model include learning and neuromodulation?"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#compare",
+   "level": 4,
+   "status": "known",
+   "confidence": "low",
+   "coverage": "mentioned",
+   "match": []
+  },
+  {
+   "id": "lab:question/memory-gap",
+   "type": "Question",
+   "label": {
+    "ko": "이 모드가 비워 둔 배움과 기억 회로",
+    "en": "The learning and memory gap in the mod"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#sum",
+   "level": 3,
+   "status": "known",
+   "confidence": "medium",
+   "coverage": "mentioned",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p3-nervous3d",
+   "type": "Simulation",
+   "label": {
+    "ko": "3D 신경계 신호 경로",
+    "en": "3D nervous system pathways"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#brain",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p3-lif",
+   "type": "Simulation",
+   "label": {
+    "ko": "뉴런 하나 시뮬레이터",
+    "en": "Single LIF neuron simulator"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#lif",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p3-neuroscope",
+   "type": "Simulation",
+   "label": {
+    "ko": "행동 관찰 대시보드",
+    "en": "Behavior observation dashboard"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#scope",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p3-gain",
+   "type": "Simulation",
+   "label": {
+    "ko": "이득 0.55·0.65·0.75 비교",
+    "en": "Gain comparison"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#gain",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p3-compare",
+   "type": "Simulation",
+   "label": {
+    "ko": "세 작업 비교 지도",
+    "en": "Three-project comparison map"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#compare",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p3-teachable",
+   "type": "Simulation",
+   "label": {
+    "ko": "초파리 학습기 (배선 고정 스파이킹)",
+    "en": "Fly teachable lab"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#lab",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p3-colab",
+   "type": "Simulation",
+   "label": {
+    "ko": "Colab 코드 1·2 (LIF 넘파이, PyTorch 비교)",
+    "en": "Colab code 1-2"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#code",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/berg2026sexual",
+   "type": "Work",
+   "label": {
+    "ko": "Berg 외 (2026) Cell",
+    "en": "Sexual dimorphism in the complete Drosophila male central nervous system connectome"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/shiu2024drosophila",
+   "type": "Work",
+   "label": {
+    "ko": "Shiu 외 (2024) Nature",
+    "en": "A Drosophila computational brain model reveals sensorimotor processing"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/lappalainen2024connectome",
+   "type": "Work",
+   "label": {
+    "ko": "Lappalainen 외 (2024) Nature",
+    "en": "Connectome-constrained networks predict neural activity across the fly visual system"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/plaza2022neuprint",
+   "type": "Work",
+   "label": {
+    "ko": "Plaza 외 (2022) Front Neuroinform",
+    "en": "neuPrint: An open access tool for EM connectomics"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/blendiremade2026flybrain",
+   "type": "Work",
+   "label": {
+    "ko": "blendi-remade/fly-brain-minecraft (2026)",
+    "en": "fly-brain-minecraft GitHub repository"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:claim/p3-male-cns-count",
+   "type": "Claim",
+   "label": {
+    "ko": "교정·주석을 마친 수컷 중추신경계 커넥톰의 뉴런은 166,700개다",
+    "en": "The proofread male CNS connectome contains 166,700 neurons"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#papers",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "berg2026sexual",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p3-mod-scale",
+   "type": "Claim",
+   "label": {
+    "ko": "모드는 뉴런 176,422개, 시냅스 5개 이상인 연결 6,287,749개를 시뮬레이션한다",
+    "en": "The mod simulates 176,422 neurons and 6,287,749 connections with at least 5 synapses"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#top",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "blendiremade2026flybrain",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p3-zero-learned",
+   "type": "Claim",
+   "label": {
+    "ko": "모드에서 학습으로 바뀌는 가중치는 0개다",
+    "en": "No weights change by learning in the mod"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#top",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "blendiremade2026flybrain",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p3-lif-params",
+   "type": "Claim",
+   "label": {
+    "ko": "뉴런 식의 값은 τm 20 ms, τs 5 ms, −52/−45 mV, 불응기 2.2 ms, 시냅스당 0.275 mV다",
+    "en": "LIF parameters follow Shiu et al. (2024)"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#lif",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "shiu2024drosophila",
+     "loc": ""
+    },
+    {
+     "ref": "blendiremade2026flybrain",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p3-shiu-sugar",
+   "type": "Claim",
+   "label": {
+    "ko": "암컷 뇌 LIF 모형이 설탕 맛 → 주둥이 뻗기 같은 경로를 예측하고 실험으로 확인했다",
+    "en": "A whole-brain LIF model predicted sugar-to-proboscis pathways later confirmed experimentally"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#papers",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "shiu2024drosophila",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p3-gain-075",
+   "type": "Claim",
+   "label": {
+    "ko": "이득 0.75에서는 틱당 스파이크가 불어나고 케니언 세포가 깨어나 손질 명령까지 꺼진다",
+    "en": "At gain 0.75 activity runs away and Kenyon cells wake up"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#gain",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "blendiremade2026flybrain",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p3-lappalainen",
+   "type": "Claim",
+   "label": {
+    "ko": "시각계 64개 세포 종류의 실제 연결 위에서 학습한 모형의 예측이 26개 연구의 실측과 맞았다",
+    "en": "A connectome-constrained model of 64 visual cell types matched measurements from 26 studies"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#compare",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "lappalainen2024connectome",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p3-neuprint",
+   "type": "Claim",
+   "label": {
+    "ko": "neuPrint는 커넥톰을 질의하는 공개 도구다",
+    "en": "neuPrint is an open-access tool for querying EM connectomes"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#papers",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "plaza2022neuprint",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p3-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "시냅스 30개 연결의 입력 하나가 더하는 전류",
+    "en": "시냅스 30개 연결의 입력 하나가 더하는 전류"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p3-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "혼자 발화시키려면 동시 시냅스가 몇 개 필요한가",
+    "en": "혼자 발화시키려면 동시 시냅스가 몇 개 필요한가"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p3-3",
+   "type": "QuizItem",
+   "label": {
+    "ko": "설탕 + 쓴맛에서 억제가 일어나는 단계",
+    "en": "설탕 + 쓴맛에서 억제가 일어나는 단계"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p3-4",
+   "type": "QuizItem",
+   "label": {
+    "ko": "이득 0.75에서 손질 장면에 생기는 일",
+    "en": "이득 0.75에서 손질 장면에 생기는 일"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p3-5",
+   "type": "QuizItem",
+   "label": {
+    "ko": "배선 고정 스파이킹 모델과 MLP 결과 비교",
+    "en": "배선 고정 스파이킹 모델과 MLP 결과 비교"
+   },
+   "page": "3_fruitfly_minecraft_connectome",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:question/behavior-from-wiring",
+   "p": "lab:broader",
+   "o": "lab:topic/connectome",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/fly-brain-minecraft",
+   "p": "lab:broader",
+   "o": "lab:topic/connectome",
+   "anchor": "#what",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/fly-brain-minecraft",
+   "p": "lab:broader",
+   "o": "lab:topic/biological-neuron",
+   "anchor": "#what",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/connectome",
+   "p": "lab:broader",
+   "o": "lab:topic/connectome",
+   "anchor": "#what",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/ventral-nerve-cord",
+   "p": "lab:broader",
+   "o": "lab:topic/connectome",
+   "anchor": "#brain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/descending-neurons",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/mn9",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/giant-fiber",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/t4-t5",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/antennal-lobe",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lif-neuron",
+   "p": "lab:broader",
+   "o": "lab:topic/biological-neuron",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/spike",
+   "p": "lab:broader",
+   "o": "lab:topic/biological-neuron",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/threshold-unit",
+   "p": "lab:broader",
+   "o": "lab:topic/perceptron",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/synapse-count-weight",
+   "p": "lab:broader",
+   "o": "lab:topic/weights-and-biases",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/synapse-count-weight",
+   "p": "lab:broader",
+   "o": "lab:topic/connectome",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/dales-law",
+   "p": "lab:broader",
+   "o": "lab:topic/biological-neuron",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/inhibition",
+   "p": "lab:broader",
+   "o": "lab:topic/biological-neuron",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/inhibition",
+   "p": "lab:broader",
+   "o": "lab:topic/weights-and-biases",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/frozen-weights",
+   "p": "lab:broader",
+   "o": "lab:topic/transfer-learning",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/poisson-input",
+   "p": "lab:broader",
+   "o": "lab:topic/probability-statistics",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/brain-tick",
+   "p": "lab:broader",
+   "o": "lab:topic/time-series",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/priority-decoder",
+   "p": "lab:broader",
+   "o": "lab:topic/rule-vs-learning",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/firing-rate",
+   "p": "lab:broader",
+   "o": "lab:topic/biological-neuron",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/global-gain",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-rate-schedule",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/hyperparameter-tuning",
+   "p": "lab:broader",
+   "o": "lab:topic/generalization",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/runaway-excitation",
+   "p": "lab:broader",
+   "o": "lab:topic/normalization-layers",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/emergent-behavior",
+   "p": "lab:broader",
+   "o": "lab:topic/connectome",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/hand-built-proxy",
+   "p": "lab:broader",
+   "o": "lab:topic/rule-vs-learning",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/connectome-model-gaps",
+   "p": "lab:broader",
+   "o": "lab:topic/connectome",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/olfactory-saturation",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/provenance-labeling",
+   "p": "lab:broader",
+   "o": "lab:topic/reproducibility",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/frozen-model-inference",
+   "p": "lab:broader",
+   "o": "lab:topic/pretrained-lm",
+   "anchor": "#apply",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/tool-selection-analogy",
+   "p": "lab:broader",
+   "o": "lab:topic/deployment",
+   "anchor": "#apply",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/rule-learning-hybrid",
+   "p": "lab:broader",
+   "o": "lab:topic/rule-vs-learning",
+   "anchor": "#apply",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/rule-learning-hybrid",
+   "p": "lab:broader",
+   "o": "lab:topic/deployment",
+   "anchor": "#apply",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/connectome-constrained-dl",
+   "p": "lab:broader",
+   "o": "lab:topic/connectome",
+   "anchor": "#compare",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/connectome-constrained-dl",
+   "p": "lab:broader",
+   "o": "lab:topic/backpropagation",
+   "anchor": "#compare",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/rnn",
+   "p": "lab:broader",
+   "o": "lab:topic/rnn",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lstm-gru",
+   "p": "lab:broader",
+   "o": "lab:topic/lstm-gru",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:broader",
+   "o": "lab:topic/mlp",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/cnn",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/connectome-lif-readout",
+   "p": "lab:broader",
+   "o": "lab:topic/random-features",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/connectome-lif-readout",
+   "p": "lab:broader",
+   "o": "lab:topic/biological-neuron",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/surrogate-gradient",
+   "p": "lab:broader",
+   "o": "lab:topic/backpropagation",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/transfer-learning-tm",
+   "p": "lab:broader",
+   "o": "lab:topic/transfer-learning",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/neuprint",
+   "p": "lab:broader",
+   "o": "lab:topic/connectome",
+   "anchor": "#papers",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-male-cns-count",
+   "p": "lab:assertedIn",
+   "o": "lab:work/berg2026sexual",
+   "anchor": "#papers",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-male-cns-count",
+   "p": "lab:supports",
+   "o": "lab:concept/connectome",
+   "anchor": "#papers",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-mod-scale",
+   "p": "lab:assertedIn",
+   "o": "lab:work/blendiremade2026flybrain",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-mod-scale",
+   "p": "lab:supports",
+   "o": "lab:method/fly-brain-minecraft",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-mod-scale",
+   "p": "lab:supports",
+   "o": "lab:concept/connectome",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-zero-learned",
+   "p": "lab:assertedIn",
+   "o": "lab:work/blendiremade2026flybrain",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-zero-learned",
+   "p": "lab:supports",
+   "o": "lab:concept/frozen-weights",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-zero-learned",
+   "p": "lab:supports",
+   "o": "lab:concept/synapse-count-weight",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-lif-params",
+   "p": "lab:assertedIn",
+   "o": "lab:work/shiu2024drosophila",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-lif-params",
+   "p": "lab:assertedIn",
+   "o": "lab:work/blendiremade2026flybrain",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-lif-params",
+   "p": "lab:supports",
+   "o": "lab:method/lif-neuron",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-lif-params",
+   "p": "lab:supports",
+   "o": "lab:concept/synapse-count-weight",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-shiu-sugar",
+   "p": "lab:assertedIn",
+   "o": "lab:work/shiu2024drosophila",
+   "anchor": "#papers",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-shiu-sugar",
+   "p": "lab:supports",
+   "o": "lab:method/lif-neuron",
+   "anchor": "#papers",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-shiu-sugar",
+   "p": "lab:supports",
+   "o": "lab:bio/mn9",
+   "anchor": "#papers",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-shiu-sugar",
+   "p": "lab:supports",
+   "o": "lab:concept/emergent-behavior",
+   "anchor": "#papers",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-gain-075",
+   "p": "lab:assertedIn",
+   "o": "lab:work/blendiremade2026flybrain",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-gain-075",
+   "p": "lab:supports",
+   "o": "lab:concept/global-gain",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-gain-075",
+   "p": "lab:supports",
+   "o": "lab:limitation/runaway-excitation",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-lappalainen",
+   "p": "lab:assertedIn",
+   "o": "lab:work/lappalainen2024connectome",
+   "anchor": "#compare",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-lappalainen",
+   "p": "lab:supports",
+   "o": "lab:method/connectome-constrained-dl",
+   "anchor": "#compare",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-neuprint",
+   "p": "lab:assertedIn",
+   "o": "lab:work/plaza2022neuprint",
+   "anchor": "#papers",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p3-neuprint",
+   "p": "lab:supports",
+   "o": "lab:method/neuprint",
+   "anchor": "#papers",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/behavior-from-wiring",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/fly-brain-minecraft",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/behavior-from-wiring",
+   "p": "lab:raises",
+   "o": "lab:question/memory-gap",
+   "anchor": "#sum",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/connectome",
+   "p": "lab:partOf",
+   "o": "lab:method/fly-brain-minecraft",
+   "anchor": "#what",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lif-neuron",
+   "p": "lab:partOf",
+   "o": "lab:method/fly-brain-minecraft",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/priority-decoder",
+   "p": "lab:partOf",
+   "o": "lab:method/fly-brain-minecraft",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/ventral-nerve-cord",
+   "p": "lab:partOf",
+   "o": "lab:concept/connectome",
+   "anchor": "#brain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/descending-neurons",
+   "p": "lab:partOf",
+   "o": "lab:bio/ventral-nerve-cord",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/mn9",
+   "p": "lab:partOf",
+   "o": "lab:bio/ventral-nerve-cord",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/giant-fiber",
+   "p": "lab:partOf",
+   "o": "lab:bio/descending-neurons",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:partOf",
+   "o": "lab:concept/connectome",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/neuprint",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/connectome",
+   "anchor": "#papers",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/threshold-unit",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/lif-neuron",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lif-neuron",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/threshold-unit",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/spike",
+   "p": "lab:partOf",
+   "o": "lab:method/lif-neuron",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/synapse-count-weight",
+   "p": "lab:partOf",
+   "o": "lab:method/lif-neuron",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/dales-law",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/inhibition",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/inhibition",
+   "p": "lab:partOf",
+   "o": "lab:concept/synapse-count-weight",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/frozen-weights",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/synapse-count-weight",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/poisson-input",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/lif-neuron",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/brain-tick",
+   "p": "lab:partOf",
+   "o": "lab:method/fly-brain-minecraft",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/firing-rate",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/priority-decoder",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/descending-neurons",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/priority-decoder",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/priority-decoder",
+   "p": "lab:partOf",
+   "o": "lab:concept/hand-built-proxy",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/global-gain",
+   "p": "lab:partOf",
+   "o": "lab:concept/synapse-count-weight",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/global-gain",
+   "p": "lab:analogyOf",
+   "o": "lab:concept/hyperparameter-tuning",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/runaway-excitation",
+   "p": "lab:addressedBy",
+   "o": "lab:concept/global-gain",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:evaluatedBy",
+   "o": "lab:concept/global-gain",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/emergent-behavior",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/hand-built-proxy",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/provenance-labeling",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/emergent-behavior",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/fly-brain-minecraft",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/connectome-model-gaps",
+   "anchor": "#what",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/fly-brain-minecraft",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/olfactory-saturation",
+   "anchor": "#what",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/olfactory-saturation",
+   "p": "lab:addressedBy",
+   "o": "lab:concept/hand-built-proxy",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/antennal-lobe",
+   "p": "lab:partOf",
+   "o": "lab:limitation/olfactory-saturation",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/t4-t5",
+   "p": "lab:partOf",
+   "o": "lab:limitation/connectome-model-gaps",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/fly-brain-minecraft",
+   "p": "lab:analogyOf",
+   "o": "lab:concept/frozen-model-inference",
+   "anchor": "#what",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/priority-decoder",
+   "p": "lab:analogyOf",
+   "o": "lab:concept/tool-selection-analogy",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/hand-built-proxy",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/rule-learning-hybrid",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/provenance-labeling",
+   "p": "lab:partOf",
+   "o": "lab:concept/rule-learning-hybrid",
+   "anchor": "#apply",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/fly-brain-minecraft",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/connectome-constrained-dl",
+   "anchor": "#what",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/connectome-model-gaps",
+   "p": "lab:addressedBy",
+   "o": "lab:method/connectome-constrained-dl",
+   "anchor": "#compare",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/t4-t5",
+   "p": "lab:evaluatedBy",
+   "o": "lab:method/connectome-constrained-dl",
+   "anchor": "#compare",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/connectome-constrained-dl",
+   "p": "lab:raises",
+   "o": "lab:question/whole-brain-learning-model",
+   "anchor": "#compare",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/memory-gap",
+   "p": "lab:relatedTo",
+   "o": "lab:bio/kenyon-cells",
+   "anchor": "#sum",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/fly-brain-minecraft",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/rnn",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/rnn",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/lstm-gru",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/cnn",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/connectome-lif-readout",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/mlp",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/connectome-lif-readout",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/surrogate-gradient",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/surrogate-gradient",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/lif-neuron",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/transfer-learning-tm",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/connectome-lif-readout",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/connectome",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-nervous3d",
+   "anchor": "#what",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/ventral-nerve-cord",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-nervous3d",
+   "anchor": "#brain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lif-neuron",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-lif",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/inhibition",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-lif",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/global-gain",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-lif",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/priority-decoder",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-neuroscope",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/poisson-input",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-neuroscope",
+   "anchor": "#scope",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/emergent-behavior",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-neuroscope",
+   "anchor": "#honest",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/global-gain",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-gain",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/runaway-excitation",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-gain",
+   "anchor": "#gain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/connectome-constrained-dl",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-compare",
+   "anchor": "#compare",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/connectome-lif-readout",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-teachable",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lif-neuron",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-colab",
+   "anchor": "#lif",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/connectome-lif-readout",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-colab",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/surrogate-gradient",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-colab",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-colab",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/cnn",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-colab",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/rnn",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-colab",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lstm-gru",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p3-colab",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p3-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/synapse-count-weight",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p3-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/global-gain",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p3-2",
+   "p": "lab:assesses",
+   "o": "lab:method/lif-neuron",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p3-3",
+   "p": "lab:assesses",
+   "o": "lab:concept/inhibition",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p3-3",
+   "p": "lab:assesses",
+   "o": "lab:bio/mn9",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p3-4",
+   "p": "lab:assesses",
+   "o": "lab:limitation/runaway-excitation",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p3-4",
+   "p": "lab:assesses",
+   "o": "lab:concept/global-gain",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p3-5",
+   "p": "lab:assesses",
+   "o": "lab:method/connectome-lif-readout",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p3-5",
+   "p": "lab:assesses",
+   "o": "lab:method/mlp",
+   "anchor": "#teach",
+   "confidence": "high"
+  }
+ ]
+}

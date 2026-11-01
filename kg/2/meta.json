@@ -1,0 +1,39 @@
+{
+ "title": "배운 기억은 본능 회로를 거쳐서 꺼내진다 — Dolan 외 (2018) 도해",
+ "number": "특별 2",
+ "series": "딥러닝 A to Z · 초파리 특별편",
+ "about": [
+  "lab:question/how-memory-becomes-action",
+  "lab:bio/convergence-neurons",
+  "lab:concept/memory-retrieval",
+  "lab:concept/innate-learned-convergence",
+  "lab:method/memory-innate-merge"
+ ],
+ "basedOn": [
+  "dolan2018communication"
+ ],
+ "educationalLevel": "입문~중급",
+ "creator": [
+  {
+   "name": "안상선",
+   "role": "author"
+  }
+ ],
+ "contributor": [
+  {
+   "name": "AI 보조 제작",
+   "role": "assistant"
+  }
+ ],
+ "date": "2026-11-01",
+ "version": "1.1",
+ "language": [
+  "ko"
+ ],
+ "license": "CC BY-NC 4.0",
+ "url": "",
+ "registry": "KG_00_registry 0.2",
+ "learningResourceType": "interactive explainer",
+ "seeAlso": "",
+ "suggestedCitation": "안상선 (2026). 배운 기억은 본능 회로를 거쳐서 꺼내진다 — Dolan 외 (2018) 도해. 딥러닝 A to Z · 초파리 특별편 특별 2, v1.1."
+}

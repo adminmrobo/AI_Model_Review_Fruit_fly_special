@@ -1,0 +1,403 @@
+[
+ {
+  "id": "dorkenwald2024neuronal",
+  "type": "article-journal",
+  "title": "Neuronal wiring diagram of an adult brain",
+  "author": [
+   {
+    "family": "Dorkenwald",
+    "given": "S."
+   },
+   {
+    "family": "Matsliah",
+    "given": "A."
+   },
+   {
+    "family": "Sterling",
+    "given": "A. R."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "container-title": "Nature",
+  "volume": "634",
+  "page": "124–138",
+  "DOI": "10.1038/s41586-024-07558-y",
+  "lab": {
+   "work": "lab:work/dorkenwald2024neuronal",
+   "role": "primary",
+   "supports": [
+    "lab:claim/p1-fly-brain-size"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "aso2014neuronal",
+  "type": "article-journal",
+  "title": "The neuronal architecture of the mushroom body provides a logic for associative learning",
+  "author": [
+   {
+    "family": "Aso",
+    "given": "Y."
+   },
+   {
+    "family": "Hattori",
+    "given": "D."
+   },
+   {
+    "family": "Yu",
+    "given": "Y."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2014
+    ]
+   ]
+  },
+  "container-title": "eLife",
+  "volume": "3",
+  "page": "e04577",
+  "DOI": "10.7554/eLife.04577",
+  "lab": {
+   "work": "lab:work/aso2014neuronal",
+   "role": "data",
+   "supports": [
+    "lab:claim/p1-kc-count"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "azevedo2009equal",
+  "type": "article-journal",
+  "title": "Equal numbers of neuronal and nonneuronal cells make the human brain an isometrically scaled-up primate brain",
+  "author": [
+   {
+    "family": "Azevedo",
+    "given": "F. A. C."
+   },
+   {
+    "family": "Carvalho",
+    "given": "L. R. B."
+   },
+   {
+    "family": "Grinberg",
+    "given": "L. T."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  },
+  "container-title": "Journal of Comparative Neurology",
+  "volume": "513",
+  "issue": "5",
+  "page": "532–541",
+  "DOI": "10.1002/cne.21974",
+  "lab": {
+   "work": "lab:work/azevedo2009equal",
+   "role": "data",
+   "supports": [
+    "lab:claim/p1-human-neurons"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "suh2004single",
+  "type": "article-journal",
+  "title": "A single population of olfactory sensory neurons mediates an innate avoidance behaviour in Drosophila",
+  "author": [
+   {
+    "family": "Suh",
+    "given": "G. S. B."
+   },
+   {
+    "family": "Wong",
+    "given": "A. M."
+   },
+   {
+    "family": "Hergarden",
+    "given": "A. C."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2004
+    ]
+   ]
+  },
+  "container-title": "Nature",
+  "volume": "431",
+  "page": "854–859",
+  "DOI": "10.1038/nature02980",
+  "lab": {
+   "work": "lab:work/suh2004single",
+   "role": "background",
+   "supports": [
+    "lab:claim/p1-co2-avoid"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "maisak2013directional",
+  "type": "article-journal",
+  "title": "A directional tuning map of Drosophila elementary motion detectors",
+  "author": [
+   {
+    "family": "Maisak",
+    "given": "M. S."
+   },
+   {
+    "family": "Haag",
+    "given": "J."
+   },
+   {
+    "family": "Ammer",
+    "given": "G."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2013
+    ]
+   ]
+  },
+  "container-title": "Nature",
+  "volume": "500",
+  "page": "212–216",
+  "DOI": "10.1038/nature12320",
+  "lab": {
+   "work": "lab:work/maisak2013directional",
+   "role": "background",
+   "supports": [
+    "lab:claim/p1-t4t5"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "klapoetke2017ultra",
+  "type": "article-journal",
+  "title": "Ultra-selective looming detection from radial motion opponency",
+  "author": [
+   {
+    "family": "Klapoetke",
+    "given": "N. C."
+   },
+   {
+    "family": "Nern",
+    "given": "A."
+   },
+   {
+    "family": "Peek",
+    "given": "M. Y."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2017
+    ]
+   ]
+  },
+  "container-title": "Nature",
+  "volume": "551",
+  "page": "237–241",
+  "DOI": "10.1038/nature24626",
+  "lab": {
+   "work": "lab:work/klapoetke2017ultra",
+   "role": "background",
+   "supports": [
+    "lab:claim/p1-lplc2"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "couto2005molecular",
+  "type": "article-journal",
+  "title": "Molecular, anatomical, and functional organization of the Drosophila olfactory system",
+  "author": [
+   {
+    "family": "Couto",
+    "given": "A."
+   },
+   {
+    "family": "Alenius",
+    "given": "M."
+   },
+   {
+    "family": "Dickson",
+    "given": "B. J."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2005
+    ]
+   ]
+  },
+  "container-title": "Current Biology",
+  "volume": "15",
+  "issue": "17",
+  "page": "1535–1547",
+  "DOI": "10.1016/j.cub.2005.07.034",
+  "lab": {
+   "work": "lab:work/couto2005molecular",
+   "role": "data",
+   "supports": [
+    "lab:claim/p1-orn-types"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 본문 각주 [3](\"Couto 외 2005, Curr Biol\")에서 출발해 FlyBase FBrf0187305(PubMed 16139208)로 제목·권호·쪽·DOI를 확인함 (2026-11-01)",
+   "checkedSource": "external"
+  }
+ },
+ {
+  "id": "semmelhack2009select",
+  "type": "article-journal",
+  "title": "Select Drosophila glomeruli mediate innate olfactory attraction and aversion",
+  "author": [
+   {
+    "family": "Semmelhack",
+    "given": "J. L."
+   },
+   {
+    "family": "Wang",
+    "given": "J. W."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  },
+  "container-title": "Nature",
+  "volume": "459",
+  "issue": "7244",
+  "page": "218–223",
+  "DOI": "10.1038/nature07983",
+  "lab": {
+   "work": "lab:work/semmelhack2009select",
+   "role": "background",
+   "supports": [
+    "lab:claim/p1-vinegar-band"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 본문 각주 [6](\"Semmelhack & Wang (2009) Nature\")에서 출발해 RePEc/IDEAS 서지(doi:10.1038/nature07983)로 제목·권호·쪽을 확인함 (2026-11-01)",
+   "checkedSource": "external"
+  }
+ }
+]

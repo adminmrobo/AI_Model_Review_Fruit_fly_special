@@ -1,0 +1,162 @@
+[
+ {
+  "id": "dolan2018communication",
+  "type": "article-journal",
+  "title": "Communication from learned to innate olfactory processing centers is required for memory retrieval in Drosophila",
+  "author": [
+   {
+    "family": "Dolan",
+    "given": "M.-J."
+   },
+   {
+    "family": "Belliart-Guérin",
+    "given": "G."
+   },
+   {
+    "family": "Bates",
+    "given": "A. S."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  },
+  "container-title": "Neuron",
+  "volume": "100",
+  "issue": "3",
+  "page": "651–668.e8",
+  "DOI": "10.1016/j.neuron.2018.08.037",
+  "lab": {
+   "work": "lab:work/dolan2018communication",
+   "role": "primary",
+   "supports": [
+    "lab:claim/p2-pd2-required",
+    "lab:claim/p2-naive-intact",
+    "lab:claim/p2-mbon-required",
+    "lab:claim/p2-response-depressed",
+    "lab:claim/p2-pn-input",
+    "lab:claim/p2-innate-attraction"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "zheng2018complete",
+  "type": "article-journal",
+  "title": "A complete electron microscopy volume of the brain of adult Drosophila melanogaster",
+  "author": [
+   {
+    "family": "Zheng",
+    "given": "Z."
+   },
+   {
+    "family": "Lauritzen",
+    "given": "J. S."
+   },
+   {
+    "family": "Perlman",
+    "given": "E."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  },
+  "container-title": "Cell",
+  "volume": "174",
+  "issue": "3",
+  "page": "730–743.e22",
+  "DOI": "10.1016/j.cell.2018.06.019",
+  "lab": {
+   "work": "lab:work/zheng2018complete",
+   "role": "data",
+   "supports": [
+    "lab:claim/p2-pn-input"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "aso2014neuronal",
+  "type": "article-journal",
+  "title": "The neuronal architecture of the mushroom body provides a logic for associative learning",
+  "author": [
+   {
+    "family": "Aso",
+    "given": "Y."
+   },
+   {
+    "family": "Hattori",
+    "given": "D."
+   },
+   {
+    "family": "Yu",
+    "given": "Y."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2014
+    ]
+   ]
+  },
+  "container-title": "eLife",
+  "volume": "3",
+  "page": "e04577",
+  "DOI": "10.7554/eLife.04577",
+  "lab": {
+   "work": "lab:work/aso2014neuronal",
+   "role": "background",
+   "supports": [
+    "lab:claim/p2-mbon-naming"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ }
+]

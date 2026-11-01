@@ -1,0 +1,2737 @@
+{
+ "version": "1.0",
+ "page": "1_fruitfly_brain_deep_learning",
+ "nodes": [
+  {
+   "id": "lab:question/how-flies-perceive",
+   "type": "Question",
+   "label": {
+    "ko": "초파리는 어떻게 맡고, 보고, 알아차리는가",
+    "en": "How does a fly smell, see and recognize?"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#top",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/fly-model-organism",
+   "type": "Concept",
+   "label": {
+    "ko": "모델 생물로서의 초파리",
+    "en": "Drosophila as a model organism"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#why",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "전체 배선도가 공개되어 있고, 감각에서 행동까지 길이 짧으며, 원하는 뉴런만 켜고 끌 수 있어 신경망을 배우기에 알맞은 크기의 동물이다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/connectome",
+   "type": "Concept",
+   "label": {
+    "ko": "커넥톰",
+    "en": "Connectome"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#why",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "뇌 전체의 뉴런과 연결을 담은 배선도. 신경망으로 치면 모델의 구조와 연결 전체다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/spike",
+   "type": "Concept",
+   "label": {
+    "ko": "스파이크",
+    "en": "Spike (action potential)"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#elec",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "뉴런 막의 전압이 문턱을 넘을 때 나가는 크기가 일정한 전기 펄스."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/firing-rate",
+   "type": "Concept",
+   "label": {
+    "ko": "발화 빈도",
+    "en": "Firing rate"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#elec",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "자극 세기를 스파이크를 몇 번 쏘는지로 나타낸 값. 인공 뉴런의 출력 숫자에 해당한다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/synapse",
+   "type": "Concept",
+   "label": {
+    "ko": "시냅스",
+    "en": "Synapse"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#elec",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "뉴런 사이 틈에서 전기가 신경전달물질로 바뀌어 건너가는 곳. 전달 효율이 가중치다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/graded-potential",
+   "type": "Concept",
+   "label": {
+    "ko": "연속 전압 신호",
+    "en": "Graded potential"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#elec",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "짧은 거리만 신호를 보내는 뉴런이 스파이크 대신 전압을 연속으로 오르내리며 전하는 방식."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/input-encoding",
+   "type": "Concept",
+   "label": {
+    "ko": "입력을 숫자로 바꾸기",
+    "en": "Encoding inputs as numbers"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#elec",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "빛·냄새·소리·맛을 모두 같은 형태의 신호로 바꿔야 한곳에서 섞고 비교할 수 있다. 딥러닝이 모든 입력을 숫자 목록으로 바꾸는 것과 같다."
+   },
+   "family": "ml-basics",
+   "match": []
+  },
+  {
+   "id": "lab:bio/olfactory-receptor-neurons",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "후각 수용 뉴런",
+    "en": "Olfactory receptor neurons"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#elec",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/compound-eye",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "겹눈",
+    "en": "Compound eye"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#map",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/antennal-lobe",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "더듬이엽",
+    "en": "Antennal lobe"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#map",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/mushroom-body",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "버섯체",
+    "en": "Mushroom body"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/kenyon-cells",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "케니언 세포",
+    "en": "Kenyon cells"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/lateral-horn",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "측각",
+    "en": "Lateral horn"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#rule",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/dopamine-neurons",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "도파민 뉴런",
+    "en": "Dopaminergic neurons"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#rule",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/co2-neurons",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "이산화탄소 감지 뉴런",
+    "en": "CO2-sensing olfactory neurons"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/t4-t5",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "T4·T5 뉴런",
+    "en": "T4/T5 neurons"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv4",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/lplc2",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "LPLC2 뉴런",
+    "en": "LPLC2 neurons"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv4",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/giant-fiber",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "거대 섬유",
+    "en": "Giant fiber"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv4",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/sense-nerve-brain-action",
+   "type": "Concept",
+   "label": {
+    "ko": "감각기관 → 신경 → 뇌 → 행동",
+    "en": "Sense → nerve → brain → action"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#map",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "초파리의 네 단계는 신경망의 입력층 → 전처리·첫 층 → 은닉층 → 출력층과 일대일로 맞는다."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/rule-based",
+   "type": "Concept",
+   "label": {
+    "ko": "규칙 기반",
+    "en": "Rule-based system"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#rule",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "사람(또는 진화)이 미리 규칙을 써 두는 방식. 설명은 쉽지만 환경이 바뀌면 직접 고쳐야 한다."
+   },
+   "family": "ml-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/learning-based",
+   "type": "Concept",
+   "label": {
+    "ko": "학습 기반",
+    "en": "Learning-based system"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#rule",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "예시와 결과만 주고 예상이 틀린 만큼 가중치를 고쳐 규칙을 스스로 찾게 하는 방식."
+   },
+   "family": "ml-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/prediction-error-update",
+   "type": "Concept",
+   "label": {
+    "ko": "예측 오차 갱신",
+    "en": "Prediction-error update"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#rule",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "값 ← 값 + η × (결과 − 예상). 예상이 틀린 만큼 고친다."
+   },
+   "family": "rl",
+   "match": []
+  },
+  {
+   "id": "lab:method/threshold-unit",
+   "type": "Method",
+   "label": {
+    "ko": "문턱 모델",
+    "en": "Threshold unit"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "입력 x에 가중치 w를 곱한 값이 문턱 θ를 넘으면 1, 아니면 0을 내는 가장 작은 모델."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/weight",
+   "type": "Concept",
+   "label": {
+    "ko": "가중치",
+    "en": "Weight"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "이 입력을 얼마나 크게 들을지 정하는 값. 시냅스의 강도에 해당한다."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/bias",
+   "type": "Concept",
+   "label": {
+    "ko": "편향",
+    "en": "Bias"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "가중합에 더하는 값. 얼마나 쉽게 반응할지를 정한다."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:limitation/single-input",
+   "type": "Limitation",
+   "label": {
+    "ko": "입력을 하나만 본다",
+    "en": "Only one input"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/perceptron",
+   "type": "Method",
+   "label": {
+    "ko": "퍼셉트론",
+    "en": "Perceptron"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "여러 입력에 가중치를 곱해 더하고 편향을 더한 뒤 시그모이드로 0~1 확률로 바꾸는 뉴런 하나."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/sigmoid",
+   "type": "Concept",
+   "label": {
+    "ko": "시그모이드",
+    "en": "Sigmoid"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "점수를 0~1 사이 확률로 바꾸는 함수."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/gradient-descent",
+   "type": "Method",
+   "label": {
+    "ko": "경사하강법",
+    "en": "Gradient descent"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "예측 → 오차 → 책임 나누기 → 반대 방향으로 조금 옮기기를 반복한다."
+   },
+   "family": "optimization",
+   "match": []
+  },
+  {
+   "id": "lab:concept/learning-rate",
+   "type": "Concept",
+   "label": {
+    "ko": "학습률",
+    "en": "Learning rate"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "가중치를 한 번에 얼마나 옮길지 정하는 값 η."
+   },
+   "family": "optimization",
+   "match": []
+  },
+  {
+   "id": "lab:limitation/single-linear-boundary",
+   "type": "Limitation",
+   "label": {
+    "ko": "곧은 경계 하나뿐",
+    "en": "Single linear boundary"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:dataset/band-toy",
+   "type": "Dataset",
+   "label": {
+    "ko": "띠 모양 냄새 장난감 데이터",
+    "en": "Band-shaped toy odor data"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:concept/underfitting",
+   "type": "Concept",
+   "label": {
+    "ko": "과소적합",
+    "en": "Underfitting"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "훈련 점수도 낮은 상태. 모델이 너무 단순하다."
+   },
+   "family": "ml-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/mlp",
+   "type": "Method",
+   "label": {
+    "ko": "다층 퍼셉트론",
+    "en": "Multilayer perceptron"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "입력과 출력 사이에 은닉층을 끼워 굽거나 띠 모양인 경계도 만드는 모델."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/hidden-layer",
+   "type": "Concept",
+   "label": {
+    "ko": "은닉층",
+    "en": "Hidden layer"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "은닉 뉴런 하나하나가 선을 긋고 출력 뉴런이 그 선들을 조합한다."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/backpropagation",
+   "type": "Method",
+   "label": {
+    "ko": "역전파",
+    "en": "Backpropagation"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "출력의 오차를 누구 책임인가에 따라 거꾸로 나눠 주는 계산."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/random-features",
+   "type": "Method",
+   "label": {
+    "ko": "무작위 고정 은닉층 + 출력만 학습",
+    "en": "Random features with trained readout"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "은닉층은 무작위로 고정하고 마지막 연결만 학습한다. 초파리 케니언 세포 회로와 같은 짜임이다."
+   },
+   "family": "representation",
+   "altLabel": {
+    "ko": [
+     "초파리 방식",
+     "랜덤 특징",
+     "극한 학습 기계"
+    ]
+   },
+   "match": []
+  },
+  {
+   "id": "lab:concept/sparse-coding",
+   "type": "Concept",
+   "label": {
+    "ko": "희소 표현",
+    "en": "Sparse representation"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#code",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "케니언 세포 1,000개 중 상위 8%만 켜는 넓고 희소한 표현."
+   },
+   "family": "representation",
+   "match": []
+  },
+  {
+   "id": "lab:concept/overfitting",
+   "type": "Concept",
+   "label": {
+    "ko": "과적합",
+    "en": "Overfitting"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "훈련 점수는 높은데 검증 점수가 낮은 상태. 규칙 대신 개별 예시를 외웠다."
+   },
+   "family": "ml-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/train-validation-split",
+   "type": "Concept",
+   "label": {
+    "ko": "훈련·검증 분리",
+    "en": "Train/validation split"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "훈련 데이터로만 가중치를 고치고, 학습에 쓰지 않은 검증 데이터로 채점한다."
+   },
+   "family": "ml-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/early-stopping",
+   "type": "Method",
+   "label": {
+    "ko": "조기 종료",
+    "en": "Early stopping"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "regularization",
+   "match": []
+  },
+  {
+   "id": "lab:metric/validation-accuracy",
+   "type": "Metric",
+   "label": {
+    "ko": "검증 정확도",
+    "en": "Validation accuracy"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:metric/train-accuracy",
+   "type": "Metric",
+   "label": {
+    "ko": "훈련 정확도",
+    "en": "Training accuracy"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:limitation/many-hidden-units",
+   "type": "Limitation",
+   "label": {
+    "ko": "입력이 크면 은닉 뉴런이 매우 많이 필요",
+    "en": "Width explodes with input size"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#sum",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/cnn",
+   "type": "Method",
+   "label": {
+    "ko": "합성곱 신경망",
+    "en": "Convolutional neural network"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "좁은 영역만 보는 같은 계산을 모든 위치에 반복하고, 층이 올라갈수록 보는 범위가 넓어진다."
+   },
+   "family": "vision",
+   "match": []
+  },
+  {
+   "id": "lab:concept/weight-sharing",
+   "type": "Concept",
+   "label": {
+    "ko": "가중치 공유",
+    "en": "Weight sharing"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "같은 계산(필터)을 모든 위치에 반복해 쓰는 것."
+   },
+   "family": "vision",
+   "match": []
+  },
+  {
+   "id": "lab:concept/receptive-field",
+   "type": "Concept",
+   "label": {
+    "ko": "수용 영역",
+    "en": "Receptive field"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "한 뉴런이 보는 입력 범위. 층이 올라갈수록 넓어진다."
+   },
+   "family": "vision",
+   "match": []
+  },
+  {
+   "id": "lab:task/looming-detection",
+   "type": "Task",
+   "label": {
+    "ko": "다가옴 검출",
+    "en": "Looming detection"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:limitation/depth-cost",
+   "type": "Limitation",
+   "label": {
+    "ko": "깊을수록 데이터·계산이 많이 든다",
+    "en": "Depth costs data and compute"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#sum",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/rnn",
+   "type": "Method",
+   "label": {
+    "ko": "순환 신경망 (RNN)",
+    "en": "Recurrent neural network"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#arch",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "은닉 상태를 다음 시간 칸으로 넘기며 입력을 한 칸씩 읽는 구조."
+   },
+   "family": "sequence",
+   "match": []
+  },
+  {
+   "id": "lab:method/lstm-gru",
+   "type": "Method",
+   "label": {
+    "ko": "LSTM·GRU",
+    "en": "LSTM and GRU"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#arch",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "게이트로 기억을 얼마나 지우고 쓰고 꺼낼지 정하는 순환 신경망. GRU는 게이트가 둘이라 LSTM보다 가볍다."
+   },
+   "family": "sequence",
+   "match": []
+  },
+  {
+   "id": "lab:concept/transfer-learning-tm",
+   "type": "Concept",
+   "label": {
+    "ko": "전이 학습 (Teachable Machine)",
+    "en": "Transfer learning (Teachable Machine)"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lab",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "language",
+   "match": []
+  },
+  {
+   "id": "lab:concept/confusion-matrix",
+   "type": "Concept",
+   "label": {
+    "ko": "혼동 행렬",
+    "en": "Confusion matrix"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lab",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "정답 클래스와 모델이 고른 클래스를 표로 세어 어떤 실수를 했는지 보여 준다."
+   },
+   "family": "evaluation",
+   "match": []
+  },
+  {
+   "id": "lab:dataset/doodle-shapes",
+   "type": "Dataset",
+   "label": {
+    "ko": "16×16 손그림 모양 데이터",
+    "en": "16×16 doodle shapes"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lab",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p1-brain3d",
+   "type": "Simulation",
+   "label": {
+    "ko": "3D 뇌 신호 경로",
+    "en": "3D brain signal paths"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#brain",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p1-rule-vs-learn",
+   "type": "Simulation",
+   "label": {
+    "ko": "규칙 파리 대 학습 파리 실험장",
+    "en": "Rule fly vs learning fly"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#rule",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p1-perceptron",
+   "type": "Simulation",
+   "label": {
+    "ko": "퍼셉트론 학습기",
+    "en": "Perceptron trainer"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv2",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p1-mlp",
+   "type": "Simulation",
+   "label": {
+    "ko": "은닉층 학습기 (딥러닝 방식 / 초파리 방식)",
+    "en": "Hidden-layer trainer"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p1-looming",
+   "type": "Simulation",
+   "label": {
+    "ko": "다가옴 검출 시각 경로",
+    "en": "Looming detection pathway"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p1-labdemo",
+   "type": "Simulation",
+   "label": {
+    "ko": "학습기 예시 (초파리 방식 대 MLP)",
+    "en": "Example: fly readout vs MLP"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lab",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p1-colab",
+   "type": "Simulation",
+   "label": {
+    "ko": "Colab 코드 1·2 (넘파이 초파리 방식, PyTorch 여덟 모델 비교)",
+    "en": "Colab code 1-2"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#code",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:question/dopamine-rpe",
+   "type": "Question",
+   "label": {
+    "ko": "초파리 도파민 신호는 예측 오차를 계산하는가",
+    "en": "Do fly dopamine neurons encode prediction error?"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#rule",
+   "level": 3,
+   "status": "known",
+   "confidence": "low",
+   "coverage": "mentioned",
+   "match": []
+  },
+  {
+   "id": "lab:question/brain-without-backprop",
+   "type": "Question",
+   "label": {
+    "ko": "뇌는 역전파 없이 깊은 층을 어떻게 학습하나",
+    "en": "How do brains learn deep layers without backprop?"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#analogy",
+   "level": 3,
+   "status": "known",
+   "confidence": "low",
+   "coverage": "mentioned",
+   "match": []
+  },
+  {
+   "id": "lab:work/dorkenwald2024neuronal",
+   "type": "Work",
+   "label": {
+    "ko": "Dorkenwald 외 (2024) Nature",
+    "en": "Neuronal wiring diagram of an adult brain"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/aso2014neuronal",
+   "type": "Work",
+   "label": {
+    "ko": "Aso 외 (2014) eLife",
+    "en": "The neuronal architecture of the mushroom body provides a logic for associative learning"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/azevedo2009equal",
+   "type": "Work",
+   "label": {
+    "ko": "Azevedo 외 (2009) J Comp Neurol",
+    "en": "Equal numbers of neuronal and nonneuronal cells make the human brain an isometrically scaled-up primate brain"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/suh2004single",
+   "type": "Work",
+   "label": {
+    "ko": "Suh 외 (2004) Nature",
+    "en": "A single population of olfactory sensory neurons mediates an innate avoidance behaviour in Drosophila"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/maisak2013directional",
+   "type": "Work",
+   "label": {
+    "ko": "Maisak 외 (2013) Nature",
+    "en": "A directional tuning map of Drosophila elementary motion detectors"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/klapoetke2017ultra",
+   "type": "Work",
+   "label": {
+    "ko": "Klapoetke 외 (2017) Nature",
+    "en": "Ultra-selective looming detection from radial motion opponency"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/couto2005molecular",
+   "type": "Work",
+   "label": {
+    "ko": "Couto 외 (2005) Curr Biol",
+    "en": "Couto et al. 2005"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/semmelhack2009select",
+   "type": "Work",
+   "label": {
+    "ko": "Semmelhack & Wang (2009) Nature",
+    "en": "Semmelhack & Wang 2009"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:claim/p1-fly-brain-size",
+   "type": "Claim",
+   "label": {
+    "ko": "초파리 뇌 전체 뉴런은 약 14만, 시냅스는 약 5천만이다",
+    "en": "The adult fly brain has about 140,000 neurons and about 50 million synapses"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#top",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "dorkenwald2024neuronal",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p1-kc-count",
+   "type": "Claim",
+   "label": {
+    "ko": "한쪽 버섯체에는 케니언 세포가 약 2,000개, 출력 뉴런이 21종 있다",
+    "en": "About 2,000 Kenyon cells and 21 MBON types per mushroom body"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#top",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "aso2014neuronal",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p1-human-neurons",
+   "type": "Claim",
+   "label": {
+    "ko": "사람 뇌의 뉴런은 약 860억이다",
+    "en": "The human brain has about 86 billion neurons"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#top",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "azevedo2009equal",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p1-co2-avoid",
+   "type": "Claim",
+   "label": {
+    "ko": "이산화탄소 전용 감각 뉴런 한 무리가 배우지 않은 회피 행동을 만든다",
+    "en": "A single population of CO2-sensing neurons mediates innate avoidance"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv1",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "suh2004single",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p1-orn-types",
+   "type": "Claim",
+   "label": {
+    "ko": "후각 수용 뉴런은 약 50종, 더듬이엽 사구체는 약 50개다",
+    "en": "About 50 olfactory receptor neuron types and about 50 glomeruli"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#top",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "couto2005molecular",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p1-vinegar-band",
+   "type": "Claim",
+   "label": {
+    "ko": "초파리는 옅은 식초에는 다가가고 너무 진한 식초는 피한다",
+    "en": "Flies approach low but avoid high vinegar concentrations"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv2",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "semmelhack2009select",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p1-t4t5",
+   "type": "Claim",
+   "label": {
+    "ko": "T4·T5 뉴런이 움직임의 방향을 계산한다",
+    "en": "T4/T5 neurons compute motion direction"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv4",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "maisak2013directional",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p1-lplc2",
+   "type": "Claim",
+   "label": {
+    "ko": "LPLC2 뉴런이 사방으로 퍼지는 움직임, 즉 다가오는 물체를 골라낸다",
+    "en": "LPLC2 neurons selectively detect looming via radial motion opponency"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#lv4",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "klapoetke2017ultra",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p1-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "입력 (1, 0), 가중치 (0.8, −0.5), 문턱 0.5인 퍼셉트론의 출력",
+    "en": "입력 (1, 0), 가중치 (0.8, −0.5), 문턱 0.5인 퍼셉트론의 출력"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p1-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "퍼셉트론이 띠 모양 문제를 못 푸는 이유",
+    "en": "퍼셉트론이 띠 모양 문제를 못 푸는 이유"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p1-3",
+   "type": "QuizItem",
+   "label": {
+    "ko": "훈련 96%·검증 59%의 뜻과 대책",
+    "en": "훈련 96%·검증 59%의 뜻과 대책"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p1-4",
+   "type": "QuizItem",
+   "label": {
+    "ko": "초파리 방식에서 학습되는 연결과 고정된 연결",
+    "en": "초파리 방식에서 학습되는 연결과 고정된 연결"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p1-5",
+   "type": "QuizItem",
+   "label": {
+    "ko": "초파리 방식이 MLP와 비슷한 정확도를 낸 뜻",
+    "en": "초파리 방식이 MLP와 비슷한 정확도를 낸 뜻"
+   },
+   "page": "1_fruitfly_brain_deep_learning",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:question/how-flies-perceive",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/fly-model-organism",
+   "p": "lab:broader",
+   "o": "lab:topic/circuit-methods",
+   "anchor": "#why",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/connectome",
+   "p": "lab:broader",
+   "o": "lab:topic/connectome",
+   "anchor": "#why",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/spike",
+   "p": "lab:broader",
+   "o": "lab:topic/biological-neuron",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/firing-rate",
+   "p": "lab:broader",
+   "o": "lab:topic/biological-neuron",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/synapse",
+   "p": "lab:broader",
+   "o": "lab:topic/biological-neuron",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/synapse",
+   "p": "lab:broader",
+   "o": "lab:topic/synaptic-plasticity",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/graded-potential",
+   "p": "lab:broader",
+   "o": "lab:topic/biological-neuron",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/input-encoding",
+   "p": "lab:broader",
+   "o": "lab:topic/feature-engineering",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/input-encoding",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/olfactory-receptor-neurons",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/compound-eye",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/antennal-lobe",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/mushroom-body",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:broader",
+   "o": "lab:topic/random-features",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/lateral-horn",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/dopamine-neurons",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/dopamine-neurons",
+   "p": "lab:broader",
+   "o": "lab:topic/reward-prediction-error",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/co2-neurons",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/t4-t5",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/lplc2",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/giant-fiber",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/sense-nerve-brain-action",
+   "p": "lab:broader",
+   "o": "lab:topic/mlp",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/rule-based",
+   "p": "lab:broader",
+   "o": "lab:topic/rule-vs-learning",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/learning-based",
+   "p": "lab:broader",
+   "o": "lab:topic/rule-vs-learning",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/learning-based",
+   "p": "lab:broader",
+   "o": "lab:topic/supervised-learning",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/prediction-error-update",
+   "p": "lab:broader",
+   "o": "lab:topic/reward-prediction-error",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/threshold-unit",
+   "p": "lab:broader",
+   "o": "lab:topic/perceptron",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/threshold-unit",
+   "p": "lab:broader",
+   "o": "lab:topic/weights-and-biases",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/weight",
+   "p": "lab:broader",
+   "o": "lab:topic/weights-and-biases",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/bias",
+   "p": "lab:broader",
+   "o": "lab:topic/weights-and-biases",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/single-input",
+   "p": "lab:broader",
+   "o": "lab:topic/perceptron",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/perceptron",
+   "p": "lab:broader",
+   "o": "lab:topic/perceptron",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/sigmoid",
+   "p": "lab:broader",
+   "o": "lab:topic/activation-function",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/gradient-descent",
+   "p": "lab:broader",
+   "o": "lab:topic/gradient-descent",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/learning-rate",
+   "p": "lab:broader",
+   "o": "lab:topic/gradient-descent",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/single-linear-boundary",
+   "p": "lab:broader",
+   "o": "lab:topic/perceptron",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/underfitting",
+   "p": "lab:broader",
+   "o": "lab:topic/bias-variance",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:broader",
+   "o": "lab:topic/mlp",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/hidden-layer",
+   "p": "lab:broader",
+   "o": "lab:topic/mlp",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/backpropagation",
+   "p": "lab:broader",
+   "o": "lab:topic/backpropagation",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/random-features",
+   "p": "lab:broader",
+   "o": "lab:topic/random-features",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/sparse-coding",
+   "p": "lab:broader",
+   "o": "lab:topic/sparse-representation",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/overfitting",
+   "p": "lab:broader",
+   "o": "lab:topic/generalization",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/overfitting",
+   "p": "lab:broader",
+   "o": "lab:topic/bias-variance",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/train-validation-split",
+   "p": "lab:broader",
+   "o": "lab:topic/data-splitting",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/early-stopping",
+   "p": "lab:broader",
+   "o": "lab:topic/early-stopping",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/many-hidden-units",
+   "p": "lab:broader",
+   "o": "lab:topic/mlp",
+   "anchor": "#sum",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/cnn",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/weight-sharing",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/receptive-field",
+   "p": "lab:broader",
+   "o": "lab:topic/receptive-field",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/depth-cost",
+   "p": "lab:broader",
+   "o": "lab:topic/mlp",
+   "anchor": "#sum",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/rnn",
+   "p": "lab:broader",
+   "o": "lab:topic/rnn",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lstm-gru",
+   "p": "lab:broader",
+   "o": "lab:topic/lstm-gru",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/transfer-learning-tm",
+   "p": "lab:broader",
+   "o": "lab:topic/transfer-learning",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/confusion-matrix",
+   "p": "lab:broader",
+   "o": "lab:topic/confusion-matrix",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-fly-brain-size",
+   "p": "lab:assertedIn",
+   "o": "lab:work/dorkenwald2024neuronal",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-fly-brain-size",
+   "p": "lab:supports",
+   "o": "lab:concept/connectome",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-kc-count",
+   "p": "lab:assertedIn",
+   "o": "lab:work/aso2014neuronal",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-kc-count",
+   "p": "lab:supports",
+   "o": "lab:bio/kenyon-cells",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-kc-count",
+   "p": "lab:supports",
+   "o": "lab:bio/mushroom-body",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-human-neurons",
+   "p": "lab:assertedIn",
+   "o": "lab:work/azevedo2009equal",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-human-neurons",
+   "p": "lab:supports",
+   "o": "lab:concept/fly-model-organism",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-co2-avoid",
+   "p": "lab:assertedIn",
+   "o": "lab:work/suh2004single",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-co2-avoid",
+   "p": "lab:supports",
+   "o": "lab:bio/co2-neurons",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-co2-avoid",
+   "p": "lab:supports",
+   "o": "lab:method/threshold-unit",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-orn-types",
+   "p": "lab:assertedIn",
+   "o": "lab:work/couto2005molecular",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-orn-types",
+   "p": "lab:supports",
+   "o": "lab:bio/olfactory-receptor-neurons",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-orn-types",
+   "p": "lab:supports",
+   "o": "lab:bio/antennal-lobe",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-vinegar-band",
+   "p": "lab:assertedIn",
+   "o": "lab:work/semmelhack2009select",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-vinegar-band",
+   "p": "lab:supports",
+   "o": "lab:dataset/band-toy",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-vinegar-band",
+   "p": "lab:supports",
+   "o": "lab:limitation/single-linear-boundary",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-t4t5",
+   "p": "lab:assertedIn",
+   "o": "lab:work/maisak2013directional",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-t4t5",
+   "p": "lab:supports",
+   "o": "lab:bio/t4-t5",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-t4t5",
+   "p": "lab:supports",
+   "o": "lab:method/cnn",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-lplc2",
+   "p": "lab:assertedIn",
+   "o": "lab:work/klapoetke2017ultra",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-lplc2",
+   "p": "lab:supports",
+   "o": "lab:bio/lplc2",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p1-lplc2",
+   "p": "lab:supports",
+   "o": "lab:task/looming-detection",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/how-flies-perceive",
+   "p": "lab:raises",
+   "o": "lab:question/dopamine-rpe",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/fly-model-organism",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/connectome",
+   "anchor": "#why",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/spike",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/firing-rate",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/firing-rate",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/weight",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/synapse",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/weight",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/graded-potential",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/spike",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/input-encoding",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/sense-nerve-brain-action",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/olfactory-receptor-neurons",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/input-encoding",
+   "anchor": "#elec",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/compound-eye",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/input-encoding",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/antennal-lobe",
+   "p": "lab:partOf",
+   "o": "lab:concept/connectome",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/mushroom-body",
+   "p": "lab:partOf",
+   "o": "lab:concept/connectome",
+   "anchor": "#brain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:partOf",
+   "o": "lab:bio/mushroom-body",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/lateral-horn",
+   "p": "lab:partOf",
+   "o": "lab:concept/connectome",
+   "anchor": "#brain",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/hidden-layer",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:method/random-features",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/dopamine-neurons",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/prediction-error-update",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/lateral-horn",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/rule-based",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/mushroom-body",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/learning-based",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/co2-neurons",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:method/threshold-unit",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/t4-t5",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:method/cnn",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/lplc2",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:task/looming-detection",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/giant-fiber",
+   "p": "lab:partOf",
+   "o": "lab:task/looming-detection",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/compound-eye",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:bio/t4-t5",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/t4-t5",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:bio/lplc2",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/lplc2",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:bio/giant-fiber",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/sense-nerve-brain-action",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/mlp",
+   "anchor": "#map",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/rule-based",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/learning-based",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/learning-based",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/prediction-error-update",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/prediction-error-update",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/gradient-descent",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/prediction-error-update",
+   "p": "lab:raises",
+   "o": "lab:question/dopamine-rpe",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/backpropagation",
+   "p": "lab:raises",
+   "o": "lab:question/brain-without-backprop",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/threshold-unit",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/perceptron",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/threshold-unit",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/single-input",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/single-input",
+   "p": "lab:addressedBy",
+   "o": "lab:method/perceptron",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/weight",
+   "p": "lab:partOf",
+   "o": "lab:method/threshold-unit",
+   "anchor": "#lv1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/bias",
+   "p": "lab:partOf",
+   "o": "lab:method/perceptron",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/sigmoid",
+   "p": "lab:partOf",
+   "o": "lab:method/perceptron",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/perceptron",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/single-linear-boundary",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/single-linear-boundary",
+   "p": "lab:addressedBy",
+   "o": "lab:method/mlp",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/gradient-descent",
+   "p": "lab:partOf",
+   "o": "lab:method/perceptron",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/learning-rate",
+   "p": "lab:partOf",
+   "o": "lab:method/gradient-descent",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:dataset/band-toy",
+   "p": "lab:evaluatedOn",
+   "o": "lab:limitation/single-linear-boundary",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/perceptron",
+   "p": "lab:evaluatedOn",
+   "o": "lab:dataset/band-toy",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/single-linear-boundary",
+   "p": "lab:relatedTo",
+   "o": "lab:concept/underfitting",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/perceptron",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/mlp",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/hidden-layer",
+   "p": "lab:partOf",
+   "o": "lab:method/mlp",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/backpropagation",
+   "p": "lab:partOf",
+   "o": "lab:method/mlp",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/gradient-descent",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/backpropagation",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/random-features",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/backpropagation",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/sparse-coding",
+   "p": "lab:partOf",
+   "o": "lab:method/random-features",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/train-validation-split",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/overfitting",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/overfitting",
+   "p": "lab:addressedBy",
+   "o": "lab:method/early-stopping",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/overfitting",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/underfitting",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:evaluatedBy",
+   "o": "lab:metric/validation-accuracy",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:evaluatedBy",
+   "o": "lab:metric/train-accuracy",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:metric/validation-accuracy",
+   "p": "lab:contrastsWith",
+   "o": "lab:metric/train-accuracy",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/many-hidden-units",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/many-hidden-units",
+   "p": "lab:addressedBy",
+   "o": "lab:method/cnn",
+   "anchor": "#sum",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/cnn",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/weight-sharing",
+   "p": "lab:partOf",
+   "o": "lab:method/cnn",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/receptive-field",
+   "p": "lab:partOf",
+   "o": "lab:method/cnn",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/cnn",
+   "p": "lab:hasLimitation",
+   "o": "lab:limitation/depth-cost",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/cnn",
+   "p": "lab:solves",
+   "o": "lab:task/looming-detection",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/rnn",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/rnn",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/lstm-gru",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/random-features",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/cnn",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/random-features",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/mlp",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/random-features",
+   "p": "lab:evaluatedOn",
+   "o": "lab:dataset/doodle-shapes",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:evaluatedOn",
+   "o": "lab:dataset/doodle-shapes",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/random-features",
+   "p": "lab:evaluatedBy",
+   "o": "lab:metric/validation-accuracy",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/confusion-matrix",
+   "p": "lab:relatedTo",
+   "o": "lab:metric/validation-accuracy",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/transfer-learning-tm",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/random-features",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/connectome",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-brain3d",
+   "anchor": "#why",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/mushroom-body",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-brain3d",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/rule-based",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-rule-vs-learn",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/learning-based",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-rule-vs-learn",
+   "anchor": "#rule",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/perceptron",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-perceptron",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:limitation/single-linear-boundary",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-perceptron",
+   "anchor": "#lv2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-mlp",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/random-features",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-mlp",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/overfitting",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-mlp",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/cnn",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-looming",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:task/looming-detection",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-looming",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/confusion-matrix",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-labdemo",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/random-features",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-labdemo",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/sparse-coding",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-colab",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/random-features",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-colab",
+   "anchor": "#lv3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/rnn",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-colab",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lstm-gru",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-colab",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/cnn",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p1-colab",
+   "anchor": "#lv4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p1-1",
+   "p": "lab:assesses",
+   "o": "lab:method/perceptron",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p1-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/weight",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p1-2",
+   "p": "lab:assesses",
+   "o": "lab:limitation/single-linear-boundary",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p1-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/hidden-layer",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p1-3",
+   "p": "lab:assesses",
+   "o": "lab:concept/overfitting",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p1-3",
+   "p": "lab:assesses",
+   "o": "lab:method/early-stopping",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p1-4",
+   "p": "lab:assesses",
+   "o": "lab:method/random-features",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p1-4",
+   "p": "lab:assesses",
+   "o": "lab:bio/kenyon-cells",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p1-5",
+   "p": "lab:assesses",
+   "o": "lab:method/random-features",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p1-5",
+   "p": "lab:assesses",
+   "o": "lab:concept/sparse-coding",
+   "anchor": "#teach",
+   "confidence": "high"
+  }
+ ]
+}

@@ -1,0 +1,2309 @@
+{
+ "version": "1.0",
+ "page": "2_fruitfly_memory_retrieval_paper",
+ "nodes": [
+  {
+   "id": "lab:question/how-memory-becomes-action",
+   "type": "Question",
+   "label": {
+    "ko": "배운 기억은 어떻게 행동이 되나",
+    "en": "How is a learned memory turned into behavior?"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#top",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/convergence-neurons",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "합류 뉴런",
+    "en": "PD2a1/b1 lateral horn output neurons"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#cast",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "altLabel": {
+    "ko": [
+     "PD2a1/b1"
+    ]
+   },
+   "match": []
+  },
+  {
+   "id": "lab:bio/mbon-a2sc",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "기억 출력 뉴런",
+    "en": "MBON-α2sc"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#cast",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "altLabel": {
+    "ko": [
+     "기억 출력 뉴런"
+    ]
+   },
+   "match": []
+  },
+  {
+   "id": "lab:bio/projection-neurons",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "냄새 배달부",
+    "en": "Projection neurons"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#cast",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/mushroom-body",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "버섯체",
+    "en": "Mushroom body"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p0",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/kenyon-cells",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "케니언 세포",
+    "en": "Kenyon cells"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p8",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/lateral-horn",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "측각",
+    "en": "Lateral horn"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p0",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/antennal-lobe",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "더듬이엽",
+    "en": "Antennal lobe"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p0",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:bio/dopamine-neurons",
+   "type": "BioAnalogue",
+   "label": {
+    "ko": "도파민 뉴런",
+    "en": "Dopaminergic neurons"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#analogy",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/separate-pathways-model",
+   "type": "Concept",
+   "label": {
+    "ko": "본능·학습 따로 처리 모델",
+    "en": "Separate innate/learned pathway model"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "측각은 타고난 행동, 버섯체는 배운 행동을 따로 맡는다는 교과서 그림."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/memory-retrieval",
+   "type": "Concept",
+   "label": {
+    "ko": "기억 인출",
+    "en": "Memory retrieval"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "훈련 뒤 같은 냄새를 만났을 때 저장된 기억이 행동으로 꺼내지는 과정."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/aversive-conditioning",
+   "type": "Concept",
+   "label": {
+    "ko": "혐오 조건화",
+    "en": "Aversive olfactory conditioning"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "냄새 A와 전기충격을 짝지어 훈련해 A를 피하게 만드는 학습."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/innate-learned-convergence",
+   "type": "Concept",
+   "label": {
+    "ko": "타고난 경로와 배운 경로의 합류",
+    "en": "Convergence of innate and learned pathways"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p5",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "배운 정보와 타고난 정보가 식별 가능한 한 뉴런에서 합쳐져 행동이 된다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/memory-timescales",
+   "type": "Concept",
+   "label": {
+    "ko": "즉시·3시간·장기 기억",
+    "en": "Immediate, 3-hour and long-term memory"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/train-wait-test",
+   "type": "Concept",
+   "label": {
+    "ko": "훈련 → 기다림 → 시험",
+    "en": "Train, wait, test protocol"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "훈련 단계에서 연결이 바뀌고, 시험 단계에서 바뀐 연결이 행동으로 나온다."
+   },
+   "family": "ml-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/gal4",
+   "type": "Method",
+   "label": {
+    "ko": "유전자 주소표",
+    "en": "GAL4 / split-GAL4"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p2",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "altLabel": {
+    "ko": [
+     "유전자 주소표"
+    ]
+   },
+   "match": []
+  },
+  {
+   "id": "lab:method/shibire-ts",
+   "type": "Method",
+   "label": {
+    "ko": "온도 스위치",
+    "en": "Shibire-ts"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p3",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "온도에 따라 작동하는 차단 단백질로, 시험하는 동안만 특정 뉴런의 출력을 막는다."
+   },
+   "family": "neuro",
+   "altLabel": {
+    "ko": [
+     "Shits",
+     "온도 스위치"
+    ]
+   },
+   "match": []
+  },
+  {
+   "id": "lab:method/calcium-imaging",
+   "type": "Method",
+   "label": {
+    "ko": "활동 형광 카메라",
+    "en": "Calcium imaging"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p4",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "뉴런이 활동할 때 늘어나는 칼슘을 형광 밝기로 보는 방법."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:method/em-connectomics",
+   "type": "Method",
+   "label": {
+    "ko": "뇌 배선도 (전자현미경)",
+    "en": "EM connectomics"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p5",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "뇌 전체 전자현미경 영상에서 뉴런의 입력과 출력을 추적한다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:method/t-maze",
+   "type": "Method",
+   "label": {
+    "ko": "선택 시험장",
+    "en": "T-maze assay"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p1",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:metric/performance-index",
+   "type": "Metric",
+   "label": {
+    "ko": "기억 점수",
+    "en": "Performance index"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:concept/genetic-controls",
+   "type": "Concept",
+   "label": {
+    "ko": "대조군 (유전자 한쪽, 온도만)",
+    "en": "Genetic and temperature controls"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "온도 자체나 유전자 삽입만으로 기억이 떨어지지 않는지 확인하는 파리 무리."
+   },
+   "family": "evaluation",
+   "match": []
+  },
+  {
+   "id": "lab:concept/naive-avoidance-check",
+   "type": "Concept",
+   "label": {
+    "ko": "타고난 냄새 회피 확인",
+    "en": "Naive odor avoidance check"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p3",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "합류 뉴런을 꺼도 두 냄새를 원래 피하는 정도는 그대로인지 따로 잰다."
+   },
+   "family": "evaluation",
+   "match": []
+  },
+  {
+   "id": "lab:concept/seven-step-pipeline",
+   "type": "Concept",
+   "label": {
+    "ko": "해부에서 행동까지 일곱 단계",
+    "en": "Seven steps from anatomy to behavior"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p2",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "누가 신호를 받는지 찾고, 확인하고, 꺼 보고, 들여다보는 순서."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:concept/ablation-study",
+   "type": "Concept",
+   "label": {
+    "ko": "절제 실험",
+    "en": "Ablation study"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "부품 하나를 끄고 성능이 어떻게 변하는지 보는 실험."
+   },
+   "family": "evaluation",
+   "match": []
+  },
+  {
+   "id": "lab:concept/activation-inspection",
+   "type": "Concept",
+   "label": {
+    "ko": "활성값 관찰",
+    "en": "Activation inspection"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p4",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "중간 층의 활성값 변화를 관찰한다. 변화만으로 학습 위치를 단정할 수는 없다."
+   },
+   "family": "responsible",
+   "match": []
+  },
+  {
+   "id": "lab:concept/downstream-activation-change",
+   "type": "Concept",
+   "label": {
+    "ko": "앞 층 가중치가 바뀌면 뒤 층 활성값도 바뀐다",
+    "en": "Upstream weight change shifts downstream activations"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p4",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "중간 층 W2만 파인튜닝해도 같은 입력에 대한 그 뒤 층의 활성값이 모두 달라진다."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:concept/shared-unit",
+   "type": "Concept",
+   "label": {
+    "ko": "공유 유닛",
+    "en": "Shared hidden unit"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p5",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "두 경로가 함께 지나는 공유 층. 끄면 두 출력이 함께 사라진다."
+   },
+   "family": "representation",
+   "match": []
+  },
+  {
+   "id": "lab:method/memory-innate-merge",
+   "type": "Method",
+   "label": {
+    "ko": "기억 + 본능 합류 모형",
+    "en": "Memory + innate merge model"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "합류 뉴런을 타고난 입력 × 1.0 + 학습된 입력 × 0.6을 더하는 유닛 하나로 둔 설명용 장난감 모형."
+   },
+   "family": "vision",
+   "match": []
+  },
+  {
+   "id": "lab:concept/frozen-weights",
+   "type": "Concept",
+   "label": {
+    "ko": "동결된 사전학습 가중치",
+    "en": "Frozen pretrained weights"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p7",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "발생 과정에서 정해진 타고난 경로처럼 학습 중에 바뀌지 않는 가중치."
+   },
+   "family": "language",
+   "match": []
+  },
+  {
+   "id": "lab:concept/residual-connection",
+   "type": "Concept",
+   "label": {
+    "ko": "잔차 연결",
+    "en": "Residual connection"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p7",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "vision",
+   "match": []
+  },
+  {
+   "id": "lab:method/lora",
+   "type": "Method",
+   "label": {
+    "ko": "LoRA",
+    "en": "LoRA"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p7",
+   "level": 4,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "language",
+   "match": []
+  },
+  {
+   "id": "lab:method/frozen-base-adapter",
+   "type": "Method",
+   "label": {
+    "ko": "고정 모델 + 학습된 보정 (어댑터)",
+    "en": "Frozen base + learned adapter"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#code",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "기본 모델은 requires_grad_(False)로 고정하고 어댑터만 학습한다. 어댑터를 끄면 기본 모델의 답으로 돌아간다."
+   },
+   "family": "language",
+   "match": []
+  },
+  {
+   "id": "lab:concept/rag-like-retrieval",
+   "type": "Concept",
+   "label": {
+    "ko": "검색 증강과 닮은 기억 꺼내기",
+    "en": "RAG-like retrieval (analogy)"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p7",
+   "level": 4,
+   "status": "known",
+   "confidence": "low",
+   "coverage": "mentioned",
+   "family": "language",
+   "match": []
+  },
+  {
+   "id": "lab:concept/fine-tuning",
+   "type": "Concept",
+   "label": {
+    "ko": "파인튜닝",
+    "en": "Fine-tuning"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p4",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "language",
+   "match": []
+  },
+  {
+   "id": "lab:concept/local-learning-rule",
+   "type": "Concept",
+   "label": {
+    "ko": "국소 학습 규칙 (도파민)",
+    "en": "Local learning rule (dopamine)"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#code",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "켜진 케니언 세포 × 고른 행동 × 도파민(숫자 하나)으로 연결을 바꾼다. 역전파와 달리 기울기를 거꾸로 전하지 않는다."
+   },
+   "family": "neuro",
+   "match": []
+  },
+  {
+   "id": "lab:method/backpropagation",
+   "type": "Method",
+   "label": {
+    "ko": "역전파",
+    "en": "Backpropagation"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#code",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/mlp",
+   "type": "Method",
+   "label": {
+    "ko": "다층 퍼셉트론",
+    "en": "Multilayer perceptron"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#arch",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "모든 층을 역전파로 학습하는 일반 신경망."
+   },
+   "family": "nn-basics",
+   "match": []
+  },
+  {
+   "id": "lab:method/rnn",
+   "type": "Method",
+   "label": {
+    "ko": "순환 신경망 (RNN)",
+    "en": "Recurrent neural network"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#arch",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "은닉 상태를 다음 시간 칸으로 넘기며 입력을 한 칸씩 읽는 구조."
+   },
+   "family": "sequence",
+   "match": []
+  },
+  {
+   "id": "lab:method/lstm-gru",
+   "type": "Method",
+   "label": {
+    "ko": "LSTM·GRU",
+    "en": "LSTM and GRU"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#arch",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "게이트로 기억을 얼마나 지우고 쓰고 꺼낼지 정하는 순환 신경망."
+   },
+   "family": "sequence",
+   "match": []
+  },
+  {
+   "id": "lab:method/cnn",
+   "type": "Method",
+   "label": {
+    "ko": "합성곱 신경망",
+    "en": "Convolutional neural network"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#arch",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "좁은 영역을 보는 같은 필터를 모든 위치에 반복하는 신경망."
+   },
+   "family": "vision",
+   "match": []
+  },
+  {
+   "id": "lab:concept/weight-memory-vs-state",
+   "type": "Concept",
+   "label": {
+    "ko": "연결에 저장된 기억 대 은닉 상태 기억",
+    "en": "Memory in weights vs in hidden state"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#arch",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "definition": {
+    "ko": "RNN·LSTM은 시간 안에서 기억을 은닉 상태로 들고 다니지만, 이 모델의 기억은 연결 강도에 저장되어 몇 시간을 건너간다."
+   },
+   "family": "sequence",
+   "match": []
+  },
+  {
+   "id": "lab:concept/transfer-learning-tm",
+   "type": "Concept",
+   "label": {
+    "ko": "전이 학습 (Teachable Machine)",
+    "en": "Transfer learning (Teachable Machine)"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#lab",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "language",
+   "match": []
+  },
+  {
+   "id": "lab:concept/confusion-matrix",
+   "type": "Concept",
+   "label": {
+    "ko": "혼동 행렬",
+    "en": "Confusion matrix"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#lab",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "mentioned",
+   "family": "evaluation",
+   "match": []
+  },
+  {
+   "id": "lab:question/convergence-own-plasticity",
+   "type": "Question",
+   "label": {
+    "ko": "합류 뉴런 자신의 연결도 바뀌는가",
+    "en": "Do the convergence neurons themselves change their synapses?"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p4",
+   "level": 4,
+   "status": "known",
+   "confidence": "low",
+   "coverage": "mentioned",
+   "match": []
+  },
+  {
+   "id": "lab:question/innate-attraction-scope",
+   "type": "Question",
+   "label": {
+    "ko": "타고난 끌림은 어떤 냄새에서 합류 뉴런이 필요한가",
+    "en": "For which odors is innate attraction convergence-neuron dependent?"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p5",
+   "level": 4,
+   "status": "known",
+   "confidence": "low",
+   "coverage": "mentioned",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p2-brain3d",
+   "type": "Simulation",
+   "label": {
+    "ko": "3D 뇌 기억 경로",
+    "en": "3D memory pathway"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p0",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p2-model-toggle",
+   "type": "Simulation",
+   "label": {
+    "ko": "기존 모델 대 이 논문 모델 전환",
+    "en": "Old vs new model toggle"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p1",
+   "level": 1,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p2-silencing",
+   "type": "Simulation",
+   "label": {
+    "ko": "뉴런 골라 끄기",
+    "en": "Neuron silencing explorer"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p3",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p2-calcium",
+   "type": "Simulation",
+   "label": {
+    "ko": "훈련 전후 칼슘 반응",
+    "en": "Calcium response before/after training"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p4",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p2-model-lab",
+   "type": "Simulation",
+   "label": {
+    "ko": "모형 실험실 (T자 미로)",
+    "en": "Model lab (T-maze)"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p6",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p2-teachable",
+   "type": "Simulation",
+   "label": {
+    "ko": "초파리 학습기 (기억 + 본능 모형)",
+    "en": "Fly teachable lab"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#lab",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:sim/p2-colab",
+   "type": "Simulation",
+   "label": {
+    "ko": "Colab 코드 1·2 (합류 모형, PyTorch 비교)",
+    "en": "Colab code 1-2"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#code",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/dolan2018communication",
+   "type": "Work",
+   "label": {
+    "ko": "Dolan 외 (2018) Neuron",
+    "en": "Communication from learned to innate olfactory processing centers is required for memory retrieval in Drosophila"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/zheng2018complete",
+   "type": "Work",
+   "label": {
+    "ko": "Zheng 외 (2018) Cell",
+    "en": "A complete electron microscopy volume of the brain of adult Drosophila melanogaster"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:work/aso2014neuronal",
+   "type": "Work",
+   "label": {
+    "ko": "Aso 외 (2014) eLife",
+    "en": "The neuronal architecture of the mushroom body provides a logic for associative learning"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#refs",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:claim/p2-pd2-required",
+   "type": "Claim",
+   "label": {
+    "ko": "합류 뉴런(PD2a1/b1)을 시험 중에 끄면 혐오 기억을 꺼내지 못한다",
+    "en": "Silencing PD2a1/b1 during testing impairs aversive memory retrieval"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p3",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "dolan2018communication",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p2-naive-intact",
+   "type": "Claim",
+   "label": {
+    "ko": "합류 뉴런을 꺼도 훈련 냄새를 원래 피하는 정도는 그대로였다",
+    "en": "Naive avoidance of training odors is unchanged when PD2a1/b1 are silenced"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p3",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "dolan2018communication",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p2-mbon-required",
+   "type": "Claim",
+   "label": {
+    "ko": "기억 출력 뉴런(MBON-α2sc)은 혐오 기억 인출에 필요하고 축삭이 측각으로 뻗는다",
+    "en": "MBON-α2sc is required for aversive memory retrieval and projects to the lateral horn"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p1",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "dolan2018communication",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p2-response-depressed",
+   "type": "Claim",
+   "label": {
+    "ko": "훈련 뒤 합류 뉴런의 냄새 반응이 기억 출력 뉴런과 같은 방향으로 약해졌다",
+    "en": "After training, PD2a1/b1 odor responses are depressed like MBON-α2sc"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p4",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "dolan2018communication",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p2-pn-input",
+   "type": "Claim",
+   "label": {
+    "ko": "전자현미경 데이터에서 먹이 냄새 투사 뉴런의 입력이 합류 뉴런에 직접 들어온다",
+    "en": "EM reconstruction shows direct projection-neuron input onto PD2a1/b1"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p5",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "dolan2018communication",
+     "loc": ""
+    },
+    {
+     "ref": "zheng2018complete",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p2-innate-attraction",
+   "type": "Claim",
+   "label": {
+    "ko": "합류 뉴런을 끄면 일부 냄새에 대한 타고난 끌림도 약해진다",
+    "en": "Silencing PD2a1/b1 reduces innate attraction to some odors"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#p5",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "dolan2018communication",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:claim/p2-mbon-naming",
+   "type": "Claim",
+   "label": {
+    "ko": "MBON-α2sc는 버섯체 α엽의 두 번째 구역에서 신호를 받는 출력 뉴런이다",
+    "en": "MBON-α2sc receives input in the α2 compartment of the mushroom body"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#cast",
+   "level": 3,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "source": [
+    {
+     "ref": "aso2014neuronal",
+     "loc": ""
+    }
+   ],
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p2-1",
+   "type": "QuizItem",
+   "label": {
+    "ko": "이 논문의 주장을 한 문장으로",
+    "en": "이 논문의 주장을 한 문장으로"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p2-2",
+   "type": "QuizItem",
+   "label": {
+    "ko": "온도만 올린 대조군이 필요한 이유",
+    "en": "온도만 올린 대조군이 필요한 이유"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p2-3",
+   "type": "QuizItem",
+   "label": {
+    "ko": "1.0 × 본능 + 0.6 × 기억 합류 값 계산",
+    "en": "1.0 × 본능 + 0.6 × 기억 합류 값 계산"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p2-4",
+   "type": "QuizItem",
+   "label": {
+    "ko": "한 뉴런을 끄면 두 행동이 함께 사라지는 이유",
+    "en": "한 뉴런을 끄면 두 행동이 함께 사라지는 이유"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  },
+  {
+   "id": "lab:quiz/p2-5",
+   "type": "QuizItem",
+   "label": {
+    "ko": "기억 인출을 막자 정확도가 0.09가 된 이유",
+    "en": "기억 인출을 막자 정확도가 0.09가 된 이유"
+   },
+   "page": "2_fruitfly_memory_retrieval_paper",
+   "anchor": "#teach",
+   "level": 2,
+   "status": "known",
+   "confidence": "high",
+   "coverage": "explained",
+   "match": []
+  }
+ ],
+ "edges": [
+  {
+   "s": "lab:question/how-memory-becomes-action",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/convergence-neurons",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#cast",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/mbon-a2sc",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#cast",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/projection-neurons",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#cast",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/mushroom-body",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#p0",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#p8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:broader",
+   "o": "lab:topic/sparse-representation",
+   "anchor": "#p8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/lateral-horn",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#p0",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/antennal-lobe",
+   "p": "lab:broader",
+   "o": "lab:topic/sensory-processing",
+   "anchor": "#p0",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/dopamine-neurons",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#analogy",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/separate-pathways-model",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/memory-retrieval",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/aversive-conditioning",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/aversive-conditioning",
+   "p": "lab:broader",
+   "o": "lab:topic/supervised-learning",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/innate-learned-convergence",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/memory-timescales",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/train-wait-test",
+   "p": "lab:broader",
+   "o": "lab:topic/data-splitting",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/gal4",
+   "p": "lab:broader",
+   "o": "lab:topic/circuit-methods",
+   "anchor": "#p2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/shibire-ts",
+   "p": "lab:broader",
+   "o": "lab:topic/circuit-methods",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/calcium-imaging",
+   "p": "lab:broader",
+   "o": "lab:topic/circuit-methods",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/em-connectomics",
+   "p": "lab:broader",
+   "o": "lab:topic/connectome",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/em-connectomics",
+   "p": "lab:broader",
+   "o": "lab:topic/circuit-methods",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/t-maze",
+   "p": "lab:broader",
+   "o": "lab:topic/circuit-methods",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/genetic-controls",
+   "p": "lab:broader",
+   "o": "lab:topic/ablation",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/naive-avoidance-check",
+   "p": "lab:broader",
+   "o": "lab:topic/ablation",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/seven-step-pipeline",
+   "p": "lab:broader",
+   "o": "lab:topic/circuit-methods",
+   "anchor": "#p2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/ablation-study",
+   "p": "lab:broader",
+   "o": "lab:topic/ablation",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/activation-inspection",
+   "p": "lab:broader",
+   "o": "lab:topic/interpretability",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/downstream-activation-change",
+   "p": "lab:broader",
+   "o": "lab:topic/backpropagation",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/shared-unit",
+   "p": "lab:broader",
+   "o": "lab:topic/multi-task-learning",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/memory-innate-merge",
+   "p": "lab:broader",
+   "o": "lab:topic/residual-connections",
+   "anchor": "#p6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/memory-innate-merge",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#p6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/frozen-weights",
+   "p": "lab:broader",
+   "o": "lab:topic/transfer-learning",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/residual-connection",
+   "p": "lab:broader",
+   "o": "lab:topic/residual-connections",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lora",
+   "p": "lab:broader",
+   "o": "lab:topic/lora",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/frozen-base-adapter",
+   "p": "lab:broader",
+   "o": "lab:topic/transfer-learning",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/frozen-base-adapter",
+   "p": "lab:broader",
+   "o": "lab:topic/lora",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/rag-like-retrieval",
+   "p": "lab:broader",
+   "o": "lab:topic/rag",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/fine-tuning",
+   "p": "lab:broader",
+   "o": "lab:topic/transfer-learning",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/local-learning-rule",
+   "p": "lab:broader",
+   "o": "lab:topic/synaptic-plasticity",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/local-learning-rule",
+   "p": "lab:broader",
+   "o": "lab:topic/reward-prediction-error",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/backpropagation",
+   "p": "lab:broader",
+   "o": "lab:topic/backpropagation",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:broader",
+   "o": "lab:topic/mlp",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/rnn",
+   "p": "lab:broader",
+   "o": "lab:topic/rnn",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lstm-gru",
+   "p": "lab:broader",
+   "o": "lab:topic/lstm-gru",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/cnn",
+   "p": "lab:broader",
+   "o": "lab:topic/convolution",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/weight-memory-vs-state",
+   "p": "lab:broader",
+   "o": "lab:topic/lstm-gru",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/weight-memory-vs-state",
+   "p": "lab:broader",
+   "o": "lab:topic/learning-memory-circuits",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/transfer-learning-tm",
+   "p": "lab:broader",
+   "o": "lab:topic/transfer-learning",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/confusion-matrix",
+   "p": "lab:broader",
+   "o": "lab:topic/confusion-matrix",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-pd2-required",
+   "p": "lab:assertedIn",
+   "o": "lab:work/dolan2018communication",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-pd2-required",
+   "p": "lab:supports",
+   "o": "lab:concept/memory-retrieval",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-pd2-required",
+   "p": "lab:supports",
+   "o": "lab:bio/convergence-neurons",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-naive-intact",
+   "p": "lab:assertedIn",
+   "o": "lab:work/dolan2018communication",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-naive-intact",
+   "p": "lab:supports",
+   "o": "lab:concept/naive-avoidance-check",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-naive-intact",
+   "p": "lab:supports",
+   "o": "lab:concept/ablation-study",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-mbon-required",
+   "p": "lab:assertedIn",
+   "o": "lab:work/dolan2018communication",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-mbon-required",
+   "p": "lab:supports",
+   "o": "lab:bio/mbon-a2sc",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-mbon-required",
+   "p": "lab:supports",
+   "o": "lab:concept/memory-retrieval",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-response-depressed",
+   "p": "lab:assertedIn",
+   "o": "lab:work/dolan2018communication",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-response-depressed",
+   "p": "lab:supports",
+   "o": "lab:bio/convergence-neurons",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-response-depressed",
+   "p": "lab:supports",
+   "o": "lab:method/calcium-imaging",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-pn-input",
+   "p": "lab:assertedIn",
+   "o": "lab:work/dolan2018communication",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-pn-input",
+   "p": "lab:assertedIn",
+   "o": "lab:work/zheng2018complete",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-pn-input",
+   "p": "lab:supports",
+   "o": "lab:concept/innate-learned-convergence",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-pn-input",
+   "p": "lab:supports",
+   "o": "lab:bio/projection-neurons",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-pn-input",
+   "p": "lab:supports",
+   "o": "lab:method/em-connectomics",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-innate-attraction",
+   "p": "lab:assertedIn",
+   "o": "lab:work/dolan2018communication",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-innate-attraction",
+   "p": "lab:supports",
+   "o": "lab:bio/convergence-neurons",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-innate-attraction",
+   "p": "lab:supports",
+   "o": "lab:concept/shared-unit",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-mbon-naming",
+   "p": "lab:assertedIn",
+   "o": "lab:work/aso2014neuronal",
+   "anchor": "#cast",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:claim/p2-mbon-naming",
+   "p": "lab:supports",
+   "o": "lab:bio/mbon-a2sc",
+   "anchor": "#cast",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/how-memory-becomes-action",
+   "p": "lab:raises",
+   "o": "lab:question/convergence-own-plasticity",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:question/how-memory-becomes-action",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/memory-retrieval",
+   "anchor": "#top",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/projection-neurons",
+   "p": "lab:partOf",
+   "o": "lab:bio/antennal-lobe",
+   "anchor": "#cast",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:partOf",
+   "o": "lab:bio/mushroom-body",
+   "anchor": "#p8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/mbon-a2sc",
+   "p": "lab:partOf",
+   "o": "lab:bio/mushroom-body",
+   "anchor": "#cast",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/convergence-neurons",
+   "p": "lab:partOf",
+   "o": "lab:bio/lateral-horn",
+   "anchor": "#cast",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/projection-neurons",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:bio/kenyon-cells",
+   "anchor": "#p8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/kenyon-cells",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:bio/mbon-a2sc",
+   "anchor": "#p8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/mbon-a2sc",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:bio/convergence-neurons",
+   "anchor": "#p8",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/projection-neurons",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:bio/convergence-neurons",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/dopamine-neurons",
+   "p": "lab:partOf",
+   "o": "lab:bio/mushroom-body",
+   "anchor": "#analogy",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/separate-pathways-model",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/innate-learned-convergence",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/aversive-conditioning",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/memory-retrieval",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/train-wait-test",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/aversive-conditioning",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/t-maze",
+   "p": "lab:partOf",
+   "o": "lab:concept/train-wait-test",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/memory-timescales",
+   "p": "lab:partOf",
+   "o": "lab:concept/memory-retrieval",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/t-maze",
+   "p": "lab:evaluatedBy",
+   "o": "lab:metric/performance-index",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/memory-retrieval",
+   "p": "lab:evaluatedBy",
+   "o": "lab:metric/performance-index",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/seven-step-pipeline",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/innate-learned-convergence",
+   "anchor": "#p2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/gal4",
+   "p": "lab:partOf",
+   "o": "lab:concept/seven-step-pipeline",
+   "anchor": "#p2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/shibire-ts",
+   "p": "lab:partOf",
+   "o": "lab:concept/seven-step-pipeline",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/calcium-imaging",
+   "p": "lab:partOf",
+   "o": "lab:concept/seven-step-pipeline",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/em-connectomics",
+   "p": "lab:partOf",
+   "o": "lab:concept/seven-step-pipeline",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/t-maze",
+   "p": "lab:partOf",
+   "o": "lab:concept/seven-step-pipeline",
+   "anchor": "#p2",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/shibire-ts",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/ablation-study",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/genetic-controls",
+   "p": "lab:partOf",
+   "o": "lab:concept/ablation-study",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/naive-avoidance-check",
+   "p": "lab:partOf",
+   "o": "lab:concept/ablation-study",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/shibire-ts",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/genetic-controls",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/calcium-imaging",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/activation-inspection",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/activation-inspection",
+   "p": "lab:hasLimitation",
+   "o": "lab:question/convergence-own-plasticity",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/downstream-activation-change",
+   "p": "lab:partOf",
+   "o": "lab:concept/activation-inspection",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/fine-tuning",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:concept/downstream-activation-change",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/convergence-neurons",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/shared-unit",
+   "anchor": "#cast",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/innate-learned-convergence",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/shared-unit",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/convergence-neurons",
+   "p": "lab:raises",
+   "o": "lab:question/innate-attraction-scope",
+   "anchor": "#cast",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/memory-innate-merge",
+   "p": "lab:partOf",
+   "o": "lab:concept/innate-learned-convergence",
+   "anchor": "#p6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/frozen-weights",
+   "p": "lab:partOf",
+   "o": "lab:method/memory-innate-merge",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/lateral-horn",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/frozen-weights",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/mushroom-body",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/fine-tuning",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/memory-innate-merge",
+   "p": "lab:analogyOf",
+   "o": "lab:concept/residual-connection",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/memory-innate-merge",
+   "p": "lab:analogyOf",
+   "o": "lab:method/lora",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/memory-innate-merge",
+   "p": "lab:analogyOf",
+   "o": "lab:method/frozen-base-adapter",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/memory-retrieval",
+   "p": "lab:analogyOf",
+   "o": "lab:concept/rag-like-retrieval",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/frozen-weights",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/frozen-base-adapter",
+   "anchor": "#p7",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lora",
+   "p": "lab:relatedTo",
+   "o": "lab:method/frozen-base-adapter",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/dopamine-neurons",
+   "p": "lab:bioAnalogueOf",
+   "o": "lab:concept/local-learning-rule",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/local-learning-rule",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/backpropagation",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/frozen-base-adapter",
+   "p": "lab:contrastsWith",
+   "o": "lab:concept/local-learning-rule",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/memory-innate-merge",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/mlp",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/weight-memory-vs-state",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/rnn",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/memory-innate-merge",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/lstm-gru",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/rnn",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/lstm-gru",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:prerequisiteOf",
+   "o": "lab:method/cnn",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/weight-memory-vs-state",
+   "p": "lab:partOf",
+   "o": "lab:concept/memory-retrieval",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/transfer-learning-tm",
+   "p": "lab:contrastsWith",
+   "o": "lab:method/memory-innate-merge",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/confusion-matrix",
+   "p": "lab:relatedTo",
+   "o": "lab:metric/performance-index",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/memory-retrieval",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-brain3d",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:bio/lateral-horn",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-brain3d",
+   "anchor": "#p0",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/separate-pathways-model",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-model-toggle",
+   "anchor": "#p1",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/innate-learned-convergence",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-model-toggle",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/ablation-study",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-silencing",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/shibire-ts",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-silencing",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/genetic-controls",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-silencing",
+   "anchor": "#p3",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/calcium-imaging",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-calcium",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/downstream-activation-change",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-calcium",
+   "anchor": "#p4",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/memory-innate-merge",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-model-lab",
+   "anchor": "#p6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/shared-unit",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-model-lab",
+   "anchor": "#p5",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/memory-innate-merge",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-teachable",
+   "anchor": "#p6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/confusion-matrix",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-teachable",
+   "anchor": "#lab",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/memory-innate-merge",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-colab",
+   "anchor": "#p6",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:concept/local-learning-rule",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-colab",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/frozen-base-adapter",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-colab",
+   "anchor": "#code",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/mlp",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-colab",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/cnn",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-colab",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/rnn",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-colab",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:method/lstm-gru",
+   "p": "lab:demonstratedBy",
+   "o": "lab:sim/p2-colab",
+   "anchor": "#arch",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p2-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/innate-learned-convergence",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p2-1",
+   "p": "lab:assesses",
+   "o": "lab:concept/memory-retrieval",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p2-2",
+   "p": "lab:assesses",
+   "o": "lab:concept/genetic-controls",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p2-2",
+   "p": "lab:assesses",
+   "o": "lab:method/shibire-ts",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p2-3",
+   "p": "lab:assesses",
+   "o": "lab:method/memory-innate-merge",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p2-4",
+   "p": "lab:assesses",
+   "o": "lab:concept/shared-unit",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p2-4",
+   "p": "lab:assesses",
+   "o": "lab:bio/convergence-neurons",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p2-5",
+   "p": "lab:assesses",
+   "o": "lab:method/memory-innate-merge",
+   "anchor": "#teach",
+   "confidence": "high"
+  },
+  {
+   "s": "lab:quiz/p2-5",
+   "p": "lab:assesses",
+   "o": "lab:concept/ablation-study",
+   "anchor": "#teach",
+   "confidence": "high"
+  }
+ ]
+}

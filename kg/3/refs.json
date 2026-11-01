@@ -1,0 +1,248 @@
+[
+ {
+  "id": "berg2026sexual",
+  "type": "article-journal",
+  "title": "Sexual dimorphism in the complete Drosophila male central nervous system connectome",
+  "author": [
+   {
+    "family": "Berg",
+    "given": "S."
+   },
+   {
+    "family": "Beckett",
+    "given": "I. R."
+   },
+   {
+    "family": "Costa",
+    "given": "M."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "container-title": "Cell",
+  "volume": "189",
+  "issue": "18",
+  "page": "5504–5526",
+  "DOI": "10.1016/j.cell.2026.08.015",
+  "lab": {
+   "work": "lab:work/berg2026sexual",
+   "role": "primary",
+   "supports": [
+    "lab:claim/p3-male-cns-count"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "shiu2024drosophila",
+  "type": "article-journal",
+  "title": "A Drosophila computational brain model reveals sensorimotor processing",
+  "author": [
+   {
+    "family": "Shiu",
+    "given": "P. K."
+   },
+   {
+    "family": "Sterne",
+    "given": "G. R."
+   },
+   {
+    "family": "Spiller",
+    "given": "N."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "container-title": "Nature",
+  "volume": "634",
+  "page": "210–219",
+  "DOI": "10.1038/s41586-024-07763-9",
+  "lab": {
+   "work": "lab:work/shiu2024drosophila",
+   "role": "primary",
+   "supports": [
+    "lab:claim/p3-lif-params",
+    "lab:claim/p3-shiu-sugar"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "lappalainen2024connectome",
+  "type": "article-journal",
+  "title": "Connectome-constrained networks predict neural activity across the fly visual system",
+  "author": [
+   {
+    "family": "Lappalainen",
+    "given": "J. K."
+   },
+   {
+    "family": "Tschopp",
+    "given": "F. D."
+   },
+   {
+    "family": "Prakhya",
+    "given": "S."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  },
+  "container-title": "Nature",
+  "volume": "634",
+  "page": "1132–1140",
+  "DOI": "10.1038/s41586-024-07939-3",
+  "lab": {
+   "work": "lab:work/lappalainen2024connectome",
+   "role": "background",
+   "supports": [
+    "lab:claim/p3-lappalainen"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "plaza2022neuprint",
+  "type": "article-journal",
+  "title": "neuPrint: An open access tool for EM connectomics",
+  "author": [
+   {
+    "family": "Plaza",
+    "given": "S. M."
+   },
+   {
+    "family": "Clements",
+    "given": "J."
+   },
+   {
+    "family": "Dolafi",
+    "given": "T."
+   },
+   {
+    "literal": "et al."
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  },
+  "container-title": "Frontiers in Neuroinformatics",
+  "volume": "16",
+  "page": "896292",
+  "DOI": "10.3389/fninf.2022.896292",
+  "lab": {
+   "work": "lab:work/plaza2022neuprint",
+   "role": "background",
+   "supports": [
+    "lab:claim/p3-neuprint"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": true,
+    "doi": true
+   },
+   "checkedBy": "페이지 E-2 학술 레퍼런스에서 옮김 (외부 대조 안 함)",
+   "checkedSource": "page"
+  }
+ },
+ {
+  "id": "blendiremade2026flybrain",
+  "type": "software",
+  "title": "fly-brain-minecraft",
+  "author": [
+   {
+    "literal": "blendi-remade"
+   }
+  ],
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  },
+  "container-title": "GitHub",
+  "URL": "https://github.com/blendi-remade/fly-brain-minecraft",
+  "lab": {
+   "work": "lab:work/blendiremade2026flybrain",
+   "role": "primary",
+   "supports": [
+    "lab:claim/p3-mod-scale",
+    "lab:claim/p3-zero-learned",
+    "lab:claim/p3-lif-params",
+    "lab:claim/p3-gain-075"
+   ],
+   "locs": [],
+   "verified": {
+    "title": true,
+    "author": true,
+    "year": true,
+    "container": true,
+    "pages": false,
+    "doi": false
+   },
+   "checkedBy": "페이지 E-2 [R5]에서 옮김: README, docs/REFERENCE.md, docs/VALIDATION.md, PROVENANCE.md. 코드 MIT, 커넥톰 파생 데이터 CC BY 4.0",
+   "checkedSource": "page"
+  }
+ }
+]
