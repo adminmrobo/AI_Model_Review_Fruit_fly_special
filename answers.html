@@ -45,6 +45,84 @@ section.ans{scroll-margin-top:70px}
 .q p{margin:4px 0;color:var(--text)} .q .pt{color:var(--amber);font-size:14px}
 h3{font-size:18px;color:var(--amber);margin:26px 0 10px}
 </style>
+<!-- i18n:start -->
+<link rel="alternate" hreflang="ko" href="answers.html">
+<link rel="alternate" hreflang="en" href="en/answers.html">
+<link rel="alternate" hreflang="zh-CN" href="zh/answers.html">
+<link rel="alternate" hreflang="ja" href="ja/answers.html">
+<link rel="alternate" hreflang="uz-Latn" href="uz/answers.html">
+<link rel="alternate" hreflang="ru" href="ru/answers.html">
+<style id="i18n-style">
+.i18n-banner{position:relative;z-index:40;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px 10px;padding:8px 44px 8px 14px;background:#0d0a1c;color:#efe9ff;border-bottom:2px solid #57d0dc;font:500 14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+.i18n-banner .i18n-lab{font-weight:700;color:#57d0dc;white-space:nowrap}
+.i18n-banner a{color:#efe9ff;text-decoration:none;border:1px solid rgba(239,233,255,.35);border-radius:999px;padding:3px 11px;white-space:nowrap;line-height:1.4}
+.i18n-banner a:hover{border-color:#57d0dc;color:#57d0dc}
+.i18n-banner a[aria-current="true"]{background:#57d0dc;border-color:#57d0dc;color:#0d0a1c;font-weight:700}
+.i18n-banner .i18n-x{position:absolute;right:8px;top:50%;transform:translateY(-50%);background:none;border:0;color:#b5abd6;font-size:20px;line-height:1;cursor:pointer;padding:4px 8px}
+.i18n-banner .i18n-x:hover{color:#efe9ff}
+.i18n-pick{display:inline-flex;align-items:center;gap:4px;flex:none;white-space:nowrap}
+.i18n-pick select{font:600 13.5px/1.2 system-ui,-apple-system,"Segoe UI",sans-serif;color:#efe9ff;background:#261e45;border:1px solid #57d0dc;border-radius:6px;padding:5px 6px;cursor:pointer;max-width:9.5em}
+.i18n-pick select:focus-visible{outline:2px solid #57d0dc;outline-offset:2px}
+.i18n-pick .i18n-globe{font-size:15px}
+nav.top.i18n-has{display:flex;align-items:center}
+nav.top.i18n-has>.wrap{flex:1 1 auto;min-width:0}
+nav.top>.i18n-pick{flex:none;padding:0 14px 0 10px;border-left:1px solid rgba(181,171,214,.25);margin-left:4px}
+.bar .i18n-pick{margin-left:auto}
+nav.i18n-top{position:sticky;top:0;z-index:35;background:rgba(18,14,36,.94);border-bottom:4px solid #3d3170;backdrop-filter:blur(6px)}
+nav.i18n-top .i18n-wrap{max-width:1120px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:12px}
+nav.i18n-top .i18n-brand{color:#efe9ff;text-decoration:none;font-weight:700;margin-right:auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+nav.i18n-top a.i18n-link{color:#b5abd6;text-decoration:none;white-space:nowrap;font-size:14px}
+nav.i18n-top a.i18n-link:hover{color:#57d0dc}
+@media (max-width:560px){nav.i18n-top a.i18n-link{display:none}.i18n-banner{font-size:13px;padding-right:38px}}
+@media print{.i18n-banner,.i18n-pick,nav.i18n-top{display:none!important}}
+</style>
+<script id="i18n-script">
+(function(){
+var CUR='ko', FILE='answers.html', KEY='fly-lang';
+var L=[['ko','한국어',''],['en','English','en/'],['zh','中文','zh/'],['ja','日本語','ja/'],['uz','Oʻzbekcha','uz/'],['ru','Русский','ru/']];
+var LAB={ko:'언어',en:'Language',zh:'语言',ja:'言語',uz:'Til',ru:'Язык'};
+var CLOSE={ko:'배너 닫기',en:'Close banner',zh:'关闭横幅',ja:'バナーを閉じる',uz:'Bannerni yopish',ru:'Закрыть баннер'};
+var ROOT=CUR==='ko'?'':'../';
+function dir(c){for(var i=0;i<L.length;i++) if(L[i][0]===c) return L[i][2]; return null;}
+function url(c){return ROOT+dir(c)+FILE+(location.hash||'');}
+function get(k,s){try{return (s||localStorage).getItem(k);}catch(e){return null;}}
+function set(k,v,s){try{(s||localStorage).setItem(k,v);}catch(e){}}
+function detect(){var ls=(navigator.languages&&navigator.languages.length)?navigator.languages:[navigator.language||''];
+  for(var i=0;i<ls.length;i++){var p=String(ls[i]).toLowerCase().split('-')[0]; if(dir(p)!==null) return p;} return null;}
+// 1) automatic switching: the reader's saved choice wins; otherwise the Korean default follows the browser language
+var pref=get(KEY), target=null;
+if(pref&&dir(pref)!==null&&pref!==CUR) target=pref;
+else if(!pref&&CUR==='ko'){var d=detect(); if(d&&d!=='ko') target=d;}
+if(target&&!/[?&]lang=stay\b/.test(location.search)){location.replace(url(target)); return;}
+function go(c){set(KEY,c); if(c!==CUR) location.href=url(c);}
+function picker(){var w=document.createElement('span'); w.className='i18n-pick';
+  var g=document.createElement('span'); g.className='i18n-globe'; g.setAttribute('aria-hidden','true'); g.textContent='🌐'; w.appendChild(g);
+  var s=document.createElement('select'); s.setAttribute('aria-label',LAB[CUR]+' / Language');
+  L.forEach(function(x){var o=document.createElement('option'); o.value=x[0]; o.textContent=x[1]; o.lang=x[0]; if(x[0]===CUR) o.selected=true; s.appendChild(o);});
+  s.addEventListener('change',function(){go(s.value);}); w.appendChild(s); return w;}
+function banner(){var b=document.createElement('div'); b.className='i18n-banner'; b.setAttribute('role','navigation'); b.setAttribute('aria-label',LAB[CUR]+' / Language');
+  var t=document.createElement('span'); t.className='i18n-lab'; t.textContent='🌐 '+LAB[CUR]+(CUR==='en'?'':' · Language'); b.appendChild(t);
+  L.forEach(function(x){var a=document.createElement('a'); a.href=url(x[0]); a.textContent=x[1]; a.lang=x[0]; a.hreflang=x[0];
+    if(x[0]===CUR) a.setAttribute('aria-current','true');
+    a.addEventListener('click',function(e){e.preventDefault(); go(x[0]);}); b.appendChild(a);});
+  var c=document.createElement('button'); c.type='button'; c.className='i18n-x'; c.setAttribute('aria-label',CLOSE[CUR]); c.textContent='×';
+  c.addEventListener('click',function(){b.remove(); set('fly-lang-banner','off',sessionStorage);}); b.appendChild(c); return b;}
+function init(){var body=document.body;
+  // 2) language menu inside the topmost navigation
+  var nt=document.querySelector('nav.top'), nb=document.querySelector('nav.bar .wrap');
+  if(nt){nt.classList.add('i18n-has'); nt.appendChild(picker());}
+  else if(nb){nb.appendChild(picker());}
+  else{var n=document.createElement('nav'); n.className='i18n-top'; n.setAttribute('aria-label',LAB[CUR]);
+    var w=document.createElement('div'); w.className='i18n-wrap';
+    var br=document.createElement('a'); br.className='i18n-brand'; br.href='#'; br.textContent="딥러닝 A to Z · 초파리 특별편"; w.appendChild(br);
+    [["1_fruitfly_brain_deep_learning.html", "특별 1"], ["2_fruitfly_memory_retrieval_paper.html", "특별 2"], ["3_fruitfly_minecraft_connectome.html", "특별 3"], ["answers.html", "교육자용 정답"]].forEach(function(x){var a=document.createElement('a'); a.className='i18n-link'; a.href=x[0]; a.textContent=x[1]; w.appendChild(a);});
+    w.appendChild(picker()); n.appendChild(w); body.insertBefore(n,body.firstChild);}
+  // 3) language banner at the very top
+  if(get('fly-lang-banner',sessionStorage)!=='off') body.insertBefore(banner(),body.firstChild);}
+if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+<!-- i18n:end -->
 </head>
 <body>
 <header class="top"><div class="wrap"><h1>교육자용 정답</h1><p>학습자라면 각 편의 확인 문제를 먼저 풀어 본 뒤 확인하세요. 문제마다 20점, 편마다 100점 기준의 채점 포인트와 Colab 과제의 예시 답안을 실었습니다. 예시 답안의 숫자는 실행 환경에 따라 조금 다를 수 있습니다.</p></div></header>
