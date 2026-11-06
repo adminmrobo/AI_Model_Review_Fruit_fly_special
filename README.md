@@ -29,6 +29,7 @@
 | 특별 1 | [1_fruitfly_brain_deep_learning.html](1_fruitfly_brain_deep_learning.html) | 초파리 뇌 탐사 — 감각에서 인식까지, 신경망이 한 칸씩 커지는 과정 |
 | 특별 2 | [2_fruitfly_memory_retrieval_paper.html](2_fruitfly_memory_retrieval_paper.html) | 배운 기억은 본능 회로를 거쳐서 꺼내진다 — Dolan 외 (2018) *Neuron* 도해 |
 | 특별 3 | [3_fruitfly_minecraft_connectome.html](3_fruitfly_minecraft_connectome.html) | 마인크래프트 속 초파리 뇌 — 배선도만으로 움직이는 신경계 |
+| 특별 4 (별도 저장소) | [adminmrobo/neuralink_animal_brain_ai](https://github.com/adminmrobo/neuralink_animal_brain_ai) | 뉴럴링크는 왜 돼지와 원숭이 뇌에 칩을 심었나 — 동물 뇌, 자율주행·YOLO, 자율비행 드론 |
 | 교육자용 | [answers.html](answers.html) | 확인 문제 정답, 채점 기준, Colab 과제 예시 답안 |
 
 각 편에는 공통 섹션 A~F(Colab 코드 2개, AI 응용 프롬프트, 용어 정리, 비유 모음, 저자 소개와 레퍼런스, 교육자 TIP)와 마무리 장면이 있습니다. 코드 1(넘파이)과 코드 2(PyTorch)는 각 편 공통 섹션 A에서 복사하거나 내려받습니다. `code/` 폴더에도 같은 코드가 있습니다.
