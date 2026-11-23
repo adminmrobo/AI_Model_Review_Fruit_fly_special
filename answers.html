@@ -123,7 +123,7 @@ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded'
 })();
 </script>
 <!-- i18n:end -->
-</head>
+<!-- px-fix v1 --><style id="px-fix">img{image-rendering:auto!important}</style><script id="px-fix-js">(function(){var R=window.ResizeObserver;function f(i){var n=i.naturalWidth,w=i.getBoundingClientRect().width;if(!n||!w)return;var s=w*(window.devicePixelRatio||1)/n;i.style.setProperty("image-rendering",s>=1.95?"pixelated":"auto","important")}var ro=R?new R(function(es){es.forEach(function(e){f(e.target)})}):null;function a(i){if(i.__px)return;i.__px=1;i.addEventListener("load",function(){f(i)});if(ro)ro.observe(i);f(i)}function all(r){(r||document).querySelectorAll&&(r||document).querySelectorAll("img").forEach(a)}function go(){all();if(window.MutationObserver)new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(n){if(n.nodeType!==1)return;if(n.tagName==="IMG")a(n);else all(n)})})}).observe(document.documentElement,{childList:true,subtree:true});window.addEventListener("resize",function(){document.querySelectorAll("img").forEach(f)})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",go);else go()})();</script><!-- /px-fix --></head>
 <body>
 <header class="top"><div class="wrap"><h1>교육자용 정답</h1><p>학습자라면 각 편의 확인 문제를 먼저 풀어 본 뒤 확인하세요. 문제마다 20점, 편마다 100점 기준의 채점 포인트와 Colab 과제의 예시 답안을 실었습니다. 예시 답안의 숫자는 실행 환경에 따라 조금 다를 수 있습니다.</p></div></header>
 <nav class="bar" aria-label="편 바로가기"><div class="wrap"><a href="index.html">처음 화면</a><a href="#a-s1">특별 1 초파리 뇌 탐사</a><a href="#a-s2">특별 2 기억 인출 논문</a><a href="#a-s3">특별 3 마인크래프트 속 초파리 뇌</a></div></nav>

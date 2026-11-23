@@ -123,7 +123,7 @@ if(document.readyState==='loading') document.addEventListener('DOMContentLoaded'
 })();
 </script>
 <!-- i18n:end -->
-</head>
+<!-- px-fix v1 --><style id="px-fix">img{image-rendering:auto!important}</style><script id="px-fix-js">(function(){var R=window.ResizeObserver;function f(i){var n=i.naturalWidth,w=i.getBoundingClientRect().width;if(!n||!w)return;var s=w*(window.devicePixelRatio||1)/n;i.style.setProperty("image-rendering",s>=1.95?"pixelated":"auto","important")}var ro=R?new R(function(es){es.forEach(function(e){f(e.target)})}):null;function a(i){if(i.__px)return;i.__px=1;i.addEventListener("load",function(){f(i)});if(ro)ro.observe(i);f(i)}function all(r){(r||document).querySelectorAll&&(r||document).querySelectorAll("img").forEach(a)}function go(){all();if(window.MutationObserver)new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(n){if(n.nodeType!==1)return;if(n.tagName==="IMG")a(n);else all(n)})})}).observe(document.documentElement,{childList:true,subtree:true});window.addEventListener("resize",function(){document.querySelectorAll("img").forEach(f)})}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",go);else go()})();</script><!-- /px-fix --></head>
 <body>
 <header class="top"><div class="wrap"><h1>教育者用の解答</h1><p>学習者の方は、各編の確認問題をまず自分で解いてから確認してください。1問20点、1編100点満点の採点ポイントと、Colab課題の解答例を載せています。解答例の数値は実行環境によって少し異なる場合があります。</p></div></header>
 <nav class="bar" aria-label="各編へのショートカット"><div class="wrap"><a href="index.html">ホーム</a><a href="#a-s1">特別編 1 ショウジョウバエ脳探検</a><a href="#a-s2">特別編 2 記憶想起の論文</a><a href="#a-s3">特別編 3 マインクラフトの中のショウジョウバエ脳</a></div></nav>
